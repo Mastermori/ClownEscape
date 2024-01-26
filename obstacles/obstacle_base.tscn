@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://d1emf3oupqslw"]
+
+[node name="ObstacleBase" type="Node3D"]
