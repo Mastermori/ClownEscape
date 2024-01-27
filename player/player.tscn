@@ -32,11 +32,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.300817, 0)
 [node name="StepsPlayer" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("2_rqnqk")
 volume_db = -20.0
+max_db = -5.0
 script = ExtResource("3_0tesu")
 
 [node name="StepsPlayer2" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_m8ik4")
 volume_db = -20.0
+max_db = -5.0
 script = ExtResource("3_0tesu")
 
 [connection signal="finished" from="StepsPlayer" to="StepsPlayer2" method="_on_steps_player_finished"]

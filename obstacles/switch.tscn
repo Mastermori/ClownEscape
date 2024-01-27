@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cvr4kx1le3q1p"]
 
-[ext_resource type="Script" path="res://obstacles/Switch/switch.gd" id="1_4p3pn"]
+[ext_resource type="Script" path="res://obstacles/switch/switch.gd" id="1_4p3pn"]
 [ext_resource type="PackedScene" uid="uid://dlx10i4tqupw2" path="res://obstacles/Pressureplate.dae" id="2_enwuh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ogriw"]

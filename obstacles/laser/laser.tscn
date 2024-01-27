@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://8e2ey38722hg"]
+[gd_scene load_steps=14 format=3 uid="uid://8e2ey38722hg"]
 
 [ext_resource type="Script" path="res://obstacles/laser/laser.gd" id="1_d4krq"]
 [ext_resource type="Material" uid="uid://b2lmcghn41s75" path="res://obstacles/laser/laser_material.tres" id="2_47lgj"]
 [ext_resource type="PackedScene" uid="uid://708wd3uux2t4" path="res://obstacles/laser/CLaserbase.dae" id="3_4on6d"]
+[ext_resource type="AudioStream" uid="uid://bfiqdbtjofcqy" path="res://obstacles/laser/Laser.ogg" id="4_tbs36"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_jiimv"]
 top_radius = 0.03
@@ -45,6 +46,25 @@ collision_mode = 2
 [sub_resource type="QuadMesh" id="QuadMesh_6smnr"]
 size = Vector2(0.02, 0.02)
 
+[sub_resource type="GDScript" id="GDScript_h8sn0"]
+script/source = "extends AudioStreamPlayer3D
+
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _on_finished():
+	play()
+"
+
 [node name="Laser" type="Node3D"]
 
 [node name="CLaserbase" parent="." instance=ExtResource("3_4on6d")]
@@ -79,3 +99,10 @@ amount = 25
 lifetime = 0.1
 process_material = SubResource("ParticleProcessMaterial_3olqd")
 draw_pass_1 = SubResource("QuadMesh_6smnr")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_tbs36")
+volume_db = -20.0
+max_db = -5.0
+autoplay = true
+script = SubResource("GDScript_h8sn0")

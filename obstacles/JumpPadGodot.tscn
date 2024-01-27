@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://7dvihxi0x72f"]
 
-[ext_resource type="PackedScene" uid="uid://dnfn8ul8f1uc6" path="res://obstacles/CJumpPad.dae" id="1_sbi4l"]
+[ext_resource type="PackedScene" uid="uid://dnfn8ul8f1uc6" path="res://obstacles/jump_pad/CJumpPad.dae" id="1_sbi4l"]
 [ext_resource type="Script" path="res://obstacles/TestAnimation.gd" id="2_gx3ov"]
 
 [node name="CJumpPad" instance=ExtResource("1_sbi4l")]

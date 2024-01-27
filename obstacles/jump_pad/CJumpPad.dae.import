@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ds2cvqqwhonyk"
-path="res://.godot/imported/CPressureplate.dae-fb160463698560e261aa46117faf8949.scn"
+uid="uid://dnfn8ul8f1uc6"
+path="res://.godot/imported/CJumpPad.dae-90c7ed5160b14a5779082cf93aa8efea.scn"
 
 [deps]
 
-source_file="res://obstacles/switch/CPressureplate.dae"
-dest_files=["res://.godot/imported/CPressureplate.dae-fb160463698560e261aa46117faf8949.scn"]
+source_file="res://obstacles/jump_pad/CJumpPad.dae"
+dest_files=["res://.godot/imported/CJumpPad.dae-90c7ed5160b14a5779082cf93aa8efea.scn"]
 
 [params]
 

@@ -1,11 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://ckx7gqnhpmegj"]
+[gd_scene load_steps=12 format=3 uid="uid://ckx7gqnhpmegj"]
 
 [ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_rsmjh"]
 [ext_resource type="PackedScene" uid="uid://8e2ey38722hg" path="res://obstacles/laser/laser.tscn" id="3_76mo7"]
 [ext_resource type="PackedScene" uid="uid://dqhvae1dwylm2" path="res://obstacles/bounce_pad.tscn" id="3_y6jts"]
 [ext_resource type="PackedScene" uid="uid://bxocjd4frnv0l" path="res://obstacles/spikes/spikes.tscn" id="4_okxws"]
 [ext_resource type="PackedScene" uid="uid://b50k5w01i1s5e" path="res://obstacles/canon/canon.tscn" id="5_sxma0"]
-[ext_resource type="PackedScene" uid="uid://b3ch27e2b5l68" path="res://obstacles/Switch/button.tscn" id="6_k4jlo"]
+[ext_resource type="PackedScene" uid="uid://b48kdjgaubgam" path="res://obstacles/jump_pad/jump_pad.tscn" id="5_xy4w7"]
+[ext_resource type="PackedScene" uid="uid://b3ch27e2b5l68" path="res://obstacles/switch/button.tscn" id="6_k4jlo"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_87626"]
 size = Vector3(50, 1, 50)
@@ -64,6 +65,9 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacles/CollisionShape3D/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_v38b0")
+
+[node name="JumpPad" parent="Obstacles" index="8" instance=ExtResource("5_xy4w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.15405, 0, 4.95764)
 
 [node name="Canon" parent="." index="9" instance=ExtResource("5_sxma0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.98744, -1.85126, -6.60602)

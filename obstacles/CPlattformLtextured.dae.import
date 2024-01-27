@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dnfn8ul8f1uc6"
-path="res://.godot/imported/CJumpPad.dae-2df260d9b6ea0ad83743db47570874a8.scn"
+uid="uid://bubbi8qsmkexj"
+path="res://.godot/imported/CPlattformLtextured.dae-4c6607b8cd475565e5ab25a8bcee0617.scn"
 
 [deps]
 
-source_file="res://obstacles/CJumpPad.dae"
-dest_files=["res://.godot/imported/CJumpPad.dae-2df260d9b6ea0ad83743db47570874a8.scn"]
+source_file="res://obstacles/CPlattformLtextured.dae"
+dest_files=["res://.godot/imported/CPlattformLtextured.dae-4c6607b8cd475565e5ab25a8bcee0617.scn"]
 
 [params]
 
