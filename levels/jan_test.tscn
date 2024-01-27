@@ -32,9 +32,6 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" index="1"]
 shape = SubResource("BoxShape3D_d470f")
 
-[node name="Spikes" parent="." index="6" instance=ExtResource("4_okxws")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.41422)
-
 [node name="BouncePad" parent="Obstacles" index="0" instance=ExtResource("3_y6jts")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499077, -4.81259)
 
@@ -45,7 +42,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.61407, -9.51311)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.38841, 4.19205, -7.69248)
 
 [node name="BouncePad4" parent="Obstacles" index="3" instance=ExtResource("3_y6jts")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.8301, -0.648405)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.988, 3.45, -0.648)
 
 [node name="BouncePad5" parent="Obstacles" index="4" instance=ExtResource("3_y6jts")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03679, 9.17269, -8.09347)
@@ -68,6 +65,9 @@ shape = SubResource("ConcavePolygonShape3D_v38b0")
 
 [node name="JumpPad" parent="Obstacles" index="8" instance=ExtResource("5_xy4w7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.15405, -1.69158, 4.95764)
+
+[node name="Spikes" parent="." index="6" instance=ExtResource("4_okxws")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.168, 0.45, 1.805)
 
 [node name="Canon" parent="." index="9" instance=ExtResource("5_sxma0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.98744, -1.85126, -6.60602)
