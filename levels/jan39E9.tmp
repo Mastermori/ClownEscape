@@ -32,19 +32,4 @@ shape = SubResource("BoxShape3D_d470f")
 [node name="UI" parent="." instance=ExtResource("2_t5tgh")]
 
 [node name="BouncePad" parent="." instance=ExtResource("3_y6jts")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499077, -4.81259)
-
-[node name="BouncePad2" parent="." instance=ExtResource("3_y6jts")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.61407, -9.51311)
-
-[node name="BouncePad3" parent="." instance=ExtResource("3_y6jts")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.38841, 4.19205, -7.69248)
-
-[node name="BouncePad4" parent="." instance=ExtResource("3_y6jts")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.8301, -0.648405)
-
-[node name="BouncePad5" parent="." instance=ExtResource("3_y6jts")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03679, 9.17269, -8.09347)
-
-[node name="BouncePad6" parent="." instance=ExtResource("3_y6jts")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.08647, 2.48113, -4.81259)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.919256, -4.81259)
