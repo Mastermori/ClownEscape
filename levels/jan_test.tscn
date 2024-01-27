@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://brc6po0dmtc7p" path="res://UI/ui.tscn" id="2_t5tgh"]
 [ext_resource type="PackedScene" uid="uid://dqhvae1dwylm2" path="res://obstacles/bounce_pad.tscn" id="3_y6jts"]
 [ext_resource type="PackedScene" uid="uid://ds3c4rpm8ggaa" path="res://obstacles/spikes.tscn" id="4_okxws"]
-[ext_resource type="PackedScene" uid="uid://cvr4kx1le3q1p" path="res://obstacles/switch.tscn" id="6_dupa6"]
+[ext_resource type="PackedScene" uid="uid://bmukds7cu4jed" path="res://obstacles/PressurePlateGodot.tscn" id="6_mq0px"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_87626"]
 size = Vector3(50, 1, 50)
@@ -60,5 +60,5 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.0864
 [node name="Spikes" parent="." instance=ExtResource("4_okxws")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.41422)
 
-[node name="Switch" parent="." instance=ExtResource("6_dupa6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.68495, 0, 3.51921)
+[node name="Pressureplate" parent="." instance=ExtResource("6_mq0px")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.46834, -1.75589, 2.70358)
