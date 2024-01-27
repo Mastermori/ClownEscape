@@ -19,6 +19,7 @@ func shoot():
 	Global.play_sound_at(preload("res://obstacles/canon/Cannon.ogg"), position)
 	if fire_interval != -1:
 		$Timer.start(fire_interval)
+	Global.play_sound_at(preload("res://obstacles/canon/Cannon.ogg"), global_position)
 
 func shoot_in(direction: Vector3, force: float):
 	var projectile := projectile_scene.instantiate() as RigidBody3D

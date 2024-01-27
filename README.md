@@ -1,13 +1,13 @@
 # ClownEscape
 ## How to Install
 1. Navigate to the 'build' folder.
-2. Download the ClownEscapeExport.exe and ClownEscapeExport.pck.
-3. Run them through virustotal.com (can't hurt to not trust people on the internet)
-4. Drop both of them into a folder of your choice.
+2. Download the ClownEscapeExport.exe
+3. Run it through virustotal.com (can't hurt to double check things from the internet)
+4. Drop it wherever you like on your PC.
 5. That's it. You can already play the game.
 
 ## Uninstall
-Simply delete the files.
+Simply delete the file.
 
 ## How to play
 - Use the WASD keys to move around.
