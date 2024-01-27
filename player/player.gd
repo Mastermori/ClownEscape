@@ -24,6 +24,7 @@ func _ready():
 	camera = $Camera3D
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	Global.player = self
+	$StepsPlayer.is_active_player = true
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -35,6 +36,7 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		Global.play_sound_at(preload("res://player/Boing.ogg"), position)
 
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir = Input.get_vector("left", "right", "forward", "back")
@@ -54,6 +56,7 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("dash") and dash_charged:
 		dash_charged = false
 		dash_cooldown = DASH_COOLDOWN_DURATION
+		Global.play_sound_at(preload("res://player/Woosh.ogg"), position)
 		# We can use one of these two transforms. The camera transform would dash EXACTLY where we are looking.
 		# However it needs to be limited since it can otherwise be used to fly.
 		# The vanilla transform only accelerates horizontally but can thus be used much more freely.
