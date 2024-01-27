@@ -42,3 +42,8 @@ func display_text(text: String, custom_display_time: float = 0):
 	clown_commentary.visible = true
 	clown_commentary.text = "[center]" + text
 	display_timer.start(display_time if custom_display_time <= 0 else custom_display_time)
+
+func play_fade():
+	var anim_player = $ColorRect3/AnimationPlayer
+	if not anim_player.is_playing():
+		anim_player.play("Fade")

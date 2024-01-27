@@ -28,6 +28,7 @@ var dash_charged = true
 # Whether the player should make walking sounds.
 var is_walking = false
 var is_falling = false
+var is_dead = false
 
 @onready var camera = %Camera3D
 @onready var koyote_timer = $KoyoteTimer
@@ -39,6 +40,16 @@ func _ready():
 	$StepsPlayer.is_active_player = true
 
 func _physics_process(delta):
+	
+	if is_dead:
+		velocity.y += _get_gravity() * delta
+		velocity.x = move_toward(velocity.x, 0, ACCELERATION * delta)
+		velocity.z = move_toward(velocity.z, 0, ACCELERATION * delta)
+		move_and_slide()
+		_special_collisions()
+		return
+		
+		
 	var acceleration = FLOORED_ACCELERATION
 	# Add the gravity.
 	if not is_on_floor():
@@ -82,13 +93,10 @@ func _physics_process(delta):
 	# Theoretically we might be afflicted by multiple bounces at once, making them cancel each other out.
 	# But that's something that'll probably never happen so we take the faster approach. No writing new code.
 	move_and_slide()
-	for i in get_slide_collision_count():
-		var collision: KinematicCollision3D = get_slide_collision(i)
-		if collision.get_collider().has_method("collide_with_player"):
-			collision.get_collider().collide_with_player(self, collision)
+	_special_collisions()
 	
 	if position.y < -10:
-		Global.level.reset_player()
+		Global.player_died()
 	
 	if not is_on_floor() and not is_falling:
 		is_falling = true
@@ -96,6 +104,12 @@ func _physics_process(delta):
 	if is_falling and is_on_floor():
 		is_falling = false
 
+
+func _special_collisions():
+	for i in get_slide_collision_count():
+		var collision: KinematicCollision3D = get_slide_collision(i)
+		if collision.get_collider().has_method("collide_with_player"):
+			collision.get_collider().collide_with_player(self, collision)
 
 func get_jump_velocity(height: float):
 	return sqrt(height * abs(jump_gravity) * 2.0)

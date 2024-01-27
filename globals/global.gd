@@ -6,6 +6,10 @@ var level: Level
 var ui: UIController
 
 
+func player_died():
+	player.is_dead = true
+
+
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	var ui_layer := preload("res://globals/ui_layer.tscn").instantiate()

@@ -36,7 +36,7 @@ func _physics_process(delta):
 	if ray.is_colliding():
 		var collider = ray.get_collider()
 		if collider is Player:
-			Global.level.reset_player()
+			Global.player_died()
 		cast_point = ray.to_local(ray.get_collision_point())
 	
 	if not cast_point:
