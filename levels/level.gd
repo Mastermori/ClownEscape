@@ -13,5 +13,6 @@ func _ready():
 	spawn_position.rotation = $Player.rotation
 
 func reset_player():
-	Global.player.global_position = spawn_position.global_position
-	Global.player.rotation = spawn_position.rotation
+	#Global.player.global_position = spawn_position.global_position
+	#Global.player.rotation = spawn_position.rotation
+	get_tree().change_scene_to_file(scene_file_path)
