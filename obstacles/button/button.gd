@@ -2,6 +2,7 @@ extends Area3D
 
 #@export var cooldown: float = 10000000
 @export var is_toggled: bool = false
+@export var toggle_timer: float = 0
 #@export var remaining_cooldown: float = 0
 
 signal switch_toggled
@@ -28,12 +29,19 @@ func _on_body_entered(body):
 	
 	if is_toggled:
 		return
-		
-	#remaining_cooldown = cooldown
-	$CPressureplate/AnimationPlayer.play("default")
+	
+	is_toggled = false
 	Global.play_sound_at(preload("res://obstacles/button/Click.ogg"), position, 0.0, 20.0)
-	print("toggled")
-	is_toggled = not is_toggled
+	$CPressureplate/AnimationPlayer.play("default")
+	
+	if toggle_timer > 0:	
+		$Timer.wait_time = toggle_timer
+		$Timer.start()
+	else:
+		toggle_button()
+		
+func toggle_button():
+	#remaining_cooldown = cooldown
 	emit_signal("switch_toggled")
 	if is_toggled:
 		emit_signal("switch_on")
