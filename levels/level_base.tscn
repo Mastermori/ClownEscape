@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cw6bsp01wen3g" path="res://player/player.tscn" id="1_fu36q"]
 [ext_resource type="Script" path="res://levels/level.gd" id="1_px7iy"]
-[ext_resource type="PackedScene" uid="uid://brc6po0dmtc7p" path="res://ui/ui.tscn" id="2_t5tgh"]
+[ext_resource type="PackedScene" uid="uid://brc6po0dmtc7p" path="res://UI/ui.tscn" id="2_t5tgh"]
 
 [sub_resource type="Environment" id="Environment_5nvxr"]
 background_mode = 3
@@ -28,10 +28,12 @@ environment = SubResource("Environment_5nvxr")
 
 [node name="Player" parent="." instance=ExtResource("1_fu36q")]
 
-[node name="UI" parent="." instance=ExtResource("2_t5tgh")]
-
 [node name="Sounds" type="Node3D" parent="."]
 
 [node name="Obstacles" type="Node3D" parent="."]
 
 [node name="SpawnPosition" type="Marker3D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("2_t5tgh")]

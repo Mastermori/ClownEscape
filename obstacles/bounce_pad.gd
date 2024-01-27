@@ -14,6 +14,9 @@ func _ready():
 	pass # Replace with function body.
 
 
+func reset():
+	cooldown = 1.0
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	countdown = move_toward(countdown, 0, delta)
