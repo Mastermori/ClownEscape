@@ -27,3 +27,14 @@ func _unhandled_input(event):
 	if event.is_action_pressed("pause"):
 		get_tree().paused = not get_tree().paused
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE if get_tree().paused else Input.MOUSE_MODE_CAPTURED)
+
+func queue_text(text: String):
+	if not is_instance_valid(level):
+		return
+	level.ui.queue_text(text)
+
+func overwrite_text(text: String):
+	if not is_instance_valid(level):
+		return
+	level.ui.overwrite_text(text)
+	

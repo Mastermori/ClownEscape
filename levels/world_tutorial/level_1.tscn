@@ -19,7 +19,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.13932, 0, 7.99322)
 [node name="PlatformA3" parent="Platforms" index="2" instance=ExtResource("4_33n8h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.9289, 0, 8.10791)
 
-[node name="LevelTransition" parent="." index="7" instance=ExtResource("3_3tnod")]
+[node name="LevelTransition" parent="Transitions" index="0" instance=ExtResource("3_3tnod")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2858, 4.2632, 8.59161)
 monitorable = false
 next_level = ExtResource("4_xtqu3")

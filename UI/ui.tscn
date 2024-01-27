@@ -70,3 +70,7 @@ bbcode_enabled = true
 text = "[center]How'd you like that?
 Fancy taking a bath in the ball pit?"
 fit_content = true
+
+[node name="FadeTimer" type="Timer" parent="."]
+
+[node name="DisplayTimer" type="Timer" parent="."]

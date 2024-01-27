@@ -1,25 +1,43 @@
 extends Control
 
+@export var fade_time: float = 2.5
+@export var display_time: float = 2.5
 
-@export var _default_fade_timer: float = 5.0
-var fade_timer = 10
+var text_queue: Array[String] = []
 
 @onready var clown_commentary = $ClownCommentary
+@onready var fade_timer = $FadeTimer
+@onready var display_timer = $DisplayTimer
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	display_timer.timeout.connect(end_display)
+	fade_timer.timeout.connect(hide_text)
 
 func _process(delta):
-	fade_timer -= delta
-	if fade_timer <= 0:
-		clown_commentary.visible = false
-	elif fade_timer < _default_fade_timer / 2:
-		clown_commentary.modulate.a = fade_timer * 2 / _default_fade_timer
-	
-	
-func display_text(text: String, fade: float = _default_fade_timer):
+	if not fade_timer.is_stopped():
+		clown_commentary.modulate.a = fade_timer.time_left / fade_timer.wait_time
+
+func hide_text():
+	clown_commentary.visible = false
+
+func end_display():
+	var next_text = text_queue.pop_front()
+	if not next_text:
+		fade_timer.start(fade_time)
+		return
+	display_text(next_text)
+
+func overwrite_text(text: String):
+	text_queue.clear()
+	display_text(text)
+
+func queue_text(text: String):
+	text_queue.append(text)
+	if not clown_commentary.visible:
+		display_text(text_queue.pop_front())
+
+func display_text(text: String, custom_display_time: float = 0):
 	clown_commentary.visible = true
 	clown_commentary.text = "[center]" + text
-	fade_timer = fade
+	display_timer.start(display_time if custom_display_time <= 0 else custom_display_time)

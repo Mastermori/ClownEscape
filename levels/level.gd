@@ -4,6 +4,7 @@ extends Node3D
 
 @onready var sounds = $Sounds
 @onready var spawn_position = $SpawnPosition
+@onready var ui = $CanvasLayer/UI
 
 
 # Called when the node enters the scene tree for the first time.
