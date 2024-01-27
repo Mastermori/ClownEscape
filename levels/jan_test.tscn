@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bxocjd4frnv0l" path="res://obstacles/spikes/spikes.tscn" id="4_okxws"]
 [ext_resource type="PackedScene" uid="uid://b50k5w01i1s5e" path="res://obstacles/canon/canon.tscn" id="5_sxma0"]
 [ext_resource type="PackedScene" uid="uid://b48kdjgaubgam" path="res://obstacles/jump_pad/jump_pad.tscn" id="5_xy4w7"]
-[ext_resource type="PackedScene" uid="uid://b3ch27e2b5l68" path="res://obstacles/switch/button.tscn" id="6_k4jlo"]
+[ext_resource type="PackedScene" uid="uid://b3ch27e2b5l68" path="res://obstacles/button/button.tscn" id="6_k4jlo"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_87626"]
 size = Vector3(50, 1, 50)

@@ -22,13 +22,25 @@ instance_dock/scenes=[{
 "scene": "res://platforms/wand_platform.tscn"
 }],
 "scroll": 0
+}, {
+"name": "Obstacles",
+"scenes": [{
+"scene": "res://obstacles/switch/button.tscn"
+}, {
+"scene": "res://obstacles/canon/canon.tscn"
+}, {
+"scene": "res://obstacles/laser/laser.tscn"
+}, {
+"scene": "res://obstacles/jump_pad/jump_pad.tscn"
+}],
+"scroll": 0
 }]
 instance_dock/preview_resolution=Vector2i(64, 64)
 
 [application]
 
 config/name="ClownEscape"
-run/main_scene="res://levels/jan_test.tscn"
+run/main_scene="res://levels/world1/level1.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
