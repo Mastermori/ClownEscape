@@ -9,8 +9,6 @@ const ACCELERATION = 15.0
 const DASH_COOLDOWN_DURATION = 1.0
 const DASH_VELOCITY = 15.0
 
-var camera = null
-
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -20,8 +18,10 @@ var dash_charged = true
 # Whether the player should make walking sounds.
 var is_walking = false
 
+@onready var camera = %Camera3D
+
+
 func _ready():
-	camera = $Camera3D
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	Global.player = self
 
