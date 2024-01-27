@@ -3,10 +3,14 @@ extends Node
 
 var player: Player
 var level: Level
+var ui: UIController
 
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	var ui_layer := preload("res://globals/ui_layer.tscn").instantiate()
+	add_child(ui_layer)
+	ui = ui_layer.get_child(0)
 
 func play_sound_at(sound: AudioStream, position: Vector3, max_distance = 0.0, volume: float = 0.0, pitch: float = 1.0):
 	var audio_player: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
@@ -29,12 +33,8 @@ func _unhandled_input(event):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE if get_tree().paused else Input.MOUSE_MODE_CAPTURED)
 
 func queue_text(text: String):
-	if not is_instance_valid(level):
-		return
-	level.ui.queue_text(text)
+	ui.queue_text(text)
+	print(ui)
 
 func overwrite_text(text: String):
-	if not is_instance_valid(level):
-		return
-	level.ui.overwrite_text(text)
-	
+	ui.overwrite_text(text)

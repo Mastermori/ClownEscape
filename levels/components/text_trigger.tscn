@@ -6,7 +6,11 @@
 size = Vector3(2, 2, 2)
 
 [node name="TextTrigger" type="Area3D"]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("1_d472s")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_gbm75")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

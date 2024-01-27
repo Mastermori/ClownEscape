@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://8e2ey38722hg"]
+[gd_scene load_steps=15 format=3 uid="uid://8e2ey38722hg"]
 
 [ext_resource type="Script" path="res://obstacles/laser/laser.gd" id="1_d4krq"]
 [ext_resource type="Material" uid="uid://b2lmcghn41s75" path="res://obstacles/laser/laser_material.tres" id="2_47lgj"]
+[ext_resource type="PackedScene" uid="uid://bqww7ktbnwtn3" path="res://obstacles/laser/GameReadyLaserBase.glb" id="2_kc588"]
 [ext_resource type="PackedScene" uid="uid://708wd3uux2t4" path="res://obstacles/laser/CLaserbase.dae" id="3_4on6d"]
 [ext_resource type="AudioStream" uid="uid://bfiqdbtjofcqy" path="res://obstacles/laser/Laser.ogg" id="4_tbs36"]
 
@@ -67,6 +68,9 @@ func _on_finished():
 
 [node name="Laser" type="Node3D"]
 script = ExtResource("1_d4krq")
+
+[node name="GameReadyLaserBase" parent="." instance=ExtResource("2_kc588")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 
 [node name="CLaserbase" parent="." instance=ExtResource("3_4on6d")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)

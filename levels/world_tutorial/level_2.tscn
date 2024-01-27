@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://ij0vtn41s8kw"]
+[gd_scene load_steps=6 format=3 uid="uid://ij0vtn41s8kw"]
 
 [ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_jq54a"]
 [ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="2_iwhjl"]
 [ext_resource type="PackedScene" uid="uid://c2ote8ql3pxa" path="res://platforms/platform_b.tscn" id="3_1mfdm"]
+[ext_resource type="PackedScene" uid="uid://cau0cybig3rn" path="res://levels/components/text_trigger.tscn" id="4_jit0d"]
+[ext_resource type="PackedScene" uid="uid://csxa7ww5dihdf" path="res://levels/components/level_transition.tscn" id="5_20vxm"]
 
 [node name="Level2" instance=ExtResource("1_jq54a")]
 
@@ -17,3 +19,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3086, 0, 1)
 
 [node name="PlatformB" parent="Platforms" index="2" instance=ExtResource("3_1mfdm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2605, 0, 0.977274)
+
+[node name="TextTrigger" parent="Transitions" index="0" instance=ExtResource("4_jit0d")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -9.24716, 4.35597, 1.0293)
+text = "Enjoy yourself,
+we surely will"
+
+[node name="TextTrigger2" parent="Transitions" index="1" instance=ExtResource("4_jit0d")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -26.6483, 4.35597, 1.0293)
+text = "Good luck being stuck for eternity"
+overwrite_all_text = true
+
+[node name="LevelTransition" parent="." index="8" instance=ExtResource("5_20vxm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.3375, 4.57141, 0.972035)

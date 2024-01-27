@@ -1,3 +1,4 @@
+class_name UIController
 extends Control
 
 @export var fade_time: float = 2.5
@@ -28,9 +29,9 @@ func end_display():
 		return
 	display_text(next_text)
 
-func overwrite_text(text: String):
+func overwrite_text(text: String, custom_display_time: float = 0):
 	text_queue.clear()
-	display_text(text)
+	display_text(text, custom_display_time)
 
 func queue_text(text: String):
 	text_queue.append(text)
