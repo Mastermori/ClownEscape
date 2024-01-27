@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do047hvns0tbj"
-path.s3tc="res://.godot/imported/GameReadyLaserBase_DefaultMaterial_Normal.png-b46979f97d48c4365efaede62ef7fdc9.s3tc.ctex"
+uid="uid://b5h1ftx6sau0x"
+path.s3tc="res://.godot/imported/GameReadyPressurePlate_Material_Normal.png-e9073d1e4c16522859e52423b9bfffc7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "0f7ab718d357d414e7305e198e342e3d"
+"md5": "f5c1caa57a17cc9a2c1e3697e233bc49"
 }
 
 [deps]
 
-source_file="res://obstacles/jump_pad/GameReadyLaserBase_DefaultMaterial_Normal.png"
-dest_files=["res://.godot/imported/GameReadyLaserBase_DefaultMaterial_Normal.png-b46979f97d48c4365efaede62ef7fdc9.s3tc.ctex"]
+source_file="res://obstacles/button/GameReadyPressurePlate_Material_Normal.png"
+dest_files=["res://.godot/imported/GameReadyPressurePlate_Material_Normal.png-e9073d1e4c16522859e52423b9bfffc7.s3tc.ctex"]
 
 [params]
 
@@ -28,7 +28,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://obstacles/jump_pad/GameReadyLaserBase_DefaultMaterial_Normal.png"
+roughness/src_normal="res://obstacles/jump_pad/GameReadyPressurePlate_Material_Normal.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

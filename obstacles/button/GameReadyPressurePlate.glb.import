@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bqww7ktbnwtn3"
-path="res://.godot/imported/GameReadyLaserBase.glb-f5c71a46fa140df6ce93b3869c92c388.scn"
+uid="uid://bba8tif8siek0"
+path="res://.godot/imported/GameReadyPressurePlate.glb-7053a59777256db9d517d406424e283b.scn"
 
 [deps]
 
-source_file="res://obstacles/jump_pad/GameReadyLaserBase.glb"
-dest_files=["res://.godot/imported/GameReadyLaserBase.glb-f5c71a46fa140df6ce93b3869c92c388.scn"]
+source_file="res://obstacles/button/GameReadyPressurePlate.glb"
+dest_files=["res://.godot/imported/GameReadyPressurePlate.glb-7053a59777256db9d517d406424e283b.scn"]
 
 [params]
 
