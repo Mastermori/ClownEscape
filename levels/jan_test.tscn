@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_rsmjh"]
 [ext_resource type="PackedScene" uid="uid://8e2ey38722hg" path="res://obstacles/laser/laser.tscn" id="3_76mo7"]
 [ext_resource type="PackedScene" uid="uid://dqhvae1dwylm2" path="res://obstacles/bounce_pad.tscn" id="3_y6jts"]
-[ext_resource type="PackedScene" uid="uid://bxocjd4frnv0l" path="res://obstacles/spikes.tscn" id="4_okxws"]
+[ext_resource type="PackedScene" uid="uid://bxocjd4frnv0l" path="res://obstacles/spikes/spikes.tscn" id="4_okxws"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_87626"]
 size = Vector3(50, 1, 50)
