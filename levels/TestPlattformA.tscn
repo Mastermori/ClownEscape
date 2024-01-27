@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://doc35pcnaphyr"]
+
+[ext_resource type="PackedScene" uid="uid://cw6bsp01wen3g" path="res://player/player.tscn" id="2_cy2df"]
+[ext_resource type="PackedScene" uid="uid://kk2rd1vu8qbc" path="res://obstacles/Clownescape Test Level Jennie.dae" id="2_hxw38"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("2_cy2df")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.2713, 5.57847, 1.83856)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.503106, -0.654187, 0.564734, -0.435159, 0.756333, 0.488463, -0.746673, 0, -0.665191, 0, 0.967425, 0)
+
+[node name="Clownescape Test Level Jennie" parent="." instance=ExtResource("2_hxw38")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.70235, 0, -1.24436)
