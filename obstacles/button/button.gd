@@ -31,7 +31,7 @@ func _on_body_entered(body):
 		
 	#remaining_cooldown = cooldown
 	$CPressureplate/AnimationPlayer.play("default")
-	Global.play_sound_at(preload("res://obstacles/Switch/Click.ogg"), position, 0.0, 20.0)
+	Global.play_sound_at(preload("res://obstacles/button/Click.ogg"), position, 0.0, 20.0)
 	print("toggled")
 	is_toggled = not is_toggled
 	emit_signal("switch_toggled")
