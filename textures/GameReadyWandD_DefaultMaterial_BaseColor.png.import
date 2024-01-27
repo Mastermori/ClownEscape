@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkaf26d3sa2x1"
-path.s3tc="res://.godot/imported/DefaultMaterial_Roughness.png-f8b311562d9d338faf0306a4553ef29d.s3tc.ctex"
+uid="uid://b0o65r042bxn0"
+path.s3tc="res://.godot/imported/GameReadyWandD_DefaultMaterial_BaseColor.png-20d67398afe9e3469615c7d72d9a9718.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "d2bbff4fdbe310316229681571d4025d"
+}
 
 [deps]
 
-source_file="res://textures/DefaultMaterial_Roughness.png"
-dest_files=["res://.godot/imported/DefaultMaterial_Roughness.png-f8b311562d9d338faf0306a4553ef29d.s3tc.ctex"]
+source_file="res://textures/GameReadyWandD_DefaultMaterial_BaseColor.png"
+dest_files=["res://.godot/imported/GameReadyWandD_DefaultMaterial_BaseColor.png-20d67398afe9e3469615c7d72d9a9718.s3tc.ctex"]
 
 [params]
 

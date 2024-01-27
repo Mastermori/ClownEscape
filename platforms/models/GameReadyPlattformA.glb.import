@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://1tyhnb38t1ks"
-path="res://.godot/imported/SubstanceLargePlattform.dae-95ef97dc550117f6c54f42ba9d416ae9.scn"
+uid="uid://dqgrbtfksic4m"
+path="res://.godot/imported/GameReadyPlattformA.glb-8dd4fcdfcb466683228cd6c062150f26.scn"
 
 [deps]
 
-source_file="res://obstacles/SubstanceLargePlattform.dae"
-dest_files=["res://.godot/imported/SubstanceLargePlattform.dae-95ef97dc550117f6c54f42ba9d416ae9.scn"]
+source_file="res://platforms/models/GameReadyPlattformA.glb"
+dest_files=["res://.godot/imported/GameReadyPlattformA.glb-8dd4fcdfcb466683228cd6c062150f26.scn"]
 
 [params]
 

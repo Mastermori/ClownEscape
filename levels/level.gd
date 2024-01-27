@@ -10,6 +10,8 @@ extends Node3D
 func _ready():
 	Global.level = self
 	spawn_position.global_position = $Player.global_position
+	spawn_position.rotation = $Player.rotation
 
 func reset_player():
 	Global.player.global_position = spawn_position.global_position
+	Global.player.rotation = spawn_position.rotation

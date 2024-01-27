@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cof8127l61sxo"
-path.s3tc="res://.godot/imported/DefaultMaterial_Normal.png-792a9dd4ff798e1ff3ced7956fe90f72.s3tc.ctex"
+uid="uid://ym5hbb3hoe4v"
+path.s3tc="res://.godot/imported/GameReadyWandD_DefaultMaterial_Normal.png-c0104b55d70df0f611d40740a7605d57.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "8084213a9012a8d0dfe7e065729c9c1d"
+}
 
 [deps]
 
-source_file="res://textures/DefaultMaterial_Normal.png"
-dest_files=["res://.godot/imported/DefaultMaterial_Normal.png-792a9dd4ff798e1ff3ced7956fe90f72.s3tc.ctex"]
+source_file="res://textures/GameReadyWandD_DefaultMaterial_Normal.png"
+dest_files=["res://.godot/imported/GameReadyWandD_DefaultMaterial_Normal.png-c0104b55d70df0f611d40740a7605d57.s3tc.ctex"]
 
 [params]
 
@@ -24,8 +27,8 @@ compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://obstacles/GameReadyWandD_DefaultMaterial_Normal.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

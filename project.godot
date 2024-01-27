@@ -8,6 +8,23 @@
 
 config_version=5
 
+[addons]
+
+instance_dock/scenes=[{
+"name": "Platforms",
+"scenes": [{
+"scene": "res://platforms/platform_a.tscn"
+}, {
+"scene": "res://platforms/platform_b.tscn"
+}, {
+"scene": "res://platforms/wand.tscn"
+}, {
+"scene": "res://platforms/wand_platform.tscn"
+}],
+"scroll": 0
+}]
+instance_dock/preview_resolution=Vector2i(64, 64)
+
 [application]
 
 config/name="ClownEscape"
@@ -21,7 +38,7 @@ Global="*res://globals/global.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg", "res://addons/script-ide/plugin.cfg", "res://addons/smoothing/plugin.cfg")
+enabled=PackedStringArray("res://addons/InstanceDock/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/script-ide/plugin.cfg", "res://addons/smoothing/plugin.cfg")
 
 [filesystem]
 

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf4qey5q5atvs"]
+
+[ext_resource type="Script" path="res://platforms/platform.gd" id="1_1xjw3"]
+[ext_resource type="PackedScene" uid="uid://dfm5p71ns60fo" path="res://platforms/models/GameReadyWandPlattformC.glb" id="2_fwifw"]
+
+[node name="WandPlatform" type="Node3D"]
+script = ExtResource("1_1xjw3")
+
+[node name="GameReadyWandPlattformC" parent="." instance=ExtResource("2_fwifw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6.28546, 0, 0)

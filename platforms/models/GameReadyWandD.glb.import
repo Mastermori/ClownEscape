@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dqgrbtfksic4m"
-path="res://.godot/imported/GameReadyPlattformA.glb-713bdc61f6a5b094b5bca7bb03085fe2.scn"
+uid="uid://c0j57cbmlpdmr"
+path="res://.godot/imported/GameReadyWandD.glb-d3157d01daff3e2606531a6136ac4b08.scn"
 
 [deps]
 
-source_file="res://platforms/GameReadyPlattformA.glb"
-dest_files=["res://.godot/imported/GameReadyPlattformA.glb-713bdc61f6a5b094b5bca7bb03085fe2.scn"]
+source_file="res://platforms/models/GameReadyWandD.glb"
+dest_files=["res://.godot/imported/GameReadyWandD.glb-d3157d01daff3e2606531a6136ac4b08.scn"]
 
 [params]
 

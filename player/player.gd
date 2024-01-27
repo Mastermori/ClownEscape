@@ -3,14 +3,11 @@ extends CharacterBody3D
 
 
 const SPEED = 5.0
-const JUMP_VELOCITY = 8.0
+const JUMP_VELOCITY = 8.5
 const MOUSE_SENSITIVITY = 0.005
 const ACCELERATION = 15.0
 const DASH_COOLDOWN_DURATION = 1.0
 const DASH_VELOCITY = 15.0
-
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 var dash_cooldown = 0.0
 var dash_charged = true

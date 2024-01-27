@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtuny4brvvc8f"]
+
+[ext_resource type="Script" path="res://platforms/platform.gd" id="1_bvwp3"]
+[ext_resource type="PackedScene" uid="uid://dqgrbtfksic4m" path="res://platforms/models/GameReadyPlattformA.glb" id="2_3curu"]
+
+[node name="PlatformA" type="Node3D"]
+script = ExtResource("1_bvwp3")
+
+[node name="GameReadyPlattformA" parent="." instance=ExtResource("2_3curu")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 12.3883)
