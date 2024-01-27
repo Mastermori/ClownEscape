@@ -13,7 +13,7 @@ const DASH_VELOCITY = 15.0
 @export var jump_time_to_peak: float = 0.5
 @export var jump_time_to_fall: float = 0.43
 
-@onready var jump_velocity: float = get_jump_velocity(jump_height)
+@onready var jump_velocity: float = (2.0 * jump_height) / jump_time_to_peak
 @onready var jump_gravity: float = (-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)
 @onready var fall_gravity: float = (-2.0 * jump_height) / (jump_time_to_fall * jump_time_to_fall)
 
@@ -85,7 +85,7 @@ func _physics_process(delta):
 
 
 func get_jump_velocity(height: float):
-	return (2.0 * height) / jump_time_to_peak
+	return sqrt(height * abs(jump_gravity) * 2.0)
 
 func _get_gravity():
 	if velocity.y > 0:

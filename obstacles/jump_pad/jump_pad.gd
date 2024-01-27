@@ -1,7 +1,7 @@
 extends StaticBody3D
 
 # The speed at which the platform will propell a player away
-@export var bounce_height: float = 5.0
+@export var bounce_height: float = 15.0
 # The time in seconds before the platform will bounce a player again
 # Do NOT set to values close to or below 0 as multiple collisions may occur
 @export var cooldown: float = 1.0
