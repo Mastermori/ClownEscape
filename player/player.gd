@@ -48,8 +48,6 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, ACCELERATION * delta)
 		velocity.z = move_toward(velocity.z, 0, ACCELERATION * delta)
 	
-	
-	
 	# Handle dash
 	if dash_cooldown > 0:
 		dash_cooldown -= delta
@@ -73,7 +71,9 @@ func _physics_process(delta):
 		var collision: KinematicCollision3D = get_slide_collision(i)
 		if collision.get_collider().has_method("collide_with_player"):
 			collision.get_collider().collide_with_player(self, collision)
-
+	
+	if position.y < -10:
+		Global.level.reset_player()
 
 
 func _input(event):

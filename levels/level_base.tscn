@@ -6,9 +6,9 @@
 
 [sub_resource type="Environment" id="Environment_5nvxr"]
 background_mode = 3
-background_color = Color(0.81, 0.7047, 0.72576, 1)
 ambient_light_source = 2
 ambient_light_color = Color(0.94, 0.4324, 0.77926, 0.576471)
+ambient_light_energy = 0.2
 tonemap_mode = 3
 tonemap_exposure = 0.8
 sdfgi_read_sky_light = false

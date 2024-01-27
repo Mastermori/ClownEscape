@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://b50k5w01i1s5e"]
+
+[ext_resource type="PackedScene" uid="uid://c6yx4xijpo6ea" path="res://obstacles/canon/CCanon.dae" id="1_koinl"]
+[ext_resource type="Script" path="res://obstacles/canon/canon.gd" id="1_vao64"]
+[ext_resource type="PackedScene" uid="uid://dhk4migxjn76v" path="res://obstacles/canon/canon_ball.tscn" id="2_kxs6a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nbpwr"]
+size = Vector3(1.7, 1.9, 1.7)
+
+[node name="Canon" type="StaticBody3D"]
+script = ExtResource("1_vao64")
+projectile_scene = ExtResource("2_kxs6a")
+
+[node name="CCanon" parent="." instance=ExtResource("1_koinl")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+shape = SubResource("BoxShape3D_nbpwr")
+
+[node name="ShotPosition" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35385, 0.82886)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="shoot"]
