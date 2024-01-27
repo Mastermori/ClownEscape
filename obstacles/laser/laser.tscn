@@ -74,7 +74,7 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 [node name="Ray" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.621263, 0)
 exclude_parent = false
-target_position = Vector3(0, 100, 0)
+target_position = Vector3(0, 50, 0)
 collision_mask = 3
 hit_from_inside = true
 
