@@ -32,7 +32,7 @@ func _on_body_entered(body):
 	
 	is_toggled = false
 	Global.play_sound_at(preload("res://obstacles/button/Click.ogg"), position, 0.0, 20.0)
-	$CPressureplate/AnimationPlayer.play("default")
+	$GameReadyPressurePlate/AnimationPlayer.play("default")
 	
 	if toggle_timer > 0:	
 		$Timer.wait_time = toggle_timer
