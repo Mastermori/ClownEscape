@@ -18,7 +18,7 @@ func _process(delta):
 	countdown = move_toward(countdown, 0, delta)
 
 # Called by the player object when a collision with the platform has been detected.
-func collide_with_player(player, collision):
+func collide_with_player(player: Player, collision: KinematicCollision3D):
 	if countdown > 0:
 		return
 	player.velocity += collision.get_normal() * bounce_velocity

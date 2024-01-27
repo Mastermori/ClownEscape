@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody3D
 
 
@@ -18,6 +19,7 @@ var dash_cooldown = 0.0
 func _ready():
 	camera = $Camera3D
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	Global.player = self
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -46,8 +48,8 @@ func _physics_process(delta):
 		# We can use one of these two transforms. The camera transform would dash EXACTLY where we are looking.
 		# However it needs to be limited since it can otherwise be used to fly.
 		# The vanilla transform only accelerates horizontally but can thus be used much more freely.
-		velocity -= camera.global_transform.basis.z * DASH_VELOCITY
-		#velocity -= transform.basis.z * DASH_VELOCITY
+		#velocity -= camera.global_transform.basis.z * DASH_VELOCITY
+		velocity -= transform.basis.z * DASH_VELOCITY
 	
 	# Here we finally process the movement. We use move_and_slide since we want to slide along surfaces.
 	# Additionally it allows for easy detection of whether we are grounded.
@@ -56,7 +58,7 @@ func _physics_process(delta):
 	# But that's something that'll probably never happen so we take the faster approach. No writing new code.
 	move_and_slide()
 	for i in get_slide_collision_count():
-		var collision = get_slide_collision(i)
+		var collision: KinematicCollision3D = get_slide_collision(i)
 		if collision.get_collider().has_method("collide_with_player"):
 			collision.get_collider().collide_with_player(self, collision)
 

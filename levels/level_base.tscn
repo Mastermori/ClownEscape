@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://djrtvtl4opjyd"]
+[gd_scene load_steps=2 format=3 uid="uid://djrtvtl4opjyd"]
+
+[ext_resource type="Script" path="res://levels/level.gd" id="1_6vht8"]
 
 [node name="LevelBase" type="Node3D"]
+script = ExtResource("1_6vht8")
+
+[node name="Sounds" type="Node3D" parent="."]
