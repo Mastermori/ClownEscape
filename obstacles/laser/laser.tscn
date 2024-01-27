@@ -66,6 +66,7 @@ func _on_finished():
 "
 
 [node name="Laser" type="Node3D"]
+script = ExtResource("1_d4krq")
 
 [node name="CLaserbase" parent="." instance=ExtResource("3_4on6d")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -76,14 +77,15 @@ exclude_parent = false
 target_position = Vector3(0, 100, 0)
 collision_mask = 3
 hit_from_inside = true
-script = ExtResource("1_d4krq")
 
 [node name="BeamMesh" type="MeshInstance3D" parent="Ray"]
+unique_name_in_owner = true
 mesh = SubResource("CylinderMesh_jiimv")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_ie0li")
 
 [node name="HitParticles" type="CPUParticles3D" parent="Ray"]
+unique_name_in_owner = true
 amount = 12
 lifetime = 0.2
 mesh = SubResource("QuadMesh_kgq6y")
@@ -94,6 +96,7 @@ initial_velocity_max = 1.0
 scale_amount_curve = SubResource("Curve_qb4kp")
 
 [node name="BeamParticles" type="GPUParticles3D" parent="Ray"]
+unique_name_in_owner = true
 material_override = ExtResource("2_47lgj")
 amount = 25
 lifetime = 0.1
