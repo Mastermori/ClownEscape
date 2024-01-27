@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cvda2uonlvlle"
-path="res://.godot/imported/SPlattformA.dae-ad682bd37172fa801f579449df311a08.scn"
+uid="uid://708wd3uux2t4"
+path="res://.godot/imported/CLaserbase.dae-c0b1a21b459441de1dfe9ed523855e2b.scn"
 
 [deps]
 
-source_file="res://obstacles/SPlattformA.dae"
-dest_files=["res://.godot/imported/SPlattformA.dae-ad682bd37172fa801f579449df311a08.scn"]
+source_file="res://obstacles/CLaserbase.dae"
+dest_files=["res://.godot/imported/CLaserbase.dae-c0b1a21b459441de1dfe9ed523855e2b.scn"]
 
 [params]
 
@@ -29,12 +29,6 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:SPlattformA": {
-"generate/physics": true
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

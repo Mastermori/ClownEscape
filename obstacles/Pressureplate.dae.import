@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cvda2uonlvlle"
-path="res://.godot/imported/SPlattformA.dae-ad682bd37172fa801f579449df311a08.scn"
+uid="uid://dlx10i4tqupw2"
+path="res://.godot/imported/Pressureplate.dae-abe81079df8be025eb067d50b82cd5fb.scn"
 
 [deps]
 
-source_file="res://obstacles/SPlattformA.dae"
-dest_files=["res://.godot/imported/SPlattformA.dae-ad682bd37172fa801f579449df311a08.scn"]
+source_file="res://obstacles/Pressureplate.dae"
+dest_files=["res://.godot/imported/Pressureplate.dae-abe81079df8be025eb067d50b82cd5fb.scn"]
 
 [params]
 
@@ -29,12 +29,6 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:SPlattformA": {
-"generate/physics": true
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

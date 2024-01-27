@@ -1,6 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cw6bsp01wen3g"]
+[gd_scene load_steps=8 format=3 uid="uid://cw6bsp01wen3g"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_we0u8"]
+[ext_resource type="AudioStream" uid="uid://ds4o6b0a23dvx" path="res://player/Step1.ogg" id="2_rqnqk"]
+[ext_resource type="Script" path="res://player/StepsAudio.gd" id="3_0tesu"]
+[ext_resource type="AudioStream" uid="uid://2ha7v4njjh7n" path="res://player/Step2.ogg" id="4_m8ik4"]
 [ext_resource type="Script" path="res://addons/smoothing/smoothing.gd" id="2_07gmx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ait5k"]
@@ -8,6 +11,7 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_kmv1m"]
 
 [node name="Player" type="CharacterBody3D"]
+collision_layer = 2
 script = ExtResource("1_we0u8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -25,3 +29,12 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.443654, 0)
 
 [node name="StepsPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_rqnqk")
+script = ExtResource("3_0tesu")
+
+[node name="StepsPlayer2" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_m8ik4")
+script = ExtResource("3_0tesu")
+
+[connection signal="finished" from="StepsPlayer" to="StepsPlayer2" method="_on_steps_player_finished"]
+[connection signal="finished" from="StepsPlayer2" to="StepsPlayer" method="_on_steps_player_finished"]
