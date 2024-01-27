@@ -63,5 +63,5 @@ next_level = ExtResource("9_mh43q")
 [node name="SpawnPosition" parent="." index="7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.81809, 0)
 
-[connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/JumpPad" method="toggle_jump_pad"]
 [connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser" method="toggle"]
+[connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/JumpPad" method="toggle_jump_pad"]

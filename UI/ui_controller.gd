@@ -23,3 +23,8 @@ func display_text(text: String, fade: float = _default_fade_timer):
 	clown_commentary.visible = true
 	clown_commentary.text = "[center]" + text
 	fade_timer = fade
+
+func play_fade():
+	var anim_player = $ColorRect3/AnimationPlayer
+	if not anim_player.is_playing():
+		anim_player.play("Fade")
