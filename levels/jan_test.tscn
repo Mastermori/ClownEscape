@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://ckx7gqnhpmegj"]
+[gd_scene load_steps=8 format=3 uid="uid://ckx7gqnhpmegj"]
 
 [ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_rsmjh"]
 [ext_resource type="PackedScene" uid="uid://8e2ey38722hg" path="res://obstacles/laser/laser.tscn" id="3_76mo7"]
 [ext_resource type="PackedScene" uid="uid://dqhvae1dwylm2" path="res://obstacles/bounce_pad.tscn" id="3_y6jts"]
 [ext_resource type="PackedScene" uid="uid://bxocjd4frnv0l" path="res://obstacles/spikes.tscn" id="4_okxws"]
+[ext_resource type="PackedScene" uid="uid://b48kdjgaubgam" path="res://obstacles/jump_pad.tscn" id="5_si2lr"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_87626"]
 size = Vector3(50, 1, 50)
@@ -46,3 +47,5 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.0864
 
 [node name="Laser" parent="Obstacles" index="6" instance=ExtResource("3_76mo7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.152503, -9.39769)
+
+[node name="JumpPad" parent="Obstacles" index="7" instance=ExtResource("5_si2lr")]
