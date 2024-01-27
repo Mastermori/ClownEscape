@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 4.0.2 commit date:2023-12-05, commit time:07:41, hash:9be62e85b727</authoring_tool>
     </contributor>
-    <created>2024-01-27T12:05:48</created>
-    <modified>2024-01-27T12:05:48</modified>
+    <created>2024-01-27T12:40:24</created>
+    <modified>2024-01-27T12:40:24</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -58,7 +58,7 @@
   <library_visual_scenes>
     <visual_scene id="Scene" name="Scene">
       <node id="Laserbase" name="Laserbase" type="NODE">
-        <matrix sid="transform">1 0 0 -13.69342 0 1 0 0 0 0 1 -0.2276959 0 0 0 1</matrix>
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
         <instance_geometry url="#Plane_002-mesh" name="Laserbase"/>
       </node>
     </visual_scene>
