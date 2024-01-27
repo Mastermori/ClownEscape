@@ -32,6 +32,10 @@ environment = SubResource("Environment_5nvxr")
 
 [node name="Sounds" type="Node3D" parent="."]
 
+[node name="Platforms" type="Node3D" parent="."]
+
 [node name="Obstacles" type="Node3D" parent="."]
+
+[node name="Transitions" type="Node3D" parent="."]
 
 [node name="SpawnPosition" type="Marker3D" parent="."]

@@ -9,6 +9,7 @@ extends Node3D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.level = self
+	spawn_position.global_position = $Player.global_position
 
 func reset_player():
 	Global.player.global_position = spawn_position.global_position

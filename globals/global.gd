@@ -15,3 +15,6 @@ func play_sound_at(sound: AudioStream, position: Vector3, max_distance = 0.0, vo
 	audio_player.finished.connect(audio_player.queue_free)
 	level.sounds.add_child(audio_player)
 	return audio_player
+
+func change_level(new_level: PackedScene):
+	get_tree().change_scene_to_packed.call_deferred(new_level)
