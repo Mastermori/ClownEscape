@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvhn0crc3hr7q"
-path.s3tc="res://.godot/imported/CObsticles_DefaultMaterial_Metallic-DefaultMaterial_Roughness.png-32499765968fa6765a172d520dd0f201.s3tc.ctex"
+uid="uid://ir437ut2s7oy"
+path.s3tc="res://.godot/imported/GameReadyJumpad_DefaultMaterial_BaseColor.png-14f346ac9a6391dbe0b8ab8ae60cef63.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "2085f3d5d7c492355b9bdd1783c2aa43"
+"md5": "ace0791b5b83e80fc5220573b8bee48a"
 }
 
 [deps]
 
-source_file="res://obstacles/jump_pad/CObsticles_DefaultMaterial_Metallic-DefaultMaterial_Roughness.png"
-dest_files=["res://.godot/imported/CObsticles_DefaultMaterial_Metallic-DefaultMaterial_Roughness.png-32499765968fa6765a172d520dd0f201.s3tc.ctex"]
+source_file="res://obstacles/jump_pad/GameReadyJumpad_DefaultMaterial_BaseColor.png"
+dest_files=["res://.godot/imported/GameReadyJumpad_DefaultMaterial_BaseColor.png-14f346ac9a6391dbe0b8ab8ae60cef63.s3tc.ctex"]
 
 [params]
 
