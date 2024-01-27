@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bmukds7cu4jed"]
 
-[ext_resource type="Script" path="res://obstacles/switch.gd" id="1_sou35"]
+[ext_resource type="Script" path="res://obstacles/Switch/switch.gd" id="1_sou35"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ouydt"]
 _surfaces = [{
