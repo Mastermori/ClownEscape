@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bow8brtkw0a68"
-path.s3tc="res://.godot/imported/CObsticles_DefaultMaterial_Normal.png-6f2cb6dd1508a718c0d3c6abf8655f7c.s3tc.ctex"
+uid="uid://cxtoqrjn4n2db"
+path.s3tc="res://.godot/imported/GameReadyJumpad_DefaultMaterial_Normal.png-59d19cbcc53b0a0840ef08cbaedaca97.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "7e45fcf5bbc69a7fd71d020bd970bd4e"
+"md5": "7f914c452966ca158af9c2f68f33cecb"
 }
 
 [deps]
 
-source_file="res://obstacles/jump_pad/CObsticles_DefaultMaterial_Normal.png"
-dest_files=["res://.godot/imported/CObsticles_DefaultMaterial_Normal.png-6f2cb6dd1508a718c0d3c6abf8655f7c.s3tc.ctex"]
+source_file="res://obstacles/jump_pad/GameReadyJumpad_DefaultMaterial_Normal.png"
+dest_files=["res://.godot/imported/GameReadyJumpad_DefaultMaterial_Normal.png-59d19cbcc53b0a0840ef08cbaedaca97.s3tc.ctex"]
 
 [params]
 
@@ -28,7 +28,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://obstacles/jump_pad/CObsticles_DefaultMaterial_Normal.png"
+roughness/src_normal="res://obstacles/jump_pad/GameReadyJumpad_DefaultMaterial_Normal.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

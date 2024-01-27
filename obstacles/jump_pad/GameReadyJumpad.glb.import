@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bkobfquimgsjs"
-path="res://.godot/imported/CObsticles.glb-01a4a1988cf330df7c3bc5e1a6b3dca8.scn"
+uid="uid://7mcxk6qkndfn"
+path="res://.godot/imported/GameReadyJumpad.glb-b4d2c0488f3b4cfc44a9cb2a0e0bd9f4.scn"
 
 [deps]
 
-source_file="res://obstacles/jump_pad/CObsticles.glb"
-dest_files=["res://.godot/imported/CObsticles.glb-01a4a1988cf330df7c3bc5e1a6b3dca8.scn"]
+source_file="res://obstacles/jump_pad/GameReadyJumpad.glb"
+dest_files=["res://.godot/imported/GameReadyJumpad.glb-b4d2c0488f3b4cfc44a9cb2a0e0bd9f4.scn"]
 
 [params]
 
