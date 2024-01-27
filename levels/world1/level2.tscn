@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnc4bs7ptxlil"]
+
+[ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_jo414"]
+[ext_resource type="PackedScene" uid="uid://c2ote8ql3pxa" path="res://platforms/platform_b.tscn" id="2_muclh"]
+
+[node name="LevelBase" instance=ExtResource("1_jo414")]
+
+[node name="PlatformB" parent="." index="9" instance=ExtResource("2_muclh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0514416, -5, 0.1576)
