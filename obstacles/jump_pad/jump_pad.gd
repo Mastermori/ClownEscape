@@ -12,6 +12,8 @@ extends StaticBody3D
 var countdown = 0
 @export var is_enabled: bool = true
 
+@onready var jump_direction = %JumpDirection
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -29,7 +31,9 @@ func collide_with_player(player: Player, collision: KinematicCollision3D):
 		return
 	player.dash_charged = true
 	var bounce_velocity = player.get_jump_velocity(bounce_height)
-	player.velocity += (collision.get_normal() + bounce_direction_correction).normalized() * bounce_velocity
+	#var direction = collision.get_normal()
+	var direction = (jump_direction.global_position - global_position).normalized()
+	player.velocity += (direction + bounce_direction_correction).normalized() * bounce_velocity
 	countdown = cooldown
 	$CJumpPad/AnimationPlayer.play("default")
 	Global.play_sound_at(preload("res://player/Boing.ogg"), position)

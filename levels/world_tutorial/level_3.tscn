@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwtj3rotfsea1"]
+
+[ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_vo76n"]
+[ext_resource type="PackedScene" uid="uid://c2ote8ql3pxa" path="res://platforms/platform_b.tscn" id="2_s3y7w"]
+[ext_resource type="PackedScene" uid="uid://b48kdjgaubgam" path="res://obstacles/jump_pad/jump_pad.tscn" id="3_vhrwr"]
+[ext_resource type="PackedScene" uid="uid://cf4qey5q5atvs" path="res://platforms/wand_platform.tscn" id="4_a5ro6"]
+[ext_resource type="PackedScene" uid="uid://csxa7ww5dihdf" path="res://levels/components/level_transition.tscn" id="5_ljfok"]
+
+[node name="Level3" instance=ExtResource("1_vo76n")]
+
+[node name="Player" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57516, 4.42442, -1.65351)
+
+[node name="PlatformB" parent="Platforms" index="0" instance=ExtResource("2_s3y7w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91732, 0, -1.82228)
+
+[node name="PlatformB3" parent="Platforms" index="1" instance=ExtResource("2_s3y7w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91732, 7.77626, -15.8159)
+
+[node name="PlatformB2" parent="Platforms" index="2" instance=ExtResource("2_s3y7w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91732, 0, -8.53935)
+
+[node name="JumpPad" parent="Obstacles" index="0" instance=ExtResource("3_vhrwr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93313, 3.52585, -8.57252)
+bounce_height = 8.0
+
+[node name="WandPlatform" parent="." index="8" instance=ExtResource("4_a5ro6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89823, 7.62829, -11.6348)
+
+[node name="LevelTransition" parent="." index="9" instance=ExtResource("5_ljfok")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86225, 12.6497, -16)
