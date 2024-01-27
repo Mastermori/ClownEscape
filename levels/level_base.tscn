@@ -1,11 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://xag144nxhhpn"]
+[gd_scene load_steps=7 format=3 uid="uid://xag144nxhhpn"]
 
 [ext_resource type="PackedScene" uid="uid://cw6bsp01wen3g" path="res://player/player.tscn" id="1_fu36q"]
 [ext_resource type="Script" path="res://levels/level.gd" id="1_px7iy"]
 [ext_resource type="PackedScene" uid="uid://brc6po0dmtc7p" path="res://UI/ui.tscn" id="2_t5tgh"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qvwp2"]
+sky_top_color = Color(0.540375, 0.3575, 0.55, 1)
+sky_horizon_color = Color(0.67, 0.402, 0.406467, 1)
+ground_bottom_color = Color(0.0528, 0.06504, 0.08, 1)
+ground_horizon_color = Color(0.652133, 0.4556, 0.67, 1)
+ground_curve = 0.0360501
+sun_angle_max = 10.0
+
+[sub_resource type="Sky" id="Sky_aga2y"]
+sky_material = SubResource("ProceduralSkyMaterial_qvwp2")
+
 [sub_resource type="Environment" id="Environment_5nvxr"]
-background_mode = 3
+background_mode = 2
+sky = SubResource("Sky_aga2y")
 ambient_light_source = 2
 ambient_light_color = Color(0.94, 0.4324, 0.77926, 0.576471)
 ambient_light_energy = 0.2
