@@ -2,7 +2,7 @@ extends Node3D
 
 @export var projectile_scene: PackedScene
 @export var push_strength: float = 40
-@export var fire_interval: float = 5
+@export var fire_interval: float = 2
 @export var fire_strength: float = 20
 @export var direction: Vector3 = Vector3(0, .5, 1)
 
@@ -15,6 +15,7 @@ func _ready():
 
 func shoot():
 	shoot_in(direction, fire_strength)
+	Global.play_sound_at(preload("res://obstacles/canon/Cannon.ogg"), position)
 
 func shoot_in(direction: Vector3, force: float):
 	var projectile := projectile_scene.instantiate() as RigidBody3D

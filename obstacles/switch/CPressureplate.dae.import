@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ds2cvqqwhonyk"
-path="res://.godot/imported/CPressureplate.dae-b1546f57e23a3167ed17e013fdadce07.scn"
+path="res://.godot/imported/CPressureplate.dae-fb160463698560e261aa46117faf8949.scn"
 
 [deps]
 
-source_file="res://obstacles/CPressureplate.dae"
-dest_files=["res://.godot/imported/CPressureplate.dae-b1546f57e23a3167ed17e013fdadce07.scn"]
+source_file="res://obstacles/switch/CPressureplate.dae"
+dest_files=["res://.godot/imported/CPressureplate.dae-fb160463698560e261aa46117faf8949.scn"]
 
 [params]
 
