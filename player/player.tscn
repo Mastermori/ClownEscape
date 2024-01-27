@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://cw6bsp01wen3g"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_we0u8"]
+[ext_resource type="Script" path="res://addons/smoothing/smoothing.gd" id="2_07gmx"]
 [ext_resource type="AudioStream" uid="uid://ds4o6b0a23dvx" path="res://player/Step1.ogg" id="2_rqnqk"]
 [ext_resource type="Script" path="res://player/StepsAudio.gd" id="3_0tesu"]
 [ext_resource type="AudioStream" uid="uid://2ha7v4njjh7n" path="res://player/Step2.ogg" id="4_m8ik4"]
-[ext_resource type="Script" path="res://addons/smoothing/smoothing.gd" id="2_07gmx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ait5k"]
 

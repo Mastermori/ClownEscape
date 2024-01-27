@@ -5,18 +5,15 @@ extends RayCast3D
 @onready var hit_particles = $HitParticles
 @onready var beam_particles = $BeamParticles
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	var cast_point
 	force_raycast_update()
 	
 	if is_colliding():
+		var collider = get_collider()
+		if collider is Player:
+			Global.level.reset_player()
 		cast_point = to_local(get_collision_point())
 		
 		beam_mesh.mesh.height = cast_point.y

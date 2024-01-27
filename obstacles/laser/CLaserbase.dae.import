@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://708wd3uux2t4"
-path="res://.godot/imported/CLaserbase.dae-c0b1a21b459441de1dfe9ed523855e2b.scn"
+path="res://.godot/imported/CLaserbase.dae-daf52027973c7f72db1ff8230f263a18.scn"
 
 [deps]
 
-source_file="res://obstacles/CLaserbase.dae"
-dest_files=["res://.godot/imported/CLaserbase.dae-c0b1a21b459441de1dfe9ed523855e2b.scn"]
+source_file="res://obstacles/laser/CLaserbase.dae"
+dest_files=["res://.godot/imported/CLaserbase.dae-daf52027973c7f72db1ff8230f263a18.scn"]
 
 [params]
 
