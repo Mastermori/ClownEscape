@@ -41,5 +41,8 @@ volume_db = -20.0
 max_db = -5.0
 script = ExtResource("3_0tesu")
 
+[node name="KoyoteTimer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="finished" from="StepsPlayer" to="StepsPlayer2" method="_on_steps_player_finished"]
 [connection signal="finished" from="StepsPlayer2" to="StepsPlayer" method="_on_steps_player_finished"]

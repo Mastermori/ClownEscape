@@ -13,6 +13,7 @@ const DASH_VELOCITY = 15.0
 @export var jump_height: float = 2.0
 @export var jump_time_to_peak: float = 0.5
 @export var jump_time_to_fall: float = 0.43
+@export var koyote_time_frame: float = .1
 
 @onready var jump_velocity: float = (2.0 * jump_height) / jump_time_to_peak
 @onready var jump_gravity: float = (-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)
@@ -26,8 +27,10 @@ var dash_charged = true
 
 # Whether the player should make walking sounds.
 var is_walking = false
+var is_falling = false
 
 @onready var camera = %Camera3D
+@onready var koyote_timer = $KoyoteTimer
 
 
 func _ready():
@@ -36,7 +39,6 @@ func _ready():
 	$StepsPlayer.is_active_player = true
 
 func _physics_process(delta):
-	
 	var acceleration = FLOORED_ACCELERATION
 	# Add the gravity.
 	if not is_on_floor():
@@ -46,7 +48,8 @@ func _physics_process(delta):
 		dash_charged = true
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and (is_on_floor() or not koyote_timer.is_stopped()):
+		koyote_timer.stop()
 		velocity.y = jump_velocity
 		Global.play_sound_at(preload("res://player/Boing.ogg"), position)
 
@@ -86,6 +89,12 @@ func _physics_process(delta):
 	
 	if position.y < -10:
 		Global.level.reset_player()
+	
+	if not is_on_floor() and not is_falling:
+		is_falling = true
+		koyote_timer.start(koyote_time_frame)
+	if is_falling and is_on_floor():
+		is_falling = false
 
 
 func get_jump_velocity(height: float):
