@@ -6,6 +6,7 @@ const SPEED = 5.0
 #const JUMP_VELOCITY = 8.0
 const MOUSE_SENSITIVITY = 0.005
 const ACCELERATION = 15.0
+const FLOORED_ACCELERATION = 30.0
 const DASH_COOLDOWN_DURATION = 1.0
 const DASH_VELOCITY = 15.0
 
@@ -35,8 +36,11 @@ func _ready():
 	$StepsPlayer.is_active_player = true
 
 func _physics_process(delta):
+	
+	var acceleration = FLOORED_ACCELERATION
 	# Add the gravity.
 	if not is_on_floor():
+		acceleration = ACCELERATION
 		velocity.y += _get_gravity() * delta
 	else:
 		dash_charged = true
@@ -50,11 +54,11 @@ func _physics_process(delta):
 	var input_dir = Input.get_vector("left", "right", "forward", "back")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		velocity.x = move_toward(velocity.x, direction.x * SPEED, ACCELERATION * delta)
-		velocity.z = move_toward(velocity.z, direction.z * SPEED, ACCELERATION * delta)
+		velocity.x = move_toward(velocity.x, direction.x * SPEED, acceleration * delta)
+		velocity.z = move_toward(velocity.z, direction.z * SPEED, acceleration * delta)
 	else:
-		velocity.x = move_toward(velocity.x, 0, ACCELERATION * delta)
-		velocity.z = move_toward(velocity.z, 0, ACCELERATION * delta)
+		velocity.x = move_toward(velocity.x, 0, acceleration * delta)
+		velocity.z = move_toward(velocity.z, 0, acceleration * delta)
 	
 	# Handle dash
 	if dash_cooldown > 0:

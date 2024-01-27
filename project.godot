@@ -25,13 +25,15 @@ instance_dock/scenes=[{
 }, {
 "name": "Obstacles",
 "scenes": [{
-"scene": "res://obstacles/switch/button.tscn"
+"scene": "res://obstacles/button/button.tscn"
 }, {
 "scene": "res://obstacles/canon/canon.tscn"
 }, {
 "scene": "res://obstacles/laser/laser.tscn"
 }, {
 "scene": "res://obstacles/jump_pad/jump_pad.tscn"
+}, {
+"scene": "res://levels/components/level_transition.tscn"
 }],
 "scroll": 0
 }]
