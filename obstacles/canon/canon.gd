@@ -16,6 +16,7 @@ func _ready():
 func shoot():
 	shoot_in(direction, fire_strength)
 	Global.play_sound_at(preload("res://obstacles/canon/Cannon.ogg"), global_position)
+	print(global_position)
 
 func shoot_in(direction: Vector3, force: float):
 	var projectile := projectile_scene.instantiate() as RigidBody3D

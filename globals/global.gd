@@ -8,6 +8,7 @@ var level: Level
 func play_sound_at(sound: AudioStream, position: Vector3, max_distance = 0.0, volume: float = 0.0, pitch: float = 1.0):
 	var audio_player: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
 	audio_player.stream = sound
+	audio_player.position = position
 	audio_player.autoplay = true
 	audio_player.volume_db = volume
 	audio_player.pitch_scale = pitch
