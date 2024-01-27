@@ -22,6 +22,6 @@ shape = SubResource("BoxShape3D_nbpwr")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35385, 0.82886)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+one_shot = true
 
 [connection signal="timeout" from="Timer" to="." method="shoot"]
