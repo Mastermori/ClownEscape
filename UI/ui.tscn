@@ -51,6 +51,7 @@ grow_vertical = 2
 color = Color(1, 0.0784314, 0.0784314, 1)
 
 [node name="ClownCommentary" type="RichTextLabel" parent="."]
+visible = false
 clip_contents = false
 layout_mode = 1
 anchors_preset = 12
@@ -67,6 +68,10 @@ theme_override_constants/line_separation = 0
 theme_override_constants/outline_size = 16
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wfi7v")
 bbcode_enabled = true
-text = "[center]How'd you like that?
-Fancy taking a bath in the ball pit?"
 fit_content = true
+
+[node name="FadeTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="DisplayTimer" type="Timer" parent="."]
+one_shot = true

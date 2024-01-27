@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://xag144nxhhpn"]
+[gd_scene load_steps=6 format=3 uid="uid://xag144nxhhpn"]
 
 [ext_resource type="PackedScene" uid="uid://cw6bsp01wen3g" path="res://player/player.tscn" id="1_fu36q"]
 [ext_resource type="Script" path="res://levels/level.gd" id="1_px7iy"]
-[ext_resource type="PackedScene" uid="uid://brc6po0dmtc7p" path="res://UI/ui.tscn" id="2_t5tgh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qvwp2"]
 sky_top_color = Color(0.540375, 0.3575, 0.55, 1)
@@ -49,7 +48,3 @@ environment = SubResource("Environment_5nvxr")
 [node name="Transitions" type="Node3D" parent="."]
 
 [node name="SpawnPosition" type="Marker3D" parent="."]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="UI" parent="CanvasLayer" instance=ExtResource("2_t5tgh")]
