@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="3_r7u03"]
 [ext_resource type="PackedScene" uid="uid://b50k5w01i1s5e" path="res://obstacles/canon/canon.tscn" id="4_0uexu"]
 [ext_resource type="PackedScene" uid="uid://csxa7ww5dihdf" path="res://levels/components/level_transition.tscn" id="4_ql7xg"]
-[ext_resource type="PackedScene" uid="uid://6nfyxr68n7uf" path="res://levels/world1/level3.tscn" id="5_uaboi"]
+[ext_resource type="PackedScene" uid="uid://dej3yjlxd3yf1" path="res://levels/world1/level3.tscn" id="5_uaboi"]
 [ext_resource type="PackedScene" uid="uid://b48kdjgaubgam" path="res://obstacles/jump_pad/jump_pad.tscn" id="5_w3yfd"]
 
 [node name="LevelBase" instance=ExtResource("1_jo414")]

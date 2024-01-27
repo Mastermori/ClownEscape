@@ -10,6 +10,7 @@ extends StaticBody3D
 @export var collision_normal: Vector3
 # The countdown till the platform can propell the player again
 var countdown = 0
+@export var is_enabled: bool = true
 
 @onready var jump_direction = %JumpDirection
 
@@ -24,8 +25,11 @@ func _process(delta):
 
 # Called by the player object when a collision with the platform has been detected.
 func collide_with_player(player: Player, collision: KinematicCollision3D):
+	if not is_enabled:
+		return
 	if countdown > 0 or (collision_normal and not collision_normal.is_equal_approx(collision.get_normal())):
 		return
+	player.dash_charged = true
 	var bounce_velocity = player.get_jump_velocity(bounce_height)
 	#var direction = collision.get_normal()
 	var direction = (jump_direction.global_position - global_position).normalized()
@@ -33,3 +37,8 @@ func collide_with_player(player: Player, collision: KinematicCollision3D):
 	countdown = cooldown
 	$CJumpPad/AnimationPlayer.play("default")
 	Global.play_sound_at(preload("res://player/Boing.ogg"), position)
+	
+	
+	
+func toggle_jump_pad():
+	is_enabled = not is_enabled

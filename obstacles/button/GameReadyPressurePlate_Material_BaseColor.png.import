@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2g38ox1oulbw"
-path.s3tc="res://.godot/imported/GameReadyLaserBase_DefaultMaterial_BaseColor.png-7d8765da41dc181ec70e5665f31f8ac9.s3tc.ctex"
+uid="uid://bnrrew0bsq8sp"
+path.s3tc="res://.godot/imported/GameReadyPressurePlate_Material_BaseColor.png-045ae50a665e045de6eb968edc365add.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "cb45a9c6c1230240fdea385b5cfac4c4"
+"md5": "55b254dbbb2101771a68087bc241a2d4"
 }
 
 [deps]
 
-source_file="res://obstacles/jump_pad/GameReadyLaserBase_DefaultMaterial_BaseColor.png"
-dest_files=["res://.godot/imported/GameReadyLaserBase_DefaultMaterial_BaseColor.png-7d8765da41dc181ec70e5665f31f8ac9.s3tc.ctex"]
+source_file="res://obstacles/button/GameReadyPressurePlate_Material_BaseColor.png"
+dest_files=["res://.godot/imported/GameReadyPressurePlate_Material_BaseColor.png-045ae50a665e045de6eb968edc365add.s3tc.ctex"]
 
 [params]
 

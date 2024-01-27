@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b50k5w01i1s5e" path="res://obstacles/canon/canon.tscn" id="6_1rl6q"]
 [ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="7_dk7p6"]
 [ext_resource type="PackedScene" uid="uid://csxa7ww5dihdf" path="res://levels/components/level_transition.tscn" id="8_7ppeo"]
-[ext_resource type="PackedScene" path="res://levels/world1/level4.tscn" id="9_djhtx"]
+[ext_resource type="PackedScene" uid="uid://s1edbcsxjwwm" path="res://levels/world1/level4.tscn" id="9_djhtx"]
 
 [node name="LevelBase" instance=ExtResource("1_5ne08")]
 
