@@ -3,11 +3,19 @@ extends CharacterBody3D
 
 
 const SPEED = 5.0
-const JUMP_VELOCITY = 8.0
+#const JUMP_VELOCITY = 8.0
 const MOUSE_SENSITIVITY = 0.005
 const ACCELERATION = 15.0
 const DASH_COOLDOWN_DURATION = 1.0
 const DASH_VELOCITY = 15.0
+
+@export var jump_height: float = 2.0
+@export var jump_time_to_peak: float = 0.5
+@export var jump_time_to_fall: float = 0.43
+
+@onready var jump_velocity: float = get_jump_velocity(jump_height)
+@onready var jump_gravity: float = (-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)
+@onready var fall_gravity: float = (-2.0 * jump_height) / (jump_time_to_fall * jump_time_to_fall)
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -29,13 +37,13 @@ func _ready():
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
-		velocity.y -= gravity * delta
+		velocity.y += _get_gravity() * delta
 	else:
 		dash_charged = true
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+		velocity.y = jump_velocity
 		Global.play_sound_at(preload("res://player/Boing.ogg"), position)
 
 	# Get the input direction and handle the movement/deceleration.
@@ -74,6 +82,16 @@ func _physics_process(delta):
 	
 	if position.y < -10:
 		Global.level.reset_player()
+
+
+func get_jump_velocity(height: float):
+	return (2.0 * height) / jump_time_to_peak
+
+func _get_gravity():
+	if velocity.y > 0:
+		return jump_gravity
+	else:
+		return fall_gravity
 
 
 func _input(event):

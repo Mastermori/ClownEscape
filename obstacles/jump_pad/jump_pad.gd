@@ -1,7 +1,7 @@
 extends StaticBody3D
 
 # The speed at which the platform will propell a player away
-@export var bounce_velocity: float = 15.0
+@export var bounce_height: float = 5.0
 # The time in seconds before the platform will bounce a player again
 # Do NOT set to values close to or below 0 as multiple collisions may occur
 @export var cooldown: float = 1.0
@@ -22,6 +22,7 @@ func _process(delta):
 func collide_with_player(player: Player, collision: KinematicCollision3D):
 	if countdown > 0 or (collision_normal and not collision_normal.is_equal_approx(collision.get_normal())):
 		return
+	var bounce_velocity = player.get_jump_velocity(bounce_height)
 	player.velocity += collision.get_normal() * bounce_velocity
 	countdown = cooldown
 	$CJumpPad/AnimationPlayer.play("default")
