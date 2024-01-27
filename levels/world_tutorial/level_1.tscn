@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_b5d8a"]
 [ext_resource type="PackedScene" uid="uid://csxa7ww5dihdf" path="res://levels/components/level_transition.tscn" id="3_3tnod"]
 [ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="4_33n8h"]
-[ext_resource type="PackedScene" uid="uid://ckx7gqnhpmegj" path="res://levels/jan_test.tscn" id="4_q0hie"]
+[ext_resource type="PackedScene" uid="uid://ij0vtn41s8kw" path="res://levels/world_tutorial/level_2.tscn" id="4_xtqu3"]
 
 [node name="Level1" instance=ExtResource("1_b5d8a")]
 
@@ -22,4 +22,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.9289, 0, 8.10791)
 [node name="LevelTransition" parent="." index="7" instance=ExtResource("3_3tnod")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2858, 4.2632, 8.59161)
 monitorable = false
-next_level = ExtResource("4_q0hie")
+next_level = ExtResource("4_xtqu3")

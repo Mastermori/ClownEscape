@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ij0vtn41s8kw"]
+
+[ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_jq54a"]
+[ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="2_iwhjl"]
+[ext_resource type="PackedScene" uid="uid://c2ote8ql3pxa" path="res://platforms/platform_b.tscn" id="3_1mfdm"]
+
+[node name="Level2" instance=ExtResource("1_jq54a")]
+
+[node name="Player" parent="." index="2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.06163, 4.14916, 1.87233)
+
+[node name="PlatformA" parent="Platforms" index="0" instance=ExtResource("2_iwhjl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.12523, 0, 1)
+
+[node name="PlatformA2" parent="Platforms" index="1" instance=ExtResource("2_iwhjl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3086, 0, 1)
+
+[node name="PlatformB" parent="Platforms" index="2" instance=ExtResource("3_1mfdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2605, 0, 0.977274)
