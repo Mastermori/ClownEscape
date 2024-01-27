@@ -14,6 +14,10 @@ var camera = null
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 var dash_cooldown = 0.0
+var dash_charged = true
+
+# Whether the player should make walking sounds.
+var is_walking = false
 
 func _ready():
 	camera = $Camera3D
@@ -23,13 +27,14 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+	else:
+		dash_charged = true
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "forward", "back")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
@@ -38,10 +43,14 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, ACCELERATION * delta)
 		velocity.z = move_toward(velocity.z, 0, ACCELERATION * delta)
-		
+	
+	
+	
+	# Handle dash
 	if dash_cooldown > 0:
 		dash_cooldown -= delta
-	elif Input.is_action_pressed("dash"):
+	elif Input.is_action_pressed("dash") and dash_charged:
+		dash_charged = false
 		dash_cooldown = DASH_COOLDOWN_DURATION
 		# We can use one of these two transforms. The camera transform would dash EXACTLY where we are looking.
 		# However it needs to be limited since it can otherwise be used to fly.
@@ -71,4 +80,3 @@ func _input(event):
 		rotate_y(-event.relative.x * MOUSE_SENSITIVITY)
 		camera.rotate_x(-event.relative.y * MOUSE_SENSITIVITY)
 		camera.rotation.x = clampf(camera.rotation.x, -deg_to_rad(90), deg_to_rad(90))
-		
