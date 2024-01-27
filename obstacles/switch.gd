@@ -23,7 +23,8 @@ func _on_body_entered(body):
 		return
 		
 	remaining_cooldown = cooldown
-	$AnimationPlayer.play()
+	$CPressureplate/AnimationPlayer.play("default")
+	Global.play_sound_at(preload("res://player/Woosh.ogg"), position)
 	print("toggled")
 	is_toggled = not is_toggled
 	emit_signal("switch_toggled")
