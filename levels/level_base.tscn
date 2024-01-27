@@ -1,8 +1,35 @@
-[gd_scene load_steps=2 format=3 uid="uid://djrtvtl4opjyd"]
+[gd_scene load_steps=5 format=3 uid="uid://xag144nxhhpn"]
 
-[ext_resource type="Script" path="res://levels/level.gd" id="1_6vht8"]
+[ext_resource type="PackedScene" uid="uid://cw6bsp01wen3g" path="res://player/player.tscn" id="1_fu36q"]
+[ext_resource type="Script" path="res://levels/level.gd" id="1_px7iy"]
+[ext_resource type="PackedScene" uid="uid://brc6po0dmtc7p" path="res://ui/ui.tscn" id="2_t5tgh"]
+
+[sub_resource type="Environment" id="Environment_5nvxr"]
+background_mode = 3
+background_color = Color(0.81, 0.7047, 0.72576, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.4745, 0, 0.73, 1)
+sdfgi_read_sky_light = false
+glow_enabled = true
+glow_blend_mode = 1
 
 [node name="LevelBase" type="Node3D"]
-script = ExtResource("1_6vht8")
+script = ExtResource("1_px7iy")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.770012, 0.638029, 0, -0.638029, 0.770012, 0, 6.188, -2.55951)
+directional_shadow_split_1 = 0.071
+directional_shadow_split_3 = 0.367
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_5nvxr")
+
+[node name="Player" parent="." instance=ExtResource("1_fu36q")]
+
+[node name="UI" parent="." instance=ExtResource("2_t5tgh")]
 
 [node name="Sounds" type="Node3D" parent="."]
+
+[node name="Obstacles" type="Node3D" parent="."]
+
+[node name="SpawnPosition" type="Marker3D" parent="."]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cvr4kx1le3q1p"]
+[gd_scene load_steps=6 format=3 uid="uid://cvr4kx1le3q1p"]
 
 [ext_resource type="Script" path="res://obstacles/switch.gd" id="1_4p3pn"]
+[ext_resource type="PackedScene" uid="uid://dlx10i4tqupw2" path="res://obstacles/Pressureplate.dae" id="2_enwuh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ogriw"]
 albedo_color = Color(0, 0.325331, 2.88785e-07, 1)
@@ -20,5 +21,8 @@ mesh = SubResource("BoxMesh_dunm0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("ConcavePolygonShape3D_cnc0l")
+
+[node name="Pressureplate" parent="." instance=ExtResource("2_enwuh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.13877, 0, 0)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

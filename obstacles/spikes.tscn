@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ds3c4rpm8ggaa"]
+[gd_scene load_steps=5 format=3 uid="uid://bxocjd4frnv0l"]
 
 [ext_resource type="Script" path="res://obstacles/spikes.gd" id="1_xraad"]
 
@@ -21,4 +21,4 @@ mesh = SubResource("BoxMesh_88uvp")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_x3kc3")
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

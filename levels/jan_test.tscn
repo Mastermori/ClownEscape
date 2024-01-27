@@ -1,11 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://xag144nxhhpn"]
+[gd_scene load_steps=7 format=3 uid="uid://ckx7gqnhpmegj"]
 
-[ext_resource type="PackedScene" uid="uid://cw6bsp01wen3g" path="res://player/player.tscn" id="1_fu36q"]
-[ext_resource type="Script" path="res://levels/level.gd" id="1_px7iy"]
-[ext_resource type="PackedScene" uid="uid://brc6po0dmtc7p" path="res://UI/ui.tscn" id="2_t5tgh"]
+[ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_rsmjh"]
+[ext_resource type="PackedScene" uid="uid://8e2ey38722hg" path="res://obstacles/laser/laser.tscn" id="3_76mo7"]
 [ext_resource type="PackedScene" uid="uid://dqhvae1dwylm2" path="res://obstacles/bounce_pad.tscn" id="3_y6jts"]
-[ext_resource type="PackedScene" uid="uid://ds3c4rpm8ggaa" path="res://obstacles/spikes.tscn" id="4_okxws"]
-[ext_resource type="PackedScene" uid="uid://cvr4kx1le3q1p" path="res://obstacles/switch.tscn" id="6_dupa6"]
+[ext_resource type="PackedScene" uid="uid://bxocjd4frnv0l" path="res://obstacles/spikes.tscn" id="4_okxws"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_87626"]
 size = Vector3(50, 1, 50)
@@ -13,52 +11,38 @@ size = Vector3(50, 1, 50)
 [sub_resource type="BoxShape3D" id="BoxShape3D_d470f"]
 size = Vector3(50, 1, 50)
 
-[node name="Node3D" type="Node3D"]
-script = ExtResource("1_px7iy")
+[node name="LevelBase" instance=ExtResource("1_rsmjh")]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.770012, 0.638029, 0, -0.638029, 0.770012, 0, 6.188, -2.55951)
-directional_shadow_split_1 = 0.071
-directional_shadow_split_3 = 0.367
-
-[node name="Player" parent="." instance=ExtResource("1_fu36q")]
-
-[node name="UI" parent="." instance=ExtResource("2_t5tgh")]
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="Floor" type="StaticBody3D" parent="." index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.35126, -2.71714)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Floor" index="0"]
 mesh = SubResource("BoxMesh_87626")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" index="1"]
 shape = SubResource("BoxShape3D_d470f")
 
-[node name="Sounds" type="Node3D" parent="."]
-
-[node name="Obstacles" type="Node3D" parent="."]
-
-[node name="BouncePad" parent="Obstacles" instance=ExtResource("3_y6jts")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499077, -4.81259)
-
-[node name="BouncePad2" parent="Obstacles" instance=ExtResource("3_y6jts")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.61407, -9.51311)
-
-[node name="BouncePad3" parent="Obstacles" instance=ExtResource("3_y6jts")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.38841, 4.19205, -7.69248)
-
-[node name="BouncePad4" parent="Obstacles" instance=ExtResource("3_y6jts")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.8301, -0.648405)
-
-[node name="BouncePad5" parent="Obstacles" instance=ExtResource("3_y6jts")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03679, 9.17269, -8.09347)
-
-[node name="BouncePad6" parent="Obstacles" instance=ExtResource("3_y6jts")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.08647, 2.48113, -4.81259)
-
-[node name="Spikes" parent="." instance=ExtResource("4_okxws")]
+[node name="Spikes" parent="." index="6" instance=ExtResource("4_okxws")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.41422)
 
-[node name="Switch" parent="." instance=ExtResource("6_dupa6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.68495, 0, 3.51921)
+[node name="BouncePad" parent="Obstacles" index="0" instance=ExtResource("3_y6jts")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499077, -4.81259)
+
+[node name="BouncePad2" parent="Obstacles" index="1" instance=ExtResource("3_y6jts")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.61407, -9.51311)
+
+[node name="BouncePad3" parent="Obstacles" index="2" instance=ExtResource("3_y6jts")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.38841, 4.19205, -7.69248)
+
+[node name="BouncePad4" parent="Obstacles" index="3" instance=ExtResource("3_y6jts")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.8301, -0.648405)
+
+[node name="BouncePad5" parent="Obstacles" index="4" instance=ExtResource("3_y6jts")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03679, 9.17269, -8.09347)
+
+[node name="BouncePad6" parent="Obstacles" index="5" instance=ExtResource("3_y6jts")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.08647, 2.48113, -4.81259)
+
+[node name="Laser" parent="Obstacles" index="6" instance=ExtResource("3_76mo7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.152503, -9.39769)

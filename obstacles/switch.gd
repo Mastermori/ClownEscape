@@ -1,6 +1,6 @@
 extends Area3D
 
-@export var cooldown: float = 10000000
+@export var cooldown: float = 1
 @export var is_toggled: bool = false
 @export var remaining_cooldown: float = 0
 
@@ -23,7 +23,7 @@ func _on_body_entered(body):
 		return
 		
 	remaining_cooldown = cooldown
-	
+	$AnimationPlayer.play()
 	print("toggled")
 	is_toggled = not is_toggled
 	emit_signal("switch_toggled")
