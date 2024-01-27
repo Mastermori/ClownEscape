@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://ds3c4rpm8ggaa"]
+
+[ext_resource type="Script" path="res://obstacles/spikes.gd" id="1_xraad"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xj8h8"]
+albedo_color = Color(1, 0.377991, 0.31005, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_88uvp"]
+material = SubResource("StandardMaterial3D_xj8h8")
+size = Vector3(2, 0.25, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x3kc3"]
+size = Vector3(2, 0.25, 2)
+
+[node name="Spikes" type="Area3D"]
+script = ExtResource("1_xraad")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_88uvp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_x3kc3")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
