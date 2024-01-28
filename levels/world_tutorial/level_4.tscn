@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://dwcuerynd5d6u"]
+
+[ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_0gvia"]
+[ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="2_lkgjw"]
+[ext_resource type="PackedScene" uid="uid://bfhqbmxjakdab" path="res://platforms/wand.tscn" id="3_3qta0"]
+[ext_resource type="PackedScene" uid="uid://c2ote8ql3pxa" path="res://platforms/platform_b.tscn" id="4_4p5hr"]
+[ext_resource type="PackedScene" uid="uid://8e2ey38722hg" path="res://obstacles/laser/laser.tscn" id="4_xoiqb"]
+[ext_resource type="PackedScene" uid="uid://b3ch27e2b5l68" path="res://obstacles/button/button.tscn" id="6_ke5vy"]
+[ext_resource type="PackedScene" uid="uid://csxa7ww5dihdf" path="res://levels/components/level_transition.tscn" id="7_cutsr"]
+
+[node name="Level4" instance=ExtResource("1_0gvia")]
+
+[node name="Player" parent="." index="2"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.391748, 4.56808, 3.89249)
+
+[node name="PlatformA" parent="Platforms" index="0" instance=ExtResource("2_lkgjw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.09244, 0, 3.92281)
+
+[node name="Wand" parent="Platforms" index="1" instance=ExtResource("3_3qta0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.92329, 3.03222, 9.72725)
+
+[node name="Wand2" parent="Platforms" index="2" instance=ExtResource("3_3qta0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.92329, 3.03222, -3.32998)
+
+[node name="PlatformB" parent="Platforms" index="3" instance=ExtResource("4_4p5hr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8121, -0.541283, 4.14734)
+
+[node name="PlatformB2" parent="Platforms" index="4" instance=ExtResource("4_4p5hr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.38511, -0.541283, 4.14734)
+
+[node name="PlatformA2" parent="Platforms" index="5" instance=ExtResource("2_lkgjw")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.5056, -6.96008, 2.71421)
+
+[node name="Button" parent="Obstacles" index="0" instance=ExtResource("6_ke5vy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4, 3, 4.10836)
+
+[node name="Laser" parent="Obstacles" index="1" instance=ExtResource("4_xoiqb")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.99283, 3.91536, 10.4329)
+
+[node name="Laser2" parent="Obstacles" index="2" instance=ExtResource("4_xoiqb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -3.70714, 3.98288)
+
+[node name="Laser3" parent="Obstacles" index="3" instance=ExtResource("4_xoiqb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -3.70714, 4.91212)
+
+[node name="Laser4" parent="Obstacles" index="4" instance=ExtResource("4_xoiqb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -3.70714, 3.00155)
+
+[node name="Laser5" parent="Obstacles" index="5" instance=ExtResource("4_xoiqb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -3.70714, 2.04853)
+
+[node name="Laser8" parent="Obstacles" index="6" instance=ExtResource("4_xoiqb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -3.70714, 1.2613)
+
+[node name="Laser6" parent="Obstacles" index="7" instance=ExtResource("4_xoiqb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -3.70714, 5.85816)
+
+[node name="Laser7" parent="Obstacles" index="8" instance=ExtResource("4_xoiqb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -3.70714, 6.66014)
+
+[node name="LevelTransition" parent="Triggers" index="0" instance=ExtResource("7_cutsr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9167, 3.63628, 4.03696)
+
+[connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser2" method="toggle"]
+[connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser3" method="toggle"]
+[connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser4" method="toggle"]
+[connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser5" method="toggle"]
+[connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser8" method="toggle"]
+[connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser6" method="toggle"]
+[connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser7" method="toggle"]

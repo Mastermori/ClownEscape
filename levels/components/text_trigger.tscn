@@ -8,6 +8,7 @@ size = Vector3(2, 2, 2)
 [node name="TextTrigger" type="Area3D"]
 collision_layer = 0
 collision_mask = 2
+monitorable = false
 script = ExtResource("1_d472s")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
