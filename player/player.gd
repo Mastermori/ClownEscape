@@ -7,7 +7,7 @@ const SPEED = 5.0
 const MOUSE_SENSITIVITY = 0.005
 const ACCELERATION = 15.0
 const FLOORED_ACCELERATION = 60.0
-const DASH_COOLDOWN_DURATION = 1.0
+const DASH_COOLDOWN_DURATION = .5
 const DASH_VELOCITY = 15.0
 
 @export var jump_height: float = 2.0
