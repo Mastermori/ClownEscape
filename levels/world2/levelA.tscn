@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds7sya0pv27v1"]
+
+[ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_8x8rq"]
+[ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="2_dtc53"]
+[ext_resource type="PackedScene" uid="uid://dj2dynul1los1" path="res://platforms/tiny_platform.tscn" id="3_yduho"]
+
+[node name="LevelBase" instance=ExtResource("1_8x8rq")]
+
+[node name="PlatformA" parent="." index="8" instance=ExtResource("2_dtc53")]
+transform = Transform3D(0.463079, 0, -0.886317, 0, 1, 0, 0.886317, 0, 0.463079, -1.69842, -5.04378, -3.28791)
+
+[node name="PlatformA2" parent="." index="9" instance=ExtResource("2_dtc53")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.543479, -2.628, -16.2065)
+
+[node name="Platform" parent="." index="10" instance=ExtResource("3_yduho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.51086, -0.990586, -10.0302)
+
+[node name="Platform2" parent="." index="11" instance=ExtResource("3_yduho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.36421, 0, -13.6934)

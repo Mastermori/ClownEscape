@@ -20,6 +20,8 @@ instance_dock/scenes=[{
 "scene": "res://platforms/wand.tscn"
 }, {
 "scene": "res://platforms/wand_platform.tscn"
+}, {
+"scene": "res://platforms/tiny_platform.tscn"
 }],
 "scroll": 0
 }, {
