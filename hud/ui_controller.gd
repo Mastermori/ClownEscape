@@ -12,6 +12,7 @@ var text_queue: Array[String] = []
 @onready var death_rect = $DeathRect
 @onready var anim_player = $DeathRect/AnimationPlayer
 @onready var fog_material := $FogOverlay.material as ShaderMaterial
+@onready var sounds = $Sounds
 
 
 func _ready():
