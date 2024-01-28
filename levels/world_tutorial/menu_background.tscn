@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cf4qey5q5atvs" path="res://platforms/wand_platform.tscn" id="5_qg36t"]
 [ext_resource type="PackedScene" uid="uid://dj2dynul1los1" path="res://platforms/tiny_platform.tscn" id="6_1b7dd"]
 
-[node name="LevelBase" instance=ExtResource("1_er8ic")]
+[node name="LevelBase2" instance=ExtResource("1_er8ic")]
 
 [node name="Player" parent="." index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
