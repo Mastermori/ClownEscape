@@ -66,8 +66,8 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, direction.x * SPEED, acceleration * delta)
 		velocity.z = move_toward(velocity.z, direction.z * SPEED, acceleration * delta)
 	else:
-		velocity.x = move_toward(velocity.x, 0, acceleration * delta)
-		velocity.z = move_toward(velocity.z, 0, acceleration * delta)
+		velocity.x = move_toward(velocity.x, 0, acceleration * 2 * delta)
+		velocity.z = move_toward(velocity.z, 0, acceleration * 2 * delta)
 	
 	# Handle dash
 	if dash_cooldown > 0:
