@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhk4migxjn76v"]
+[gd_scene load_steps=7 format=3 uid="uid://dhk4migxjn76v"]
 
 [ext_resource type="Script" path="res://addons/smoothing/smoothing.gd" id="1_502hh"]
 [ext_resource type="Script" path="res://obstacles/canon/canon_ball.gd" id="1_dgv3m"]
+[ext_resource type="PackedScene" uid="uid://dbeya5h7nsfba" path="res://obstacles/canon/Canonball.glb" id="3_yokhi"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gilke"]
 bounce = 0.8
@@ -23,7 +24,11 @@ script = ExtResource("1_dgv3m")
 script = ExtResource("1_502hh")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Smoothing"]
+visible = false
 mesh = SubResource("SphereMesh_fbx03")
+
+[node name="Canonball" parent="Smoothing" instance=ExtResource("3_yokhi")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -1.93757, -0.267794, 1.04833)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("ConvexPolygonShape3D_dxjky")
