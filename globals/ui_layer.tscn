@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b7vldqd3jnnme"]
 
-[ext_resource type="PackedScene" uid="uid://brc6po0dmtc7p" path="res://ui/ui.tscn" id="1_wm5ys"]
+[ext_resource type="PackedScene" uid="uid://brc6po0dmtc7p" path="res://hud/ui.tscn" id="1_wm5ys"]
 
 [node name="UILayer" type="CanvasLayer"]
 
