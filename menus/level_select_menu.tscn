@@ -116,10 +116,13 @@ level_name = "2 - 3"
 [node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/WorldSelection"]
 layout_mode = 2
 
-[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer3"]
+[node name="Label3" type="RichTextLabel" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer3"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Deception"
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[wave]Deception"
+fit_content = true
+scroll_active = false
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer3"]
 layout_mode = 2
@@ -153,10 +156,13 @@ level_scene = ExtResource("15_s0xih")
 [node name="VBoxContainer4" type="VBoxContainer" parent="MarginContainer/VBoxContainer/WorldSelection"]
 layout_mode = 2
 
-[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer4"]
+[node name="Label3" type="RichTextLabel" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer4"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Mania"
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+text = "[rainbow]Mania[/rainbow]"
+fit_content = true
+scroll_active = false
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer4"]
 layout_mode = 2
