@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://b50k5w01i1s5e"]
 
-[ext_resource type="PackedScene" uid="uid://c6yx4xijpo6ea" path="res://obstacles/canon/CCanon.dae" id="1_koinl"]
 [ext_resource type="Script" path="res://obstacles/canon/canon.gd" id="1_vao64"]
 [ext_resource type="PackedScene" uid="uid://dhk4migxjn76v" path="res://obstacles/canon/canon_ball.tscn" id="2_kxs6a"]
+[ext_resource type="PackedScene" uid="uid://dkk2ekbj0rbxx" path="res://obstacles/canon/Canon.glb" id="4_j2i22"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nbpwr"]
 size = Vector3(1.7, 1.9, 1.7)
@@ -13,17 +13,32 @@ collision_mask = 0
 script = ExtResource("1_vao64")
 projectile_scene = ExtResource("2_kxs6a")
 
-[node name="CCanon" parent="." instance=ExtResource("1_koinl")]
+[node name="Canon" parent="." instance=ExtResource("4_j2i22")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Canon_005" parent="Canon" index="2"]
+transform = Transform3D(1, -1.99776e-16, -2.84712e-17, 1.79758e-16, 0.817775, 0.575538, -9.16954e-17, -0.575538, 0.817775, 0.0104094, 2.37215, -0.473908)
+
+[node name="Canon_010" parent="Canon" index="3"]
+transform = Transform3D(1, 5.08959e-17, 4.38177e-16, -5.08959e-17, 1, 0, -4.38177e-16, -2.23014e-32, 1, 0.0134506, 2.19176, -0.126577)
+
+[node name="Canon_002" parent="Canon" index="4"]
+transform = Transform3D(1, -1.99843e-16, -2.79923e-17, 1.79758e-16, 0.819151, 0.573576, -9.16954e-17, -0.573576, 0.819151, 0.0104094, 2.37215, -0.473908)
+
+[node name="Canon_004" parent="Canon" index="5"]
+transform = Transform3D(1, -1.99776e-16, -2.84712e-17, 1.79758e-16, 0.817775, 0.575538, -9.16954e-17, -0.575538, 0.817775, 0.0104094, 2.37215, -0.473908)
 
 [node name="Collider" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 shape = SubResource("BoxShape3D_nbpwr")
 
 [node name="ShotPosition" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35385, 0.82886)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.92766, 0.888761)
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
+[connection signal="animation_finished" from="Canon/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="shoot"]
+
+[editable path="Canon"]
