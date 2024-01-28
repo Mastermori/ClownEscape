@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dej3yjlxd3yf1"]
+[gd_scene load_steps=11 format=3 uid="uid://dej3yjlxd3yf1"]
 
 [ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_5ne08"]
 [ext_resource type="PackedScene" uid="uid://b48kdjgaubgam" path="res://obstacles/jump_pad/jump_pad.tscn" id="2_vxsiq"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c2ote8ql3pxa" path="res://platforms/platform_b.tscn" id="5_6jsyn"]
 [ext_resource type="PackedScene" uid="uid://b50k5w01i1s5e" path="res://obstacles/canon/canon.tscn" id="6_1rl6q"]
 [ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="7_dk7p6"]
+[ext_resource type="PackedScene" uid="uid://cau0cybig3rn" path="res://levels/components/text_trigger.tscn" id="8_7l5wu"]
 [ext_resource type="PackedScene" uid="uid://csxa7ww5dihdf" path="res://levels/components/level_transition.tscn" id="8_7ppeo"]
 [ext_resource type="PackedScene" uid="uid://s1edbcsxjwwm" path="res://levels/world1/level4.tscn" id="9_djhtx"]
 
@@ -123,6 +124,10 @@ max_length = 20
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17.6512, 20.0432, -9.83245)
 push_strength = 100.0
 direction = Vector3(0, 0.3, 1)
+
+[node name="TextTrigger" parent="Triggers" index="0" instance=ExtResource("8_7l5wu")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 18.0821, 22.5587, -10.0657)
+text = "Don't you worry. If it's only one, we can make the intern clean it."
 
 [node name="SpawnPosition" parent="." index="7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23.2083, 0)

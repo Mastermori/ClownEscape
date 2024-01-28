@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://cn8mlldn0gf57"]
+
+[ext_resource type="Script" path="res://hud/menu.gd" id="1_0gqnu"]
+[ext_resource type="PackedScene" uid="uid://6ekia4lxsilk" path="res://levels/world_tutorial/level_1.tscn" id="2_7e07r"]
+
+[sub_resource type="Theme" id="Theme_rfe57"]
+default_font_size = 48
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0gqnu")
+first_level = ExtResource("2_7e07r")
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -37.5
+offset_right = 52.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_rfe57")
+text = "Play"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]

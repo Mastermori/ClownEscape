@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpjwg6mo38qtf"]
+[gd_scene load_steps=10 format=3 uid="uid://dpjwg6mo38qtf"]
 
 [ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_yefws"]
 [ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="2_7imq0"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b48kdjgaubgam" path="res://obstacles/jump_pad/jump_pad.tscn" id="6_v4gju"]
 [ext_resource type="PackedScene" uid="uid://csxa7ww5dihdf" path="res://levels/components/level_transition.tscn" id="7_3i2vm"]
 [ext_resource type="PackedScene" uid="uid://cnc4bs7ptxlil" path="res://levels/world1/level2.tscn" id="8_4lsh4"]
+[ext_resource type="PackedScene" uid="uid://cau0cybig3rn" path="res://levels/components/text_trigger.tscn" id="9_n1rmr"]
 
 [node name="LevelBase" instance=ExtResource("1_yefws")]
 
@@ -62,6 +63,10 @@ bounce_height = 20.0
 [node name="JumpPad3" parent="Obstacles" index="2" instance=ExtResource("6_v4gju")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.32537, 15.8379, 24.7476)
 bounce_height = 20.0
+
+[node name="TextTrigger" parent="Triggers" index="0" instance=ExtResource("9_n1rmr")]
+transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, -5.53967, 10.7923, 19.5481)
+text = "Oh no, a wall! How about you try and go around it?"
 
 [node name="SpawnPosition" parent="." index="8"]
 transform = Transform3D(-0.997854, 0, 0.0654729, 0, 1, 0, -0.0654729, 0, -0.997854, 8.72966, 6.43538, 0)

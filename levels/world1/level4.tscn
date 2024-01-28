@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://s1edbcsxjwwm"]
+[gd_scene load_steps=11 format=3 uid="uid://s1edbcsxjwwm"]
 
 [ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_ggtrp"]
 [ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="2_n4ir6"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://8e2ey38722hg" path="res://obstacles/laser/laser.tscn" id="6_7o0tu"]
 [ext_resource type="PackedScene" uid="uid://csxa7ww5dihdf" path="res://levels/components/level_transition.tscn" id="8_jp0uu"]
 [ext_resource type="PackedScene" uid="uid://cxe756bax1ifv" path="res://levels/world1/level5.tscn" id="9_mh43q"]
+[ext_resource type="PackedScene" uid="uid://cau0cybig3rn" path="res://levels/components/text_trigger.tscn" id="10_g8k1q"]
 
 [node name="LevelBase" instance=ExtResource("1_ggtrp")]
 
@@ -59,6 +60,14 @@ is_enabled = false
 [node name="JumpPad2" parent="Obstacles" index="3" instance=ExtResource("5_qg0sm")]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 21, 11.3756, -21.9393)
 bounce_height = 30.0
+
+[node name="TextTrigger" parent="Triggers" index="0" instance=ExtResource("10_g8k1q")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -5.06468, -1.7836, -11.6888)
+text = "3... 2... 1... Fun!"
+
+[node name="TextTrigger2" parent="Triggers" index="1" instance=ExtResource("10_g8k1q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 20.9657, -2.38482, -24.087)
+text = "Hope you don't have caulrophobia. Because you'll have a lot of fans if you make that jump."
 
 [node name="SpawnPosition" parent="." index="8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.81809, 0)

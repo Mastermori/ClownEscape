@@ -73,8 +73,12 @@ func play_sound_at(sound: AudioStream, position: Vector3, max_distance = 0.0, vo
 	return audio_player
 
 func change_level(new_level: PackedScene):
-	if not level.level_name == "":
+	if not level:
+		total_run_deaths = 0
+		total_run_timer = -1.0
+	elif not level.level_name == "":
 		break_times[level.level_name] = [current_level_timer, total_run_timer, current_level_deaths, total_run_deaths]
+		
 	current_level_timer = 0.0
 	current_level_deaths = 0
 	ui.play_fade_out()

@@ -6,7 +6,7 @@ extends Control
 
 var text_queue: Array[String] = []
 
-@onready var clown_commentary = $ClownCommentary
+@onready var clown_commentary = $UserInterfaces/ClownCommentary
 @onready var fade_timer = $FadeTimer
 @onready var display_timer = $DisplayTimer
 @onready var death_rect = $DeathRect
@@ -38,7 +38,7 @@ func overwrite_text(text: String, custom_display_time: float = 0):
 	display_text(text, custom_display_time)
 
 func update_timer_display(text: String):
-	$TimeDeathDisplay.text = text
+	$UserInterfaces/TimeDeathDisplay.text = text
 
 func queue_text(text: String):
 	if not clown_commentary.visible:
@@ -74,6 +74,7 @@ func play_death_fade():
 
 func play_fade_in():
 		anim_player.play("fade", -1, -2.0, true)
+		$UserInterfaces.visible = true
 	
 func play_fade_out():
 		anim_player.play("fade", -1, 2.0, false)
