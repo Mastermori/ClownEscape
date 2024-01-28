@@ -73,9 +73,9 @@ func play_death_fade():
 		Global.level.reset_player()
 
 func play_fade_in():
-		anim_player.play("fade", -1, -2.0, true)
-		$UserInterfaces.visible = true
-	
+	anim_player.play("fade", -1, -2.0, true)
+	$UserInterfaces.visible = true
+
 func play_fade_out():
 		anim_player.play("fade", -1, 2.0, false)
 

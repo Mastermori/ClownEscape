@@ -21,6 +21,5 @@ size_flags_vertical = 4
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "1 - 1"
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

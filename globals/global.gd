@@ -10,6 +10,7 @@ var total_run_deaths: int = 0
 var break_times: Dictionary = {}
 var current_level_timer: float = 0.0
 var current_level_deaths: int = 0
+var timer_finished: bool = false
 
 var sounds = []
 
@@ -42,8 +43,9 @@ func _ready():
 func _process(delta):
 	if get_tree().paused:
 		return
-	total_run_timer += delta
-	current_level_timer += delta
+	if not timer_finished:
+		total_run_timer += delta
+		current_level_timer += delta
 	var millis = fmod(total_run_timer, 1) * 100
 	var seconds = fmod(total_run_timer, 60)
 	var minutes = total_run_timer / 60

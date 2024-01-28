@@ -3,13 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_uvqv7"]
 [ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="2_bff2m"]
 [ext_resource type="PackedScene" uid="uid://b50k5w01i1s5e" path="res://obstacles/canon/canon.tscn" id="2_f7rqg"]
-[ext_resource type="PackedScene" uid="uid://dj2dynul1los1" path="res://platforms/tiny_platform.tscn" id="5_aqio8"]
+[ext_resource type="PackedScene" path="res://platforms/tiny_platform.tscn" id="5_aqio8"]
 [ext_resource type="PackedScene" uid="uid://cau0cybig3rn" path="res://levels/components/text_trigger.tscn" id="6_58nnf"]
 [ext_resource type="PackedScene" uid="uid://cocdopru2jxs1" path="res://levels/easy_world/level4.tscn" id="6_63ssd"]
 [ext_resource type="PackedScene" uid="uid://b48kdjgaubgam" path="res://obstacles/jump_pad/jump_pad.tscn" id="6_lbk2c"]
 [ext_resource type="PackedScene" uid="uid://csxa7ww5dihdf" path="res://levels/components/level_transition.tscn" id="9_tq8jw"]
 
-[node name="LevelBase" instance=ExtResource("1_uvqv7")]
+[node name="LevelBase2" instance=ExtResource("1_uvqv7")]
 
 [node name="DirectionalLight3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.770012, 0.638029, 0, -0.638029, 0.770012, 0, 19.2523, -2.55951)
@@ -27,10 +27,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.4692, 5.13604, 34.1461)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.2816, -1.31667)
 
 [node name="Platform2" parent="Platforms" index="3" instance=ExtResource("5_aqio8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.96947, 22.9267, 14.2016)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.96947, 23.0065, 14.1685)
 
 [node name="Platform3" parent="Platforms" index="4" instance=ExtResource("5_aqio8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.96947, 8.1727, 14.2016)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.96947, 8.25249, 14.1685)
 
 [node name="Platform4" parent="Platforms" index="5" instance=ExtResource("5_aqio8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4303, 12.3669, 29.6264)
@@ -48,7 +48,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0939, 10.5595, 37.4033)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3939, 12.3669, 40.0073)
 
 [node name="Canon" parent="Obstacles" index="0" instance=ExtResource("2_f7rqg")]
-transform = Transform3D(2.98023e-08, 0, -1, 0, 1, 0, 1, 0, 2.98023e-08, 8, 23.4797, 14.1786)
+transform = Transform3D(2.98023e-08, 0, -1, 0, 1, 0, 1, 0, 2.98023e-08, 8, 23.5595, 14.1455)
 
 [node name="JumpPad" parent="Obstacles" index="1" instance=ExtResource("6_lbk2c")]
 transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 13.0643, -0.965277)
