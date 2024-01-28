@@ -10,14 +10,10 @@
 
 [node name="LevelBase2" instance=ExtResource("1_jo414")]
 
-[node name="Transitions#LevelTransition" parent="." index="0" instance=ExtResource("4_ql7xg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 13.3584, -75.6991)
-next_level = ExtResource("5_uaboi")
-
-[node name="DirectionalLight3D" parent="." index="1"]
+[node name="DirectionalLight3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.770012, 0.638029, 0, -0.638029, 0.770012, 0, 12.4044, -3.86146)
 
-[node name="Player" parent="." index="3"]
+[node name="Player" parent="." index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.21636, 5.99617)
 
 [node name="PlatformA" parent="Platforms" index="0" instance=ExtResource("3_r7u03")]
@@ -66,5 +62,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.696783, 6, -49.4476)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.10951, 5.82982)
 text = "In the good old days we used people as projectiles. Unfortunately our budget can't afford the cleaning staff anymore."
 
-[node name="SpawnPosition" parent="." index="8"]
+[node name="LevelTransition" parent="Triggers" index="1" instance=ExtResource("4_ql7xg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 13.3584, -75.6991)
+next_level = ExtResource("5_uaboi")
+
+[node name="SpawnPosition" parent="." index="7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.21636, 5.9079)

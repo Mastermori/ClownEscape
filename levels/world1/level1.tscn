@@ -12,14 +12,10 @@
 
 [node name="LevelBase2" instance=ExtResource("1_yefws")]
 
-[node name="Transitions#LevelTransition" parent="." index="0" instance=ExtResource("7_3i2vm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.39556, 32.1825, 24.9654)
-next_level = ExtResource("8_4lsh4")
-
-[node name="DirectionalLight3D" parent="." index="1"]
+[node name="DirectionalLight3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.770012, 0.638029, 0, -0.638029, 0.770012, 8.72966, 15.6234, -2.55951)
 
-[node name="Player" parent="." index="3"]
+[node name="Player" parent="." index="2"]
 transform = Transform3D(-0.997854, 0, 0.0654729, 0, 1, 0, -0.0654729, 0, -0.997854, 8.72966, 9.43538, -6)
 
 [node name="PlatformA" parent="Platforms" index="0" instance=ExtResource("2_7imq0")]
@@ -72,5 +68,9 @@ text = "Oh no, a wall! How about you try and go around it?"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.89413, 8.90044, 1.38701)
 text = "Now the real fun begins!"
 
-[node name="SpawnPosition" parent="." index="8"]
+[node name="LevelTransition" parent="Triggers" index="2" instance=ExtResource("7_3i2vm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.39556, 32.1825, 24.9654)
+next_level = ExtResource("8_4lsh4")
+
+[node name="SpawnPosition" parent="." index="7"]
 transform = Transform3D(-0.997854, 0, 0.0654729, 0, 1, 0, -0.0654729, 0, -0.997854, 8.72966, 9.43538, 0)

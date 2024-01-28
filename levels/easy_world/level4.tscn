@@ -4,12 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="2_bff2m"]
 [ext_resource type="PackedScene" uid="uid://c2ote8ql3pxa" path="res://platforms/platform_b.tscn" id="3_u4guf"]
 [ext_resource type="PackedScene" uid="uid://cf4qey5q5atvs" path="res://platforms/wand_platform.tscn" id="4_l5wkq"]
-[ext_resource type="PackedScene" uid="uid://dj2dynul1los1" path="res://platforms/tiny_platform.tscn" id="5_aqio8"]
+[ext_resource type="PackedScene" path="res://platforms/tiny_platform.tscn" id="5_aqio8"]
 [ext_resource type="PackedScene" uid="uid://b3ch27e2b5l68" path="res://obstacles/button/button.tscn" id="5_thaw3"]
 [ext_resource type="PackedScene" uid="uid://b48kdjgaubgam" path="res://obstacles/jump_pad/jump_pad.tscn" id="6_lbk2c"]
 [ext_resource type="PackedScene" uid="uid://8e2ey38722hg" path="res://obstacles/laser/laser.tscn" id="8_vmx3r"]
 [ext_resource type="PackedScene" uid="uid://csxa7ww5dihdf" path="res://levels/components/level_transition.tscn" id="9_tq8jw"]
-[ext_resource type="PackedScene" uid="uid://dpjwg6mo38qtf" path="res://levels/world1/level1.tscn" id="10_v4ebn"]
+[ext_resource type="PackedScene" uid="uid://ds7sya0pv27v1" path="res://levels/world2/levelA.tscn" id="10_hh2pu"]
 
 [node name="LevelBase" instance=ExtResource("1_uvqv7")]
 
@@ -17,7 +17,7 @@
 transform = Transform3D(1, 0, 0, 0, 0.770012, 0.638029, 0, -0.638029, 0.770012, 0, 11.4052, -2.55951)
 
 [node name="Player" parent="." index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00467372, 5.67519, 0.189606)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00467372, 5.04496, 0.189606)
 
 [node name="PlatformA" parent="Platforms" index="0" instance=ExtResource("2_bff2m")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.917173, -3)
@@ -102,7 +102,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.95619, 0.880954, -27.1514)
 
 [node name="LevelTransition" parent="Triggers" index="0" instance=ExtResource("9_tq8jw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 19.2172, -34)
-next_level = ExtResource("10_v4ebn")
+next_level = ExtResource("10_hh2pu")
 
 [node name="SpawnPosition" parent="." index="7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.21717, 0)

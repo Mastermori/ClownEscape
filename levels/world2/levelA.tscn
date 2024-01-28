@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_8x8rq"]
 [ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="2_dtc53"]
-[ext_resource type="PackedScene" uid="uid://dj2dynul1los1" path="res://platforms/tiny_platform.tscn" id="3_yduho"]
+[ext_resource type="PackedScene" path="res://platforms/tiny_platform.tscn" id="3_yduho"]
 [ext_resource type="PackedScene" uid="uid://bfhqbmxjakdab" path="res://platforms/wand.tscn" id="4_1kkk5"]
 [ext_resource type="PackedScene" uid="uid://c2ote8ql3pxa" path="res://platforms/platform_b.tscn" id="6_vg1l5"]
 [ext_resource type="PackedScene" uid="uid://cf4qey5q5atvs" path="res://platforms/wand_platform.tscn" id="7_1haej"]
@@ -14,9 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://dpjwg6mo38qtf" path="res://levels/world1/level1.tscn" id="11_8d134"]
 
 [node name="LevelBase" instance=ExtResource("1_8x8rq")]
-
-[node name="DirectionalLight3D" parent="." index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.770012, 0.638029, 0, -0.638029, 0.770012, 0, 6.188, -2.55951)
 
 [node name="Player" parent="." index="2"]
 transform = Transform3D(0.514964, -0.177622, -0.838607, 0.00805672, 0.979256, -0.202465, 0.857174, 0.0975059, 0.505713, 0.107794, 7.1279, -0.185865)
