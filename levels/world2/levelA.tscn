@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://743iqyd30tqx"]
+
+[ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="3_kk36r"]
+[ext_resource type="PackedScene" uid="uid://8e2ey38722hg" path="res://obstacles/laser/laser.tscn" id="3_txvc3"]
+[ext_resource type="PackedScene" uid="uid://cw6bsp01wen3g" path="res://player/player.tscn" id="4_62epl"]
+[ext_resource type="PackedScene" uid="uid://c2ote8ql3pxa" path="res://platforms/platform_b.tscn" id="4_s468m"]
+
+[node name="LevelA" type="Node3D"]
+
+[node name="Laser" parent="." instance=ExtResource("3_txvc3")]
+transform = Transform3D(2.315, 0, 0, 0, 2.315, 0, 0, 0, 2.315, -0.0314513, -1.72721, -2.3958)
+
+[node name="Player" parent="." instance=ExtResource("4_62epl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0488014, 5.48916, 10.9307)
+
+[node name="PlatformA" parent="." instance=ExtResource("3_kk36r")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 7.396)
+
+[node name="PlatformB" parent="." instance=ExtResource("4_s468m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.53385)
+
+[node name="PlatformB2" parent="." instance=ExtResource("4_s468m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.55336, -2.35634)
