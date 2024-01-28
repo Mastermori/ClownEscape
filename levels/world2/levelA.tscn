@@ -16,7 +16,7 @@
 [node name="LevelBase" instance=ExtResource("1_8x8rq")]
 
 [node name="Player" parent="." index="2"]
-transform = Transform3D(0.462744, -0.133446, -0.87639, -0.015326, 0.987253, -0.15842, 0.886359, 0.0867395, 0.454801, -1.14688, 9.52514, -1.79824)
+transform = Transform3D(0.514964, -0.177622, -0.838607, 0.00805672, 0.979256, -0.202465, 0.857174, 0.0975059, 0.505713, 0.107794, 7.1279, -0.185865)
 
 [node name="PlatformA" parent="Platforms" index="0" instance=ExtResource("2_dtc53")]
 transform = Transform3D(0.463079, 0, -0.886317, 0, 1, 0, 0.886317, 0, 0.463079, -1.69842, 2.71674, -3.28791)
