@@ -41,11 +41,12 @@ func update_timer_display(text: String):
 
 func queue_text(text: String):
 	text_queue.append(text)
-	if not clown_commentary.visible:
+	if not clown_commentary.visible or not fade_timer.is_stopped():
 		display_text(text_queue.pop_front())
 
 func display_text(text: String, custom_display_time: float = 0):
 	clown_commentary.visible = true
+	clown_commentary.modulate.a = 1
 	clown_commentary.text = "[center]" + text
 	display_timer.start(display_time if custom_display_time <= 0 else custom_display_time)
 
