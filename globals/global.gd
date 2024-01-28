@@ -10,6 +10,9 @@ var total_run_deaths: int = 0
 var break_times: Dictionary = {}
 var current_level_timer: float = 0.0
 var current_level_deaths: int = 0
+var timer_finished: bool = false
+
+var in_menu: bool = false
 
 var sounds = []
 
@@ -42,8 +45,9 @@ func _ready():
 func _process(delta):
 	if get_tree().paused:
 		return
-	total_run_timer += delta
-	current_level_timer += delta
+	if not timer_finished:
+		total_run_timer += delta
+		current_level_timer += delta
 	var millis = fmod(total_run_timer, 1) * 100
 	var seconds = fmod(total_run_timer, 60)
 	var minutes = total_run_timer / 60
@@ -86,9 +90,16 @@ func change_level(new_level: PackedScene):
 	get_tree().change_scene_to_packed.call_deferred(new_level)
 
 func _unhandled_input(event):
+	if in_menu:
+		return
 	if event.is_action_pressed("pause"):
-		get_tree().paused = not get_tree().paused
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE if get_tree().paused else Input.MOUSE_MODE_CAPTURED)
+		ui.get_node("MarginContainer").visible = true
+		get_tree().paused = true
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	elif event.is_action_pressed("mouse_capture"):
+		ui.get_node("MarginContainer").visible = false
+		get_tree().paused = false
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func queue_text(text: String):
 	ui.queue_text(text)

@@ -3,7 +3,6 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print("Hello")
 	$CJumpPad/AnimationPlayer.play("default")
 
 
@@ -13,5 +12,4 @@ func _process(delta):
 
 
 func _on_animation_player_animation_finished(anim_name):
-	print("finished")
 	$CJumpPad/AnimationPlayer.play("default")

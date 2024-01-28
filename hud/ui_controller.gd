@@ -73,16 +73,23 @@ func play_death_fade():
 		Global.level.reset_player()
 
 func play_fade_in():
-		anim_player.play("fade", -1, -2.0, true)
-		$UserInterfaces.visible = true
-	
+	anim_player.play("fade", -1, -2.0, true)
+	$UserInterfaces.visible = true
+
 func play_fade_out():
 		anim_player.play("fade", -1, 2.0, false)
 
-## Must be a value between 1.0 and 2.0. Will be clamped
+## Must be a value between 0.0 and 2.0. Will be clamped
 func set_fog_strength(strength: float):
 	strength = clamp(strength, 0.0, 2.0)
 	fog_material.set_shader_parameter("strength", strength)
 	
 	var alpha_value = remap(strength, 0.0, 2.0, .2, 1)
 	fog_material.set_shader_parameter("alpha", alpha_value)
+
+
+func _on_main_menu_button_pressed():
+	$UserInterfaces.visible = false
+	$MarginContainer.visible = false
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://menus/main_menu.tscn")

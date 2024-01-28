@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://btsgmc1psq4f"]
+
+[ext_resource type="Script" path="res://menus/level_card.gd" id="1_srcdj"]
+
+[node name="LevelCard" type="PanelContainer"]
+script = ExtResource("1_srcdj")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

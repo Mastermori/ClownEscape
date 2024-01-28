@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://csxa7ww5dihdf" path="res://levels/components/level_transition.tscn" id="8_7ppeo"]
 [ext_resource type="PackedScene" uid="uid://s1edbcsxjwwm" path="res://levels/world1/level4.tscn" id="9_djhtx"]
 
-[node name="LevelBase" instance=ExtResource("1_5ne08")]
+[node name="LevelBase2" instance=ExtResource("1_5ne08")]
 
 [node name="DirectionalLight3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.770012, 0.638029, 0, -0.638029, 0.770012, 0, 29.3963, -2.55951)
@@ -129,9 +129,9 @@ direction = Vector3(0, 0.3, 1)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 18.0821, 22.5587, -10.0657)
 text = "Don't you worry. If it's only one, we can make the intern clean it."
 
-[node name="SpawnPosition" parent="." index="7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23.2083, 0)
-
-[node name="LevelTransition" parent="." index="8" instance=ExtResource("8_7ppeo")]
+[node name="LevelTransition" parent="Triggers" index="1" instance=ExtResource("8_7ppeo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.631, 12.1815, -23.5357)
 next_level = ExtResource("9_djhtx")
+
+[node name="SpawnPosition" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23.2083, 0)

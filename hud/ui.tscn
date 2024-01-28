@@ -1,7 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://brc6po0dmtc7p"]
 
 [ext_resource type="Script" path="res://hud/ui_controller.gd" id="1_glmr3"]
-[ext_resource type="Shader" path="res://hud/fog_overlay.gdshader" id="2_sh070"]
 
 [sub_resource type="Theme" id="Theme_x1sw5"]
 default_font_size = 32
@@ -21,6 +20,45 @@ content_margin_top = 10.0
 content_margin_right = 100.0
 content_margin_bottom = 30.0
 
+[sub_resource type="Shader" id="Shader_2pyrs"]
+code = "shader_type canvas_item;
+
+// Amount of detail.
+uniform int octaves = 4;
+// Opacity of the output fog.
+uniform float starting_amplitude: hint_range(0.0, 0.5) = 0.5;
+// Rate of pattern within the fog.
+uniform float starting_frequency = 1.0;
+// Shift towards transparency (clamped) for sparser fog.
+uniform float shift: hint_range(-1.0, 0.0) = -0.2;
+// Direction and speed of travel.
+uniform vec2 velocity = vec2(1.0, 1.0);
+// Color of the fog.
+uniform vec4 fog_color: source_color = vec4(0.0, 0.0, 0.0, 1.0);
+
+uniform float alpha: hint_range(0.0, 1.0) = 0.2;
+uniform float strength: hint_range(0.0, 2.0) = 1.0;
+
+// Noise texture; OpenSimplexNoise is great, but any filtered texture is fine.
+uniform sampler2D noise : repeat_enable;
+
+float rand(vec2 uv) {
+	float amplitude = starting_amplitude;
+	float frequency = starting_frequency;
+	float output = 0.0;
+	for (int i = 0; i < octaves; i++) {
+		output += texture(noise, uv * frequency).x * amplitude;
+		amplitude /= 2.0;
+		frequency *= 2.0;
+	}
+	return clamp((output + shift) * strength, 0.0, 1.0);
+}
+
+void fragment() {
+	vec2 motion = vec2(rand(UV + TIME * starting_frequency * velocity));
+	COLOR = mix(vec4(vec3(0.0), alpha), fog_color, rand(UV + motion));
+}"
+
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_pobwv"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_2k5x0"]
@@ -28,7 +66,7 @@ seamless = true
 noise = SubResource("FastNoiseLite_pobwv")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7plw1"]
-shader = ExtResource("2_sh070")
+shader = SubResource("Shader_2pyrs")
 shader_parameter/octaves = 4
 shader_parameter/starting_amplitude = 0.5
 shader_parameter/starting_frequency = 1.0
@@ -210,3 +248,25 @@ offset_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 200
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MainMenuButton" type="Button" parent="MarginContainer/CenterContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Main Menu"
+
+[connection signal="pressed" from="MarginContainer/CenterContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

@@ -5,12 +5,11 @@
 [ext_resource type="Material" uid="uid://gcpt3pd68q4g" path="res://levels/components/abyss_material.tres" id="3_2h1c3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qvwp2"]
-sky_top_color = Color(0.58, 0.4292, 0.507113, 1)
-sky_horizon_color = Color(0.341176, 0.14902, 0.360784, 1)
-sky_curve = 0.243676
+sky_top_color = Color(0.540375, 0.3575, 0.55, 1)
+sky_horizon_color = Color(0.67, 0.402, 0.406467, 1)
 ground_bottom_color = Color(0.0528, 0.06504, 0.08, 1)
 ground_horizon_color = Color(0.3423, 0.1476, 0.36, 1)
-ground_curve = 0.196984
+ground_curve = 0.0360501
 sun_angle_max = 10.0
 
 [sub_resource type="Sky" id="Sky_aga2y"]
@@ -31,14 +30,13 @@ fog_density = 0.02
 volumetric_fog_density = 0.07
 volumetric_fog_albedo = Color(0.948, 0.87, 1, 1)
 volumetric_fog_length = 50.0
-adjustment_enabled = true
 adjustment_brightness = 0.8
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_i3jo5"]
 material = ExtResource("3_2h1c3")
 size = Vector2(300, 300)
-subdivide_width = 375
-subdivide_depth = 375
+subdivide_width = 350
+subdivide_depth = 350
 
 [node name="LevelBase" type="Node3D"]
 script = ExtResource("1_px7iy")
@@ -66,3 +64,4 @@ environment = SubResource("Environment_5nvxr")
 [node name="AbyssPlane" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11, 0)
 mesh = SubResource("PlaneMesh_i3jo5")
+metadata/_edit_lock_ = true
