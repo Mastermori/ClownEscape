@@ -6,7 +6,13 @@ extends Area3D
 @export var overwrite_all_text: bool = false
 
 
+func _ready():
+	if get_hash() in Global.seen_text_triggers:
+		queue_free()
+		return
 
+func get_hash() -> int:
+	return hash(self.get_path()) + hash(text)
 
 func _on_body_entered(body):
 	if body is Player:
@@ -14,4 +20,5 @@ func _on_body_entered(body):
 			Global.overwrite_text(text)
 		else:
 			Global.queue_text(text)
+		Global.seen_text_triggers.append(get_hash())
 		queue_free()
