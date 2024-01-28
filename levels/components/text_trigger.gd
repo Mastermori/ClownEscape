@@ -1,5 +1,6 @@
 extends Area3D
 
+signal text_triggered
 
 @export_multiline var text: String
 #@export var display_time: float = 2.5
@@ -8,6 +9,7 @@ extends Area3D
 
 func _ready():
 	if get_hash() in Global.seen_text_triggers:
+		text_triggered.emit()
 		queue_free()
 		return
 
@@ -21,4 +23,5 @@ func _on_body_entered(body):
 		else:
 			Global.queue_text(text)
 		Global.seen_text_triggers.append(get_hash())
+		text_triggered.emit()
 		queue_free()

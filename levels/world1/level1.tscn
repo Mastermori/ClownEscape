@@ -68,5 +68,9 @@ bounce_height = 20.0
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, -5.53967, 13.7923, 19.5481)
 text = "Oh no, a wall! How about you try and go around it?"
 
+[node name="TextTrigger2" parent="Triggers" index="1" instance=ExtResource("9_n1rmr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.89413, 8.90044, 1.38701)
+text = "Now the real fun begins!"
+
 [node name="SpawnPosition" parent="." index="8"]
 transform = Transform3D(-0.997854, 0, 0.0654729, 0, 1, 0, -0.0654729, 0, -0.997854, 8.72966, 9.43538, 0)
