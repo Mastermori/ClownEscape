@@ -4,7 +4,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	Global.ui.set_fog_strength(.2)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -15,3 +15,7 @@ func _process(delta):
 
 func _on_play_button_pressed():
 	Global.change_level(first_level)
+
+
+func _on_level_select_button_pressed():
+	get_tree().change_scene_to_file("res://menus/level_select_menu.tscn")

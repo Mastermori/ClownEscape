@@ -79,7 +79,7 @@ func play_fade_in():
 func play_fade_out():
 		anim_player.play("fade", -1, 2.0, false)
 
-## Must be a value between 1.0 and 2.0. Will be clamped
+## Must be a value between 0.0 and 2.0. Will be clamped
 func set_fog_strength(strength: float):
 	strength = clamp(strength, 0.0, 2.0)
 	fog_material.set_shader_parameter("strength", strength)
