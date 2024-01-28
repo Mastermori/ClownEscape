@@ -11,6 +11,8 @@ uniform sampler2D texture_albedo : source_color;
 uniform vec3 uv1_scale;
 uniform vec3 uv1_offset;
 
+uniform float alpha: hint_range(0.0, 1.0) = 1.0;
+
 uniform vec4 color1 : source_color = vec4(0.78, 0.91, 0.93, 1.0);
 uniform vec4 color2 : source_color = vec4(0.71, 0.89, 0.95, 1.0);
 
@@ -27,8 +29,6 @@ vec3 lerpColor(vec4 a, vec4 b, float t){
 float hash(vec2 p) {
   return fract(sin(dot(p * 17.17, vec2(14.91, 67.31))) * 4791.9511);
 }
-
-
 
 float noise(vec2 x) {
   vec2 p = floor(x);
@@ -69,7 +69,6 @@ void vertex() {
 }
 
 void fragment(){
-	
 	ALBEDO = COLOR.xyz;
 	vec2 base_uv = UV;
 	vec4 albedo_tex = texture(texture_albedo,base_uv);
@@ -78,4 +77,8 @@ void fragment(){
 	 if (soft_color.r==color2.r && soft_color.g==color2.g && color2.b==color2.b) {   
        ALPHA = upper_transparency;
     }
+	vec3 world_camera = (INV_VIEW_MATRIX * vec4(vec3(0.0), 1.0)).xyz;
+	vec4 a = INV_VIEW_MATRIX * vec4(VERTEX, 1.0);
+	float dist = distance(a.xyz, world_camera);
+	ALPHA *= clamp(1.1 - dist / 75.0, 0.0, 1.0);
 }
