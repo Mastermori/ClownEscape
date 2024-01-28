@@ -26,7 +26,8 @@ extends Node3D
 func _ready():
 	active = active
 	max_length = max_length
-	$GameReadyLaserBase/AnimationPlayer.play("Laserbase_001Action")
+	# removed due to lighting bugs
+	#$GameReadyLaserBase/AnimationPlayer.play("Laserbase_001Action")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):

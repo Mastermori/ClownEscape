@@ -88,7 +88,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0027771, 0.370691, -0.00012
 shape = SubResource("BoxShape3D_klsfy")
 
 [node name="Ray" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.621263, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.741191, 0)
 exclude_parent = false
 target_position = Vector3(0, 50, 0)
 collision_mask = 3
