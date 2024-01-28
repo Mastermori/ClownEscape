@@ -10,13 +10,13 @@ var total_run_deaths: int = 0
 var break_times: Dictionary = {}
 var current_level_timer: float = 0.0
 var current_level_deaths: int = 0
-var paused: bool = false
 
 func player_died():
+	if not player.is_dead:
+		total_run_deaths += 1
+		current_level_deaths += 1
+		ui.play_death_fade()
 	player.is_dead = true
-	total_run_deaths += 1
-	current_level_deaths += 1
-	ui.play_death_fade()
 
 
 func _ready():
@@ -27,7 +27,7 @@ func _ready():
 
 
 func _process(delta):
-	if paused:
+	if get_tree().paused:
 		return
 	total_run_timer += delta
 	current_level_timer += delta
@@ -65,7 +65,6 @@ func _unhandled_input(event):
 
 func queue_text(text: String):
 	ui.queue_text(text)
-	print(ui)
 
 func overwrite_text(text: String):
 	ui.overwrite_text(text)
