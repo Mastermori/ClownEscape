@@ -6,10 +6,10 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vit6n"]
 transparency = 1
-albedo_color = Color(0.0862745, 0.0196078, 0.211765, 1)
+albedo_color = Color(0.0472, 0.59, 0.219087, 1)
 emission_enabled = true
-emission = Color(0.0857851, 0.0189, 0.21, 1)
-emission_energy_multiplier = 2.0
+emission = Color(0.12348, 0.98, 0.0784, 1)
+emission_energy_multiplier = 5.0
 billboard_mode = 3
 particles_anim_h_frames = 1
 particles_anim_v_frames = 1
