@@ -1,10 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://8e2ey38722hg"]
+[gd_scene load_steps=16 format=3 uid="uid://8e2ey38722hg"]
 
 [ext_resource type="Script" path="res://obstacles/laser/laser.gd" id="1_d4krq"]
 [ext_resource type="Material" uid="uid://b2lmcghn41s75" path="res://obstacles/laser/laser_material.tres" id="2_47lgj"]
 [ext_resource type="PackedScene" uid="uid://bqww7ktbnwtn3" path="res://obstacles/laser/GameReadyLaserBase.glb" id="2_kc588"]
-[ext_resource type="PackedScene" uid="uid://708wd3uux2t4" path="res://obstacles/laser/CLaserbase.dae" id="3_4on6d"]
 [ext_resource type="AudioStream" uid="uid://bfiqdbtjofcqy" path="res://obstacles/laser/Laser.ogg" id="4_tbs36"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oaa74"]
+size = Vector3(1.03087, 0.206573, 1.02209)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_klsfy"]
+size = Vector3(0.701721, 0.734741, 0.436768)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_jiimv"]
 top_radius = 0.03
@@ -72,8 +77,15 @@ script = ExtResource("1_d4krq")
 [node name="GameReadyLaserBase" parent="." instance=ExtResource("2_kc588")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 
-[node name="CLaserbase" parent="." instance=ExtResource("3_4on6d")]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000694275, -0.101181, 0.000305176)
+shape = SubResource("BoxShape3D_oaa74")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0027771, 0.370691, -0.00012207)
+shape = SubResource("BoxShape3D_klsfy")
 
 [node name="Ray" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.621263, 0)
