@@ -8,6 +8,8 @@
 size = Vector3(1.7, 1.9, 1.7)
 
 [node name="Canon" type="StaticBody3D"]
+collision_layer = 8
+collision_mask = 0
 script = ExtResource("1_vao64")
 projectile_scene = ExtResource("2_kxs6a")
 

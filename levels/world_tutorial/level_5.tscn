@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://dntvwp3ey10cg"]
+
+[ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_iw6y5"]
+[ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="2_gq2i5"]
+[ext_resource type="PackedScene" uid="uid://b50k5w01i1s5e" path="res://obstacles/canon/canon.tscn" id="3_m48to"]
+[ext_resource type="PackedScene" uid="uid://c2ote8ql3pxa" path="res://platforms/platform_b.tscn" id="4_8of8c"]
+[ext_resource type="PackedScene" uid="uid://csxa7ww5dihdf" path="res://levels/components/level_transition.tscn" id="5_3e37o"]
+[ext_resource type="PackedScene" uid="uid://dpjwg6mo38qtf" path="res://levels/world1/level1.tscn" id="6_iiqi8"]
+
+[node name="Level5" instance=ExtResource("1_iw6y5")]
+
+[node name="Player" parent="." index="2"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.1558, 4.2839, 3.86616)
+
+[node name="PlatformA" parent="Platforms" index="0" instance=ExtResource("2_gq2i5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PlatformA2" parent="Platforms" index="1" instance=ExtResource("2_gq2i5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9468, 0, 4)
+
+[node name="PlatformA3" parent="Platforms" index="2" instance=ExtResource("2_gq2i5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.0444, 0, 4)
+
+[node name="PlatformA4" parent="Platforms" index="3" instance=ExtResource("2_gq2i5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4788, -3.04374, 16.5306)
+
+[node name="PlatformB" parent="Platforms" index="4" instance=ExtResource("4_8of8c")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.678869, -3.44574, 16.568)
+
+[node name="Canon" parent="Obstacles" index="0" instance=ExtResource("3_m48to")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 15.1661, -0.0185232, 16.6425)
+fire_interval = 1.5
+initial_delay = 0.5
+fire_strength = 23.0
+direction = Vector3(0, 0.4, 1)
+
+[node name="Canon4" parent="Obstacles" index="1" instance=ExtResource("3_m48to")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.619242, -0.0185227, 16.6425)
+fire_interval = 1.0
+fire_strength = 23.0
+direction = Vector3(0, 0.4, 1)
+
+[node name="Canon2" parent="Obstacles" index="2" instance=ExtResource("3_m48to")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 18.4104, -0.0185232, 16.6425)
+fire_interval = 1.5
+initial_delay = 1.0
+fire_strength = 23.0
+direction = Vector3(0, 0.4, 1)
+
+[node name="Canon3" parent="Obstacles" index="3" instance=ExtResource("3_m48to")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 21.8086, -0.0185232, 16.6425)
+fire_interval = 1.5
+initial_delay = 1.5
+fire_strength = 23.0
+direction = Vector3(0, 0.4, 1)
+
+[node name="LevelTransition" parent="Triggers" index="0" instance=ExtResource("5_3e37o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.3229, 3.8812, 4.06427)
+next_level = ExtResource("6_iiqi8")

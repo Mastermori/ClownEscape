@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://brc6po0dmtc7p"]
+[gd_scene load_steps=9 format=3 uid="uid://brc6po0dmtc7p"]
 
 [ext_resource type="Script" path="res://hud/ui_controller.gd" id="1_glmr3"]
 
@@ -46,6 +46,15 @@ _data = {
 "RESET": SubResource("Animation_rfeiw"),
 "fade": SubResource("Animation_2vcpw")
 }
+
+[sub_resource type="Theme" id="Theme_x1sw5"]
+default_font_size = 32
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xjar6"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -127,3 +136,20 @@ one_shot = true
 
 [node name="DisplayTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="TimeDeathDisplay" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -214.0
+offset_bottom = 113.0
+grow_horizontal = 0
+theme = SubResource("Theme_x1sw5")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xjar6")
+text = "00:00:00   ⏲️
+0   🤡"
+horizontal_alignment = 2

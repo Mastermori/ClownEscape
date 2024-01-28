@@ -1,7 +1,7 @@
 class_name Level
 extends Node3D
 
-## 
+## Leave blank if level is NOT a scored levels
 @export var level_name: String = ""
 @onready var sounds = $Sounds
 @onready var spawn_position = $SpawnPosition
