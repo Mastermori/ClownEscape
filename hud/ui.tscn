@@ -3,6 +3,24 @@
 [ext_resource type="Script" path="res://hud/ui_controller.gd" id="1_glmr3"]
 [ext_resource type="Shader" path="res://hud/fog_overlay.gdshader" id="2_sh070"]
 
+[sub_resource type="Theme" id="Theme_x1sw5"]
+default_font_size = 32
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xjar6"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_imy5e"]
+default_font_size = 32
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wfi7v"]
+content_margin_left = 100.0
+content_margin_top = 10.0
+content_margin_right = 100.0
+content_margin_bottom = 30.0
+
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_pobwv"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_2k5x0"]
@@ -20,15 +38,6 @@ shader_parameter/fog_color = Color(0.0913067, 0.0128, 0.16, 1)
 shader_parameter/alpha = 0.2
 shader_parameter/strength = 1.0
 shader_parameter/noise = SubResource("NoiseTexture2D_2k5x0")
-
-[sub_resource type="Theme" id="Theme_imy5e"]
-default_font_size = 32
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wfi7v"]
-content_margin_left = 100.0
-content_margin_top = 10.0
-content_margin_right = 100.0
-content_margin_bottom = 30.0
 
 [sub_resource type="Animation" id="Animation_rfeiw"]
 length = 0.001
@@ -66,15 +75,6 @@ _data = {
 "fade": SubResource("Animation_2vcpw")
 }
 
-[sub_resource type="Theme" id="Theme_x1sw5"]
-default_font_size = 32
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xjar6"]
-content_margin_left = 10.0
-content_margin_top = 10.0
-content_margin_right = 20.0
-content_margin_bottom = 10.0
-
 [node name="UI" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -82,24 +82,37 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_glmr3")
 
-[node name="ColorRect2" type="ColorRect" parent="."]
+[node name="UserInterfaces" type="Control" parent="."]
+visible = false
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -1.0
-offset_top = -10.0
-offset_right = 1.0
-offset_bottom = 10.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(1, 0.0784314, 0.0784314, 1)
+mouse_filter = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="TimeDeathDisplay" type="Label" parent="UserInterfaces"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -224.0
+offset_bottom = 113.0
+grow_horizontal = 0
+theme = SubResource("Theme_x1sw5")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xjar6")
+text = "00:00:00   ⏲️
+0   🤡"
+horizontal_alignment = 2
+
+[node name="ColorRect" type="ColorRect" parent="UserInterfaces"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -112,18 +125,26 @@ offset_right = 10.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(1, 0.0784314, 0.0784314, 1)
 
-[node name="FogOverlay" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_7plw1")
+[node name="ColorRect2" type="ColorRect" parent="UserInterfaces"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -10.0
+offset_right = 1.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0.0784314, 0.0784314, 1)
 
-[node name="ClownCommentary" type="RichTextLabel" parent="."]
+[node name="ClownCommentary" type="RichTextLabel" parent="UserInterfaces"]
 visible = false
 clip_contents = false
 layout_mode = 1
@@ -142,6 +163,16 @@ theme_override_constants/outline_size = 16
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wfi7v")
 bbcode_enabled = true
 fit_content = true
+
+[node name="FogOverlay" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_7plw1")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="DeathRect" type="ColorRect" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -165,23 +196,6 @@ one_shot = true
 [node name="DisplayTimer" type="Timer" parent="."]
 one_shot = true
 
-[node name="TimeDeathDisplay" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -214.0
-offset_bottom = 113.0
-grow_horizontal = 0
-theme = SubResource("Theme_x1sw5")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 12
-theme_override_styles/normal = SubResource("StyleBoxEmpty_xjar6")
-text = "00:00:00   ⏲️
-0   🤡"
-horizontal_alignment = 2
-
 [node name="Sounds" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -195,3 +209,4 @@ offset_right = 0.5
 offset_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
