@@ -50,7 +50,7 @@ instance_dock/preview_resolution=Vector2i(64, 64)
 [application]
 
 config/name="ClownEscape"
-run/main_scene="res://menus/menu.tscn"
+run/main_scene="res://menus/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
