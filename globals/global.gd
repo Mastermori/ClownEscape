@@ -12,10 +12,11 @@ var current_level_timer: float = 0.0
 var current_level_deaths: int = 0
 
 func player_died():
+	if not player.is_dead:
+		total_run_deaths += 1
+		current_level_deaths += 1
+		ui.play_death_fade()
 	player.is_dead = true
-	total_run_deaths += 1
-	current_level_deaths += 1
-	ui.play_death_fade()
 
 
 func _ready():
@@ -24,6 +25,18 @@ func _ready():
 	add_child(ui_layer)
 	ui = ui_layer.get_child(0)
 
+
+func _process(delta):
+	if get_tree().paused:
+		return
+	total_run_timer += delta
+	current_level_timer += delta
+	var millis = fmod(total_run_timer, 1) * 100
+	var seconds = fmod(total_run_timer, 60)
+	var minutes = total_run_timer / 60
+	var text = "%02d:%02d:%02d   ⏲️\n%d   🤡" % [minutes, seconds, millis, total_run_deaths]
+	ui.update_timer_display(text)
+	
 func play_sound_at(sound: AudioStream, position: Vector3, max_distance = 0.0, volume: float = 0.0, pitch: float = 1.0):
 	var audio_player: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
 	audio_player.stream = sound
@@ -38,8 +51,9 @@ func play_sound_at(sound: AudioStream, position: Vector3, max_distance = 0.0, vo
 
 func change_level(new_level: PackedScene):
 	if not level.level_name == "":
-		break_times[level.level_name] = [current_level_timer, current_level_deaths]
-	
+		break_times[level.level_name] = [current_level_timer, total_run_timer, current_level_deaths, total_run_deaths]
+	current_level_timer = 0.0
+	current_level_deaths = 0
 	ui.play_fade_out()
 	await ui.anim_player.animation_finished
 	get_tree().change_scene_to_packed.call_deferred(new_level)
@@ -51,7 +65,6 @@ func _unhandled_input(event):
 
 func queue_text(text: String):
 	ui.queue_text(text)
-	print(ui)
 
 func overwrite_text(text: String):
 	ui.overwrite_text(text)

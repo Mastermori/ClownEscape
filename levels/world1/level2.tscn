@@ -9,10 +9,14 @@
 
 [node name="LevelBase" instance=ExtResource("1_jo414")]
 
-[node name="DirectionalLight3D" parent="." index="0"]
+[node name="Transitions#LevelTransition" parent="." index="0" instance=ExtResource("4_ql7xg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 7.35841, -75.6991)
+next_level = ExtResource("5_uaboi")
+
+[node name="DirectionalLight3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.770012, 0.638029, 0, -0.638029, 0.770012, 0, 6.40436, -3.86146)
 
-[node name="Player" parent="." index="2"]
+[node name="Player" parent="." index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.216357, 5.99617)
 
 [node name="PlatformA" parent="Platforms" index="0" instance=ExtResource("3_r7u03")]
@@ -50,16 +54,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.14997, 0.343948, -57.5298)
 fire_interval = 1.2
 fire_strength = 25.0
 
-[node name="LevelTransition" parent="Transitions" index="0" instance=ExtResource("4_ql7xg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 7.35841, -75.6991)
-next_level = ExtResource("5_uaboi")
-
-[node name="SpawnPosition" parent="." index="7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.216357, -1.56186)
-
 [node name="JumpPad" parent="." index="8" instance=ExtResource("5_w3yfd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.57839, -0.379784, -17.9286)
 bounce_height = 8.0
 
 [node name="JumpPad2" parent="." index="9" instance=ExtResource("5_w3yfd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.696783, 0, -49.4476)
+
+[node name="SpawnPosition" parent="." index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.216357, -1.56186)

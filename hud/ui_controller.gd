@@ -34,6 +34,11 @@ func overwrite_text(text: String, custom_display_time: float = 0):
 	text_queue.clear()
 	display_text(text, custom_display_time)
 
+
+func update_timer_display(text: String):
+	$TimeDeathDisplay.text = text
+
+
 func queue_text(text: String):
 	text_queue.append(text)
 	if not clown_commentary.visible:
