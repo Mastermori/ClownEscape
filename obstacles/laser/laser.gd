@@ -17,6 +17,8 @@ extends Node3D
 			return
 		ray.target_position = ray.target_position.limit_length(val)
 
+@export var base_hidden: bool = false
+
 
 @onready var beam_mesh = %BeamMesh
 @onready var hit_particles = %HitParticles
@@ -26,6 +28,9 @@ extends Node3D
 func _ready():
 	active = active
 	max_length = max_length
+	$GameReadyLaserBase.visible = not base_hidden
+	$StaticBody3D/CollisionShape3D.disabled = base_hidden
+	$StaticBody3D/CollisionShape3D2.disabled = base_hidden
 	# removed due to lighting bugs
 	#$GameReadyLaserBase/AnimationPlayer.play("Laserbase_001Action")
 
