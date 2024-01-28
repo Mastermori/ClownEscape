@@ -20,4 +20,5 @@ func _on_gui_input(event):
 		return
 	if not level_scene:
 		return
+	Global.in_menu = false
 	Global.change_level(level_scene)
