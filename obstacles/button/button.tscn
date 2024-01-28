@@ -30,5 +30,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.43283e-05, 0.143331, -0.000
 shape = SubResource("ConcavePolygonShape3D_bqbt6")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="toggle_button"]
 
 [editable path="GameReadyPressurePlate"]
