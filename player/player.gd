@@ -33,9 +33,7 @@ var is_dead = false
 @onready var camera = %Camera3D
 @onready var koyote_timer = $KoyoteTimer
 
-
 func _ready():
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	Global.player = self
 	$StepsPlayer.is_active_player = true
 
@@ -46,8 +44,7 @@ func _physics_process(delta):
 		move_and_slide()
 		_special_collisions()
 		return
-		
-		
+	
 	var acceleration = FLOORED_ACCELERATION
 	# Add the gravity.
 	if not is_on_floor():
@@ -55,13 +52,13 @@ func _physics_process(delta):
 		velocity.y += _get_gravity() * delta
 	else:
 		dash_charged = true
-
+	
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and (is_on_floor() or not koyote_timer.is_stopped()):
 		koyote_timer.stop()
 		velocity.y = jump_velocity
 		Global.play_sound_at(preload("res://player/Boing.ogg"), position)
-
+	
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir = Input.get_vector("left", "right", "forward", "back")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -122,7 +119,6 @@ func _get_gravity():
 		return jump_gravity
 	else:
 		return fall_gravity
-
 
 func _input(event):
 	# Processing mouse movement here.

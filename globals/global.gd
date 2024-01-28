@@ -87,8 +87,11 @@ func change_level(new_level: PackedScene):
 
 func _unhandled_input(event):
 	if event.is_action_pressed("pause"):
-		get_tree().paused = not get_tree().paused
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE if get_tree().paused else Input.MOUSE_MODE_CAPTURED)
+		get_tree().paused = true
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	elif event.is_action_pressed("mouse_capture"):
+		get_tree().paused = false
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func queue_text(text: String):
 	ui.queue_text(text)
