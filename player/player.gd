@@ -40,9 +40,7 @@ func _ready():
 	$StepsPlayer.is_active_player = true
 
 func _physics_process(delta):
-	
 	if is_dead:
-		velocity.y += _get_gravity() * delta
 		velocity.x = move_toward(velocity.x, 0, ACCELERATION * delta)
 		velocity.z = move_toward(velocity.z, 0, ACCELERATION * delta)
 		move_and_slide()
@@ -97,6 +95,11 @@ func _physics_process(delta):
 	
 	if position.y < -10:
 		Global.player_died()
+	
+	if position.y < 5 and is_falling:
+		Global.ui.set_fog_strength(2 - (global_position.y + 10) * .15)
+	else:
+		Global.ui.set_fog_strength(0)
 	
 	if not is_on_floor() and not is_falling:
 		is_falling = true

@@ -1,13 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://xag144nxhhpn"]
+[gd_scene load_steps=8 format=3 uid="uid://xag144nxhhpn"]
 
 [ext_resource type="PackedScene" uid="uid://cw6bsp01wen3g" path="res://player/player.tscn" id="1_fu36q"]
 [ext_resource type="Script" path="res://levels/level.gd" id="1_px7iy"]
+[ext_resource type="Material" uid="uid://gcpt3pd68q4g" path="res://levels/components/abyss_material.tres" id="3_2h1c3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qvwp2"]
 sky_top_color = Color(0.540375, 0.3575, 0.55, 1)
 sky_horizon_color = Color(0.67, 0.402, 0.406467, 1)
 ground_bottom_color = Color(0.0528, 0.06504, 0.08, 1)
-ground_horizon_color = Color(0.652133, 0.4556, 0.67, 1)
+ground_horizon_color = Color(0.3423, 0.1476, 0.36, 1)
 ground_curve = 0.0360501
 sun_angle_max = 10.0
 
@@ -25,6 +26,17 @@ tonemap_exposure = 0.8
 sdfgi_read_sky_light = false
 glow_enabled = true
 glow_blend_mode = 1
+fog_density = 0.02
+volumetric_fog_density = 0.07
+volumetric_fog_albedo = Color(0.948, 0.87, 1, 1)
+volumetric_fog_length = 50.0
+adjustment_brightness = 0.8
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_i3jo5"]
+material = ExtResource("3_2h1c3")
+size = Vector2(300, 300)
+subdivide_width = 350
+subdivide_depth = 350
 
 [node name="LevelBase" type="Node3D"]
 script = ExtResource("1_px7iy")
@@ -48,3 +60,7 @@ environment = SubResource("Environment_5nvxr")
 [node name="Triggers" type="Node3D" parent="."]
 
 [node name="SpawnPosition" type="Marker3D" parent="."]
+
+[node name="AbyssPlane" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11, 0)
+mesh = SubResource("PlaneMesh_i3jo5")

@@ -17,7 +17,7 @@ func player_died():
 		current_level_deaths += 1
 		ui.play_death_fade()
 	player.is_dead = true
-
+	player.velocity.y = 0
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS

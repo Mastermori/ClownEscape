@@ -9,7 +9,9 @@ var text_queue: Array[String] = []
 @onready var clown_commentary = $ClownCommentary
 @onready var fade_timer = $FadeTimer
 @onready var display_timer = $DisplayTimer
+@onready var death_rect = $DeathRect
 @onready var anim_player = $DeathRect/AnimationPlayer
+@onready var fog_material := $FogOverlay.material as ShaderMaterial
 
 
 func _ready():
@@ -61,3 +63,11 @@ func play_fade_in():
 	
 func play_fade_out():
 		anim_player.play("fade", -1, 2.0, false)
+
+## Must be a value between 1.0 and 2.0. Will be clamped
+func set_fog_strength(strength: float):
+	strength = clamp(strength, 0.0, 2.0)
+	fog_material.set_shader_parameter("strength", strength)
+	
+	var alpha_value = remap(strength, 0.0, 2.0, .2, 1)
+	fog_material.set_shader_parameter("alpha", alpha_value)

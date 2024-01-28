@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://gcpt3pd68q4g"]
+
+[ext_resource type="Shader" path="res://levels/abyss.gdshader" id="1_i3vg0"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_i3vg0")
+shader_parameter/height_scale = 0.9
+shader_parameter/wave_speed = 0.2
+shader_parameter/upper_transparency = 0.89
+shader_parameter/global_transparency = 0.9
+shader_parameter/time_factor = Vector2(2, 3)
+shader_parameter/uv1_scale = Vector3(5, 0, 0)
+shader_parameter/uv1_offset = null
+shader_parameter/color1 = Color(0.31493, 0.0882, 0.42, 1)
+shader_parameter/color2 = Color(0.326907, 0.1476, 0.41, 1)
