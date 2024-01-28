@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cn8mlldn0gf57"]
 
-[ext_resource type="Script" path="res://hud/menu.gd" id="1_0gqnu"]
+[ext_resource type="Script" path="res://menus/menu.gd" id="1_0gqnu"]
 [ext_resource type="PackedScene" uid="uid://6ekia4lxsilk" path="res://levels/world_tutorial/level_1.tscn" id="2_7e07r"]
 
 [sub_resource type="Theme" id="Theme_rfe57"]
