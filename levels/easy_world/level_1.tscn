@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://dg4x3i1b8773x"]
+
+[ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_2pg4s"]
+[ext_resource type="PackedScene" uid="uid://c2ote8ql3pxa" path="res://platforms/platform_b.tscn" id="2_gsicp"]
+[ext_resource type="PackedScene" uid="uid://bfhqbmxjakdab" path="res://platforms/wand.tscn" id="3_rdbva"]
+[ext_resource type="PackedScene" uid="uid://cf4qey5q5atvs" path="res://platforms/wand_platform.tscn" id="4_2d2xi"]
+[ext_resource type="PackedScene" uid="uid://b48kdjgaubgam" path="res://obstacles/jump_pad/jump_pad.tscn" id="4_isqnw"]
+[ext_resource type="PackedScene" uid="uid://csxa7ww5dihdf" path="res://levels/components/level_transition.tscn" id="6_fjxms"]
+
+[node name="Level1" instance=ExtResource("1_2pg4s")]
+
+[node name="Player" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.02824, 4.66672, -3)
+
+[node name="PlatformB" parent="Platforms" index="0" instance=ExtResource("2_gsicp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.07993, 0, -2.96888)
+
+[node name="Wand2" parent="Platforms" index="1" instance=ExtResource("3_rdbva")]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 3, 12.9498, 4.99691)
+
+[node name="WandPlatform" parent="Platforms" index="2" instance=ExtResource("4_2d2xi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 8, -12)
+
+[node name="JumpPad" parent="Obstacles" index="0" instance=ExtResource("4_isqnw")]
+transform = Transform3D(1, 0, 0, 0, 0.137998, -0.990433, 0, 0.990433, 0.137998, 3.01946, 5.21115, -10.6518)
+bounce_direction_correction = Vector3(0, 0.5, 0)
+
+[node name="JumpPad2" parent="Obstacles" index="1" instance=ExtResource("4_isqnw")]
+transform = Transform3D(-1, 1.49012e-08, 2.6077e-08, -1.10489e-08, 0.137998, -0.990433, 1.19209e-07, -0.990433, -0.137998, 3.01946, 10.2809, 3.59795)
+bounce_direction_correction = Vector3(0, 0.5, 0)
+
+[node name="LevelTransition" parent="Triggers" index="0" instance=ExtResource("6_fjxms")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.08745, 12.4035, -12.4781)
