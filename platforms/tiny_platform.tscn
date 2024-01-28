@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj2dynul1los1"]
+
+[ext_resource type="Script" path="res://platforms/platform.gd" id="1_yg1rh"]
+[ext_resource type="PackedScene" uid="uid://bwltx5mo2hfco" path="res://obstacles/TinyPlattform/TinyPlattform.glb" id="2_w6a21"]
+
+[node name="Platform" type="Node3D"]
+script = ExtResource("1_yg1rh")
+
+[node name="TinyPlattform" parent="." instance=ExtResource("2_w6a21")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.64338, -1.3153, -0.296944)
