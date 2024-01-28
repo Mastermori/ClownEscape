@@ -13,6 +13,8 @@ var current_level_deaths: int = 0
 
 var sounds = []
 
+var seen_text_triggers = []
+
 func player_died():
 	if not player.is_dead:
 		total_run_deaths += 1

@@ -5,6 +5,8 @@ const ANIM_SHOOT_POS: float = .84
 
 @export var projectile_scene: PackedScene
 @export var push_strength: float = 40
+@export var ball_liftetime: float = 5
+@export var ball_bounciness: float = .8
 @export var fire_interval: float = 2 :
 	set(val):
 		fire_interval = val
@@ -41,6 +43,8 @@ func shoot_in(direction: Vector3, force: float):
 	projectile.position = shot_position.position
 	projectile.push_strength = push_strength
 	projectile.linear_velocity = direction.rotated(Vector3(0, 1, 0), rotation.y).normalized() * force
+	projectile.physics_material_override.bounce = ball_bounciness
+	projectile.lifetime = ball_liftetime
 	add_child(projectile)
 
 func _process(delta):

@@ -1,7 +1,7 @@
 class_name UIController
 extends Control
 
-@export var fade_time: float = 2.5
+@export var fade_time: float = .75
 @export var display_time: float = 2.5
 
 var text_queue: Array[String] = []
@@ -31,26 +31,39 @@ func end_display():
 	if not next_text:
 		fade_timer.start(fade_time)
 		return
-	display_text(next_text)
+	crossfade_text(next_text)
 
 func overwrite_text(text: String, custom_display_time: float = 0):
 	text_queue.clear()
 	display_text(text, custom_display_time)
 
-
 func update_timer_display(text: String):
 	$UserInterfaces/TimeDeathDisplay.text = text
 
-
 func queue_text(text: String):
+	if not clown_commentary.visible:
+		display_text(text)
+		return
+	if text_queue.size() == 0 and not fade_timer.is_stopped():
+		fade_timer.stop()
+		crossfade_text(text)
+		return
+	
 	text_queue.append(text)
-	if not clown_commentary.visible or not fade_timer.is_stopped():
-		display_text(text_queue.pop_front())
+
+func crossfade_text(text: String):
+	var tween = create_tween()
+	if clown_commentary.modulate.a > .5:
+		tween.tween_property(clown_commentary, "modulate:a", 0, .35).from_current()
+	tween.tween_callback(func(): clown_commentary.text = "[center]" + text)
+	tween.tween_property(clown_commentary, "modulate:a", 1, .45).from(0)
+	tween.tween_callback(display_timer.start.bind(display_time))
 
 func display_text(text: String, custom_display_time: float = 0):
 	clown_commentary.visible = true
 	clown_commentary.modulate.a = 1
 	clown_commentary.text = "[center]" + text
+	fade_timer.stop()
 	display_timer.start(display_time if custom_display_time <= 0 else custom_display_time)
 
 func play_death_fade():

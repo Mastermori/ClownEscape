@@ -9,17 +9,7 @@
 
 [node name="Level2" instance=ExtResource("1_jq54a")]
 
-[node name="Transitions#TextTrigger" parent="." index="0" instance=ExtResource("4_jit0d")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -9.24716, 4.35597, 1.0293)
-text = "Enjoy yourself,
-we surely will"
-
-[node name="Transitions#TextTrigger2" parent="." index="1" instance=ExtResource("4_jit0d")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -26.6483, 4.35597, 1.0293)
-text = "Good luck being stuck for eternity"
-overwrite_all_text = true
-
-[node name="Player" parent="." index="4"]
+[node name="Player" parent="." index="2"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.06163, 4.14916, 1.87233)
 
 [node name="PlatformA" parent="Platforms" index="0" instance=ExtResource("2_iwhjl")]
@@ -34,3 +24,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2605, 0, 0.977274)
 [node name="LevelTransition" parent="Triggers" index="0" instance=ExtResource("5_20vxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.3375, 4.57141, 0.972035)
 next_level = ExtResource("6_bwcec")
+
+[node name="TextTrigger2" parent="Triggers" index="1" instance=ExtResource("4_jit0d")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -18.1215, 5.35597, 1.0293)
+text = "Good luck being stuck for eternity"

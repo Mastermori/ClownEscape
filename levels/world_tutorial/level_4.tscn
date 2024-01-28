@@ -30,7 +30,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8121, -0.541283, 4.14734)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.38511, -0.541283, 4.14734)
 
 [node name="PlatformA2" parent="Platforms" index="5" instance=ExtResource("2_lkgjw")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.5056, -6.96008, 2.71421)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.5056, -14.5453, 3.57845)
+visible = false
 
 [node name="Button" parent="Obstacles" index="0" instance=ExtResource("6_ke5vy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4, 3, 4.10836)
@@ -39,25 +40,32 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4, 3, 4.10836)
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.99283, 3.91536, 10.1604)
 
 [node name="Laser2" parent="Obstacles" index="2" instance=ExtResource("4_xoiqb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -3.70714, 3.98288)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -11.2923, 3.98288)
+base_hidden = true
 
 [node name="Laser3" parent="Obstacles" index="3" instance=ExtResource("4_xoiqb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -3.70714, 4.91212)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -11.2923, 4.91212)
+base_hidden = true
 
 [node name="Laser4" parent="Obstacles" index="4" instance=ExtResource("4_xoiqb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -3.70714, 3.00155)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -11.2923, 3.00155)
+base_hidden = true
 
 [node name="Laser5" parent="Obstacles" index="5" instance=ExtResource("4_xoiqb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -3.70714, 2.04853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -11.2923, 2.04853)
+base_hidden = true
 
 [node name="Laser8" parent="Obstacles" index="6" instance=ExtResource("4_xoiqb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -3.70714, 1.2613)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -11.2923, 1.2613)
+base_hidden = true
 
 [node name="Laser6" parent="Obstacles" index="7" instance=ExtResource("4_xoiqb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -3.70714, 5.85816)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -11.2923, 5.85816)
+base_hidden = true
 
 [node name="Laser7" parent="Obstacles" index="8" instance=ExtResource("4_xoiqb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -3.70714, 6.66014)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -11.2923, 6.66014)
+base_hidden = true
 
 [node name="LevelTransition" parent="Triggers" index="0" instance=ExtResource("7_cutsr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9167, 3.63628, 4.03696)
