@@ -51,10 +51,9 @@ func _process(delta):
 	var time_left: float = $Timer.time_left
 	var shoot_anim_pos := ANIM_SHOOT_POS / animation_speed
 	if not $Canon/AnimationPlayer.is_playing() and time_left < shoot_anim_pos:
-		print("Starting anim at %s" % $Timer.time_left)
 		$Canon/AnimationPlayer.play("Cannon Animation")
 		$Canon/AnimationPlayer.seek(shoot_anim_pos - time_left)
 
 
 func _on_animation_player_animation_finished(anim_name):
-	print("Finished with %s" % $Timer.time_left)
+	pass
