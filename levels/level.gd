@@ -1,7 +1,8 @@
 class_name Level
 extends Node3D
 
-
+## 
+@export var level_name: String = ""
 @onready var sounds = $Sounds
 @onready var spawn_position = $SpawnPosition
 

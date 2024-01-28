@@ -5,9 +5,16 @@ var player: Player
 var level: Level
 var ui: UIController
 
+var total_run_timer: float = 0.0
+var total_run_deaths: int = 0
+var break_times: Dictionary = {}
+var current_level_timer: float = 0.0
+var current_level_deaths: int = 0
 
 func player_died():
 	player.is_dead = true
+	total_run_deaths += 1
+	current_level_deaths += 1
 	ui.play_death_fade()
 
 
@@ -30,6 +37,9 @@ func play_sound_at(sound: AudioStream, position: Vector3, max_distance = 0.0, vo
 	return audio_player
 
 func change_level(new_level: PackedScene):
+	if not level.level_name == "":
+		break_times[level.level_name] = [current_level_timer, current_level_deaths]
+	
 	ui.play_fade_out()
 	await ui.anim_player.animation_finished
 	get_tree().change_scene_to_packed.call_deferred(new_level)

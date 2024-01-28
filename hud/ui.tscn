@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://brc6po0dmtc7p"]
 
-[ext_resource type="Script" path="res://UI/ui_controller.gd" id="1_fbnl7"]
+[ext_resource type="Script" path="res://hud/ui_controller.gd" id="1_glmr3"]
 
 [sub_resource type="Theme" id="Theme_imy5e"]
 default_font_size = 32
@@ -54,7 +54,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_fbnl7")
+script = ExtResource("1_glmr3")
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 layout_mode = 1
