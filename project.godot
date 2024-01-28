@@ -32,8 +32,14 @@ instance_dock/scenes=[{
 "scene": "res://obstacles/laser/laser.tscn"
 }, {
 "scene": "res://obstacles/jump_pad/jump_pad.tscn"
+}],
+"scroll": 0
 }, {
+"name": "Trigger",
+"scenes": [{
 "scene": "res://levels/components/level_transition.tscn"
+}, {
+"scene": "res://levels/components/text_trigger.tscn"
 }],
 "scroll": 0
 }]
