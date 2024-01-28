@@ -24,6 +24,6 @@ func shoot():
 func shoot_in(direction: Vector3, force: float):
 	var projectile := projectile_scene.instantiate() as RigidBody3D
 	projectile.position = shot_position.position
-	projectile.linear_velocity = direction.normalized() * force
-	projectile.push_strength
+	projectile.push_strength = push_strength
+	projectile.linear_velocity = direction.rotated(Vector3(0, 1, 0), rotation.y).normalized() * force
 	add_child(projectile)

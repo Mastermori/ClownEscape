@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dwcuerynd5d6u"]
+[gd_scene load_steps=9 format=3 uid="uid://dwcuerynd5d6u"]
 
 [ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_0gvia"]
 [ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="2_lkgjw"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://8e2ey38722hg" path="res://obstacles/laser/laser.tscn" id="4_xoiqb"]
 [ext_resource type="PackedScene" uid="uid://b3ch27e2b5l68" path="res://obstacles/button/button.tscn" id="6_ke5vy"]
 [ext_resource type="PackedScene" uid="uid://csxa7ww5dihdf" path="res://levels/components/level_transition.tscn" id="7_cutsr"]
+[ext_resource type="PackedScene" uid="uid://dntvwp3ey10cg" path="res://levels/world_tutorial/level_5.tscn" id="8_scbdo"]
 
 [node name="Level4" instance=ExtResource("1_0gvia")]
 
@@ -35,7 +36,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.505
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4, 3, 4.10836)
 
 [node name="Laser" parent="Obstacles" index="1" instance=ExtResource("4_xoiqb")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.99283, 3.91536, 10.4329)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.99283, 3.91536, 10.1604)
 
 [node name="Laser2" parent="Obstacles" index="2" instance=ExtResource("4_xoiqb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -3.70714, 3.98288)
@@ -60,6 +61,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4787, -3.70714, 6.66014)
 
 [node name="LevelTransition" parent="Triggers" index="0" instance=ExtResource("7_cutsr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9167, 3.63628, 4.03696)
+next_level = ExtResource("8_scbdo")
 
 [connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser2" method="toggle"]
 [connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser3" method="toggle"]
