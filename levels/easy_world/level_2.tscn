@@ -1,0 +1,55 @@
+[gd_scene load_steps=11 format=3 uid="uid://dakv5o7t8lt2s"]
+
+[ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_fubn5"]
+[ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="2_m8acv"]
+[ext_resource type="PackedScene" uid="uid://c2ote8ql3pxa" path="res://platforms/platform_b.tscn" id="3_7sjdn"]
+[ext_resource type="PackedScene" uid="uid://csxa7ww5dihdf" path="res://levels/components/level_transition.tscn" id="3_7wqho"]
+[ext_resource type="PackedScene" uid="uid://cf4qey5q5atvs" path="res://platforms/wand_platform.tscn" id="4_0gell"]
+[ext_resource type="PackedScene" uid="uid://b48kdjgaubgam" path="res://obstacles/jump_pad/jump_pad.tscn" id="4_jo0rq"]
+[ext_resource type="PackedScene" uid="uid://cau0cybig3rn" path="res://levels/components/text_trigger.tscn" id="4_vlr7s"]
+[ext_resource type="PackedScene" uid="uid://b3ch27e2b5l68" path="res://obstacles/button/button.tscn" id="6_uhv1m"]
+[ext_resource type="PackedScene" uid="uid://8e2ey38722hg" path="res://obstacles/laser/laser.tscn" id="9_awjyp"]
+[ext_resource type="PackedScene" uid="uid://dpjwg6mo38qtf" path="res://levels/world1/level1.tscn" id="10_pmn7e"]
+
+[node name="Level2" instance=ExtResource("1_fubn5")]
+
+[node name="Player" parent="." index="2"]
+transform = Transform3D(2.98023e-08, 0, -1, 0, 1, 0, 1, 0, 2.98023e-08, 0, 4.28267, 6.32521)
+
+[node name="PlatformA" parent="Platforms" index="0" instance=ExtResource("2_m8acv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.76987, 0, 6.21661)
+
+[node name="PlatformB" parent="Platforms" index="1" instance=ExtResource("3_7sjdn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1487, -0.601107, 6.23421)
+
+[node name="PlatformB2" parent="Platforms" index="2" instance=ExtResource("3_7sjdn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.727, -0.601107, 6.23421)
+
+[node name="WandPlatform" parent="Platforms" index="3" instance=ExtResource("4_0gell")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.3571, 2.26785, 6.20183)
+
+[node name="JumpPad" parent="Obstacles" index="0" instance=ExtResource("4_jo0rq")]
+transform = Transform3D(0.5, -0.866025, 0, 0.866025, 0.5, 0, 0, 0, 1, -0.990979, -0.0260762, 6.12016)
+bounce_height = 30.0
+bounce_direction_correction = Vector3(0, 0.75, 0)
+
+[node name="Button" parent="Obstacles" index="1" instance=ExtResource("6_uhv1m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.6769, 3.33271, 6.11556)
+
+[node name="Laser" parent="Obstacles" index="2" instance=ExtResource("9_awjyp")]
+transform = Transform3D(-4.37114e-08, 1, 0, 4.37114e-08, 1.91069e-15, 1, 1, 4.37114e-08, -4.37114e-08, -22.1618, 4.58733, 6.24903)
+active = false
+
+[node name="LevelTransition" parent="Triggers" index="0" instance=ExtResource("3_7wqho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.01165, 4.35936, 6.3511)
+
+[node name="TextTrigger" parent="Triggers" index="1" instance=ExtResource("4_vlr7s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 4, 6.3)
+text = "You thought it was that easy?"
+
+[node name="LevelTransition2" parent="Triggers" index="2" instance=ExtResource("3_7wqho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.7882, 7, 6.25029)
+next_level = ExtResource("10_pmn7e")
+
+[connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser" method="toggle"]
+[connection signal="text_triggered" from="Triggers/TextTrigger" to="Triggers/LevelTransition" method="queue_free"]

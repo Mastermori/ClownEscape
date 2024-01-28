@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dg4x3i1b8773x"]
+[gd_scene load_steps=8 format=3 uid="uid://dg4x3i1b8773x"]
 
 [ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_2pg4s"]
 [ext_resource type="PackedScene" uid="uid://c2ote8ql3pxa" path="res://platforms/platform_b.tscn" id="2_gsicp"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cf4qey5q5atvs" path="res://platforms/wand_platform.tscn" id="4_2d2xi"]
 [ext_resource type="PackedScene" uid="uid://b48kdjgaubgam" path="res://obstacles/jump_pad/jump_pad.tscn" id="4_isqnw"]
 [ext_resource type="PackedScene" uid="uid://csxa7ww5dihdf" path="res://levels/components/level_transition.tscn" id="6_fjxms"]
+[ext_resource type="PackedScene" uid="uid://dakv5o7t8lt2s" path="res://levels/easy_world/level_2.tscn" id="7_hln55"]
 
 [node name="Level1" instance=ExtResource("1_2pg4s")]
 
@@ -31,3 +32,4 @@ bounce_direction_correction = Vector3(0, 0.5, 0)
 
 [node name="LevelTransition" parent="Triggers" index="0" instance=ExtResource("6_fjxms")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.08745, 12.4035, -12.4781)
+next_level = ExtResource("7_hln55")
