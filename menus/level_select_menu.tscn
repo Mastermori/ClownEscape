@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cfj8su5ieibfe"]
+[gd_scene load_steps=18 format=3 uid="uid://cfj8su5ieibfe"]
 
 [ext_resource type="PackedScene" uid="uid://btsgmc1psq4f" path="res://menus/level_card.tscn" id="1_my1jk"]
 [ext_resource type="Script" path="res://menus/level_select_menu.gd" id="1_pt5vo"]
@@ -11,10 +11,11 @@
 [ext_resource type="PackedScene" uid="uid://dg4x3i1b8773x" path="res://levels/easy_world/level_1.tscn" id="9_kpy0m"]
 [ext_resource type="PackedScene" uid="uid://dakv5o7t8lt2s" path="res://levels/easy_world/level_2.tscn" id="10_2vy0s"]
 [ext_resource type="PackedScene" uid="uid://dpjwg6mo38qtf" path="res://levels/world1/level1.tscn" id="11_hyhnw"]
+[ext_resource type="PackedScene" uid="uid://y0k2pfj6w7y5" path="res://levels/easy_world/level3.tscn" id="11_wbius"]
 [ext_resource type="PackedScene" uid="uid://cnc4bs7ptxlil" path="res://levels/world1/level2.tscn" id="12_dva2v"]
+[ext_resource type="PackedScene" uid="uid://cocdopru2jxs1" path="res://levels/easy_world/level4.tscn" id="12_vf6vq"]
 [ext_resource type="PackedScene" uid="uid://dej3yjlxd3yf1" path="res://levels/world1/level3.tscn" id="13_dj5f8"]
 [ext_resource type="PackedScene" uid="uid://s1edbcsxjwwm" path="res://levels/world1/level4.tscn" id="14_or232"]
-[ext_resource type="PackedScene" path="res://levels/world1/level5.tscn" id="15_s0xih"]
 [ext_resource type="PackedScene" uid="uid://ds7sya0pv27v1" path="res://levels/world2/levelA.tscn" id="16_hyxt6"]
 
 [node name="LevelSelectMenu" type="Control"]
@@ -43,15 +44,15 @@ layout_mode = 2
 
 [node name="WorldSelection" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 15
+theme_override_constants/separation = 50
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/WorldSelection"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer"]
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "Tutorial!"
+text = "Peace?"
 
 [node name="LevelSelection" type="HBoxContainer" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer"]
 layout_mode = 2
@@ -90,10 +91,13 @@ level_scene = ExtResource("7_e4jig")
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/WorldSelection"]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer2"]
+[node name="Label3" type="RichTextLabel" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer2"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Peace?"
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[wave]Deception"
+fit_content = true
+scroll_active = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer2"]
 layout_mode = 2
@@ -109,54 +113,20 @@ layout_mode = 2
 level_name = "2 - 2"
 level_scene = ExtResource("10_2vy0s")
 
+[node name="LevelCard4" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer2/HBoxContainer" instance=ExtResource("1_my1jk")]
+layout_mode = 2
+level_name = "2 - 4"
+level_scene = ExtResource("12_vf6vq")
+
 [node name="LevelCard3" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer2/HBoxContainer" instance=ExtResource("1_my1jk")]
 layout_mode = 2
-level_name = "2 - 3"
+level_name = "???"
+level_scene = ExtResource("11_wbius")
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/WorldSelection"]
 layout_mode = 2
 
 [node name="Label3" type="RichTextLabel" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer3"]
-layout_mode = 2
-theme_override_font_sizes/normal_font_size = 25
-bbcode_enabled = true
-text = "[wave]Deception"
-fit_content = true
-scroll_active = false
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer3"]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="LevelCard" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer3/HBoxContainer2" instance=ExtResource("1_my1jk")]
-layout_mode = 2
-level_name = "3 - 1"
-level_scene = ExtResource("11_hyhnw")
-
-[node name="LevelCard2" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer3/HBoxContainer2" instance=ExtResource("1_my1jk")]
-layout_mode = 2
-level_name = "3 - 2"
-level_scene = ExtResource("12_dva2v")
-
-[node name="LevelCard3" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer3/HBoxContainer2" instance=ExtResource("1_my1jk")]
-layout_mode = 2
-level_name = "3 - 3"
-level_scene = ExtResource("13_dj5f8")
-
-[node name="LevelCard4" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer3/HBoxContainer2" instance=ExtResource("1_my1jk")]
-layout_mode = 2
-level_name = "3 - 4"
-level_scene = ExtResource("14_or232")
-
-[node name="LevelCard5" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer3/HBoxContainer2" instance=ExtResource("1_my1jk")]
-layout_mode = 2
-level_name = "3 - 5"
-level_scene = ExtResource("15_s0xih")
-
-[node name="VBoxContainer4" type="VBoxContainer" parent="MarginContainer/VBoxContainer/WorldSelection"]
-layout_mode = 2
-
-[node name="Label3" type="RichTextLabel" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer4"]
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
@@ -164,14 +134,34 @@ text = "[rainbow]Mania[/rainbow]"
 fit_content = true
 scroll_active = false
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer4"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer3"]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="LevelCard" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer4/HBoxContainer2" instance=ExtResource("1_my1jk")]
+[node name="LevelCard5" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer3/HBoxContainer2" instance=ExtResource("1_my1jk")]
 layout_mode = 2
-level_name = "4 - A"
+level_name = "3 - 1"
 level_scene = ExtResource("16_hyxt6")
+
+[node name="LevelCard" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer3/HBoxContainer2" instance=ExtResource("1_my1jk")]
+layout_mode = 2
+level_name = "3 - 2"
+level_scene = ExtResource("11_hyhnw")
+
+[node name="LevelCard2" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer3/HBoxContainer2" instance=ExtResource("1_my1jk")]
+layout_mode = 2
+level_name = "3 - 3"
+level_scene = ExtResource("12_dva2v")
+
+[node name="LevelCard3" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer3/HBoxContainer2" instance=ExtResource("1_my1jk")]
+layout_mode = 2
+level_name = "3 - 4"
+level_scene = ExtResource("13_dj5f8")
+
+[node name="LevelCard4" parent="MarginContainer/VBoxContainer/WorldSelection/VBoxContainer3/HBoxContainer2" instance=ExtResource("1_my1jk")]
+layout_mode = 2
+level_name = "3 - 5"
+level_scene = ExtResource("14_or232")
 
 [node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2

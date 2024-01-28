@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cau0cybig3rn" path="res://levels/components/text_trigger.tscn" id="4_vlr7s"]
 [ext_resource type="PackedScene" uid="uid://b3ch27e2b5l68" path="res://obstacles/button/button.tscn" id="6_uhv1m"]
 [ext_resource type="PackedScene" uid="uid://8e2ey38722hg" path="res://obstacles/laser/laser.tscn" id="9_awjyp"]
-[ext_resource type="PackedScene" uid="uid://y0k2pfj6w7y5" path="res://levels/easy_world/level3.tscn" id="10_pxhpt"]
+[ext_resource type="PackedScene" uid="uid://cocdopru2jxs1" path="res://levels/easy_world/level4.tscn" id="10_vk2p8"]
 
 [node name="Level2" instance=ExtResource("1_fubn5")]
 
@@ -49,7 +49,7 @@ text = "You thought it was that easy?"
 
 [node name="LevelTransition2" parent="Triggers" index="2" instance=ExtResource("3_7wqho")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.7882, 7, 6.25029)
-next_level = ExtResource("10_pxhpt")
+next_level = ExtResource("10_vk2p8")
 
 [connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser" method="toggle"]
 [connection signal="text_triggered" from="Triggers/TextTrigger" to="Triggers/LevelTransition" method="queue_free"]

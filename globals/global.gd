@@ -12,6 +12,8 @@ var current_level_timer: float = 0.0
 var current_level_deaths: int = 0
 var timer_finished: bool = false
 
+var in_menu: bool = false
+
 var sounds = []
 
 var seen_text_triggers = []
@@ -88,10 +90,14 @@ func change_level(new_level: PackedScene):
 	get_tree().change_scene_to_packed.call_deferred(new_level)
 
 func _unhandled_input(event):
+	if in_menu:
+		return
 	if event.is_action_pressed("pause"):
+		ui.get_node("MarginContainer").visible = true
 		get_tree().paused = true
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	elif event.is_action_pressed("mouse_capture"):
+		ui.get_node("MarginContainer").visible = false
 		get_tree().paused = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 

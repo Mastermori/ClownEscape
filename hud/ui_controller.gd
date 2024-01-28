@@ -86,3 +86,10 @@ func set_fog_strength(strength: float):
 	
 	var alpha_value = remap(strength, 0.0, 2.0, .2, 1)
 	fog_material.set_shader_parameter("alpha", alpha_value)
+
+
+func _on_main_menu_button_pressed():
+	$UserInterfaces.visible = false
+	$MarginContainer.visible = false
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://menus/main_menu.tscn")

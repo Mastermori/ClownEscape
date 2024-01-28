@@ -3,6 +3,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.in_menu = true
 	Global.ui.set_fog_strength(.2)
 	Global.ui.get_node("UserInterfaces").visible = true
 	Global.timer_finished = true
