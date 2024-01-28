@@ -27,10 +27,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.4692, 5.13604, 34.1461)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.2816, -1.31667)
 
 [node name="Platform2" parent="Platforms" index="3" instance=ExtResource("5_aqio8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.96947, 23.0065, 14.1685)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.96947, 22.9267, 14.2016)
 
 [node name="Platform3" parent="Platforms" index="4" instance=ExtResource("5_aqio8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.96947, 8.25249, 14.1685)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.96947, 8.1727, 14.2016)
 
 [node name="Platform4" parent="Platforms" index="5" instance=ExtResource("5_aqio8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4303, 12.3669, 29.6264)
@@ -48,7 +48,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0939, 10.5595, 37.4033)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3939, 12.3669, 40.0073)
 
 [node name="Canon" parent="Obstacles" index="0" instance=ExtResource("2_f7rqg")]
-transform = Transform3D(2.98023e-08, 0, -1, 0, 1, 0, 1, 0, 2.98023e-08, 8, 23.5595, 14.1455)
+transform = Transform3D(2.98023e-08, 0, -1, 0, 1, 0, 1, 0, 2.98023e-08, 8, 23.4797, 14.1786)
 
 [node name="JumpPad" parent="Obstacles" index="1" instance=ExtResource("6_lbk2c")]
 transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 13.0643, -0.965277)
