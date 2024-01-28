@@ -122,7 +122,7 @@ max_length = 20
 [node name="Canon" parent="Obstacles" index="17" instance=ExtResource("6_1rl6q")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17.6512, 20.0432, -9.83245)
 push_strength = 100.0
-direction = Vector3(1, 0.3, 0)
+direction = Vector3(0, 0.3, 1)
 
 [node name="SpawnPosition" parent="." index="7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23.2083, 0)

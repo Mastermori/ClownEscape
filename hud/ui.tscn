@@ -153,3 +153,8 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_xjar6")
 text = "00:00:00   ⏲️
 0   🤡"
 horizontal_alignment = 2
+
+[node name="Sounds" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

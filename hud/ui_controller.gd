@@ -10,6 +10,7 @@ var text_queue: Array[String] = []
 @onready var fade_timer = $FadeTimer
 @onready var display_timer = $DisplayTimer
 @onready var anim_player = $DeathRect/AnimationPlayer
+@onready var sounds = $Sounds
 
 
 func _ready():
