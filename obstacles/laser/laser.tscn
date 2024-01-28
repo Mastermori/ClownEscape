@@ -6,10 +6,10 @@
 [ext_resource type="AudioStream" uid="uid://bfiqdbtjofcqy" path="res://obstacles/laser/Laser.ogg" id="4_tbs36"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oaa74"]
-size = Vector3(1.03087, 0.206573, 1.02209)
+size = Vector3(1.34691, 0.206573, 1.37411)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_klsfy"]
-size = Vector3(0.701721, 0.734741, 0.436768)
+size = Vector3(0.940018, 1.01044, 0.591713)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_jiimv"]
 top_radius = 0.03
@@ -75,20 +75,20 @@ func _on_finished():
 script = ExtResource("1_d4krq")
 
 [node name="GameReadyLaserBase" parent="." instance=ExtResource("2_kc588")]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000694275, -0.101181, 0.000305176)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0085746, -0.101181, 0.00160277)
 shape = SubResource("BoxShape3D_oaa74")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0027771, 0.370691, -0.00012207)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00725555, 0.508539, -0.000667483)
 shape = SubResource("BoxShape3D_klsfy")
 
 [node name="Ray" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.741191, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.853953, 0)
 exclude_parent = false
 target_position = Vector3(0, 50, 0)
 collision_mask = 3
