@@ -44,6 +44,7 @@ func shoot_in(direction: Vector3, force: float):
 	projectile.push_strength = push_strength
 	projectile.linear_velocity = direction.rotated(Vector3(0, 1, 0), rotation.y).normalized() * force
 	projectile.physics_material_override.bounce = ball_bounciness
+	projectile.lifetime = ball_liftetime
 	add_child(projectile)
 
 func _process(delta):
