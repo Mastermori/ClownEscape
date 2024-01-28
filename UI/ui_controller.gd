@@ -9,6 +9,7 @@ var text_queue: Array[String] = []
 @onready var clown_commentary = $ClownCommentary
 @onready var fade_timer = $FadeTimer
 @onready var display_timer = $DisplayTimer
+@onready var anim_player = $DeathRect/AnimationPlayer
 
 
 func _ready():
@@ -43,7 +44,14 @@ func display_text(text: String, custom_display_time: float = 0):
 	clown_commentary.text = "[center]" + text
 	display_timer.start(display_time if custom_display_time <= 0 else custom_display_time)
 
-func play_fade():
-	var anim_player = $ColorRect3/AnimationPlayer
+func play_death_fade():
 	if not anim_player.is_playing():
-		anim_player.play("Fade")
+		anim_player.play("fade")
+		await anim_player.animation_finished
+		Global.level.reset_player()
+
+func play_fade_in():
+		anim_player.play("fade", -1, -2.0, true)
+	
+func play_fade_out():
+		anim_player.play("fade", -1, 2.0, false)

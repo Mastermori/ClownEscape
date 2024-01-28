@@ -38,10 +38,6 @@ directional_shadow_split_3 = 0.367
 environment = SubResource("Environment_5nvxr")
 
 [node name="Player" parent="." instance=ExtResource("1_fu36q")]
-jump_height = 2.0
-jump_time_to_peak = 0.5
-jump_time_to_fall = 0.43
-koyote_time_frame = 0.1
 
 [node name="Sounds" type="Node3D" parent="."]
 

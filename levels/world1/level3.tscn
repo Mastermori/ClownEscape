@@ -124,6 +124,6 @@ direction = Vector3(1, 0.3, 0)
 [node name="SpawnPosition" parent="." index="7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23.2083, 0)
 
-[node name="LevelTransition" parent="." index="9" instance=ExtResource("8_7ppeo")]
+[node name="LevelTransition" parent="." index="8" instance=ExtResource("8_7ppeo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.631, 15.7108, -29.2402)
 next_level = ExtResource("9_djhtx")

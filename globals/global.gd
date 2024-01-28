@@ -8,6 +8,7 @@ var ui: UIController
 
 func player_died():
 	player.is_dead = true
+	ui.play_death_fade()
 
 
 func _ready():
@@ -29,6 +30,8 @@ func play_sound_at(sound: AudioStream, position: Vector3, max_distance = 0.0, vo
 	return audio_player
 
 func change_level(new_level: PackedScene):
+	ui.play_fade_out()
+	await ui.anim_player.animation_finished
 	get_tree().change_scene_to_packed.call_deferred(new_level)
 
 func _unhandled_input(event):
