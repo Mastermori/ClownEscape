@@ -24,6 +24,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 var dash_cooldown = 0.0
 var dash_charged = true
+var camera_locked: bool = false
 
 # Whether the player should make walking sounds.
 var is_walking = false
@@ -122,7 +123,12 @@ func _get_gravity():
 	else:
 		return fall_gravity
 
+func lock_camera(val: bool) -> void:
+	camera_locked = val
+
 func _input(event):
+	if camera_locked:
+		return
 	# Processing mouse movement here.
 	# We only want to look around while the mouse is "captured" inside godot.
 	# We rotate the character around the Y axis only since we do not want to flip ourselves upside down.
