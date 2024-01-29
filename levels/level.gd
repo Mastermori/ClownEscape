@@ -17,3 +17,7 @@ func _ready():
 
 func reset_player():
 	get_tree().change_scene_to_file(scene_file_path)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("reset_level"):
+		reset_player()
