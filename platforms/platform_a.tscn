@@ -1,10 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://dtuny4brvvc8f"]
+[gd_scene load_steps=4 format=3 uid="uid://dtuny4brvvc8f"]
 
 [ext_resource type="Script" path="res://platforms/platform.gd" id="1_bvwp3"]
 [ext_resource type="PackedScene" uid="uid://dqgrbtfksic4m" path="res://platforms/models/GameReadyPlattformA.glb" id="2_3curu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8piiv"]
+size = Vector3(11.154, 0.604347, 3.57312)
 
 [node name="PlatformA" type="Node3D"]
 script = ExtResource("1_bvwp3")
 
 [node name="GameReadyPlattformA" parent="." instance=ExtResource("2_3curu")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 12.3883)
+
+[node name="BallOnlyCollider" type="StaticBody3D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BallOnlyCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0444641, 2.73537, 0.00140381)
+shape = SubResource("BoxShape3D_8piiv")

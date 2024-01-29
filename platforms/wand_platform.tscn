@@ -1,10 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://cf4qey5q5atvs"]
+[gd_scene load_steps=5 format=3 uid="uid://cf4qey5q5atvs"]
 
 [ext_resource type="Script" path="res://platforms/platform.gd" id="1_1xjw3"]
 [ext_resource type="PackedScene" uid="uid://dfm5p71ns60fo" path="res://platforms/models/GameReadyWandPlattformC.glb" id="2_fwifw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7mmr4"]
+size = Vector3(3.59077, 0.649674, 4.00062)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hveh5"]
+size = Vector3(2.95548, 7.26984, 0.815712)
 
 [node name="WandPlatform" type="Node3D"]
 script = ExtResource("1_1xjw3")
 
 [node name="GameReadyWandPlattformC" parent="." instance=ExtResource("2_fwifw")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6.28546, 0, 0)
+
+[node name="BallOnlyCollider" type="StaticBody3D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BallOnlyCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0203521, 3.31186, -0.575199)
+shape = SubResource("BoxShape3D_7mmr4")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="BallOnlyCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0328054, -0.656357, 0.765146)
+shape = SubResource("BoxShape3D_hveh5")

@@ -22,7 +22,7 @@ transform = Transform3D(0.514964, -0.177622, -0.838607, 0.00805672, 0.979256, -0
 transform = Transform3D(0.463079, 0, -0.886317, 0, 1, 0, 0.886317, 0, 0.463079, -1.69842, -0.973638, -3.28791)
 
 [node name="PlatformA2" parent="Platforms" index="1" instance=ExtResource("2_dtc53")]
-transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, -0.573631, 1.44214, -23.1586)
+transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 1.38542, 1.44214, -23.1586)
 
 [node name="Platform" parent="Platforms" index="2" instance=ExtResource("3_yduho")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.666, 3.07956, -10.0302)
@@ -37,7 +37,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.4798, 3.27928, -22.4171)
 transform = Transform3D(-4.34014e-08, -0.118889, 0.992908, -5.19681e-09, 0.992908, 0.118889, -1, 0, -4.37114e-08, -14.5731, 4.07014, -22.3817)
 
 [node name="PlatformB" parent="Platforms" index="6" instance=ExtResource("6_vg1l5")]
-transform = Transform3D(0.0104718, -0.499973, -0.865978, 0, 0.866025, -0.5, 0.999945, 0.00523591, 0.00906887, 29.6587, 4.40416, -22.2283)
+transform = Transform3D(0.0104718, -0.499973, -0.865978, 0, 0.866025, -0.5, 0.999945, 0.00523591, 0.00906887, 30.3274, 4.40416, -22.2283)
 
 [node name="PlatformB2" parent="Platforms" index="7" instance=ExtResource("6_vg1l5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.2146, 4.66898, -35.8703)
@@ -84,7 +84,7 @@ transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 42.230
 [node name="Canon" parent="Obstacles" index="0" instance=ExtResource("8_v1x3f")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 47.9687, 13.9014, -22.4102)
 ball_liftetime = 8.0
-ball_bounciness = 0.7
+ball_bounciness = 1.0
 fire_strength = 11.7
 
 [node name="JumpPad" parent="Obstacles" index="1" instance=ExtResource("7_vo0ft")]

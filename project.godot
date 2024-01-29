@@ -121,3 +121,4 @@ mouse_capture={
 3d_physics/layer_2="Player"
 3d_physics/layer_3="Projectiles"
 3d_physics/layer_4="Obstacles"
+3d_physics/layer_5="BallOnlyCollision"
