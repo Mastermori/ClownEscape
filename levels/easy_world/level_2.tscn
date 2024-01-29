@@ -30,8 +30,8 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.35
 
 [node name="JumpPad" parent="Obstacles" index="0" instance=ExtResource("4_jo0rq")]
 transform = Transform3D(0.5, -0.866025, 0, 0.866025, 0.5, 0, 0, 0, 1, -0.990979, -0.0260762, 6.12016)
-bounce_height = 30.0
-bounce_direction_correction = Vector3(0, 0.75, 0)
+bounce_height = 26.0
+bounce_direction_correction = Vector3(0, 0.28, 0)
 
 [node name="Button" parent="Obstacles" index="1" instance=ExtResource("6_uhv1m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.6769, 3.33271, 6.11556)
