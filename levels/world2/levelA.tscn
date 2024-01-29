@@ -16,82 +16,90 @@
 [node name="LevelBase" instance=ExtResource("1_8x8rq")]
 
 [node name="Player" parent="." index="2"]
-transform = Transform3D(0.514964, -0.177622, -0.838607, 0.00805672, 0.979256, -0.202465, 0.857174, 0.0975059, 0.505713, 0.107794, 7.1279, -0.185865)
+transform = Transform3D(0.514964, -0.177622, -0.838607, 0.00805672, 0.979256, -0.202465, 0.857174, 0.0975059, 0.505713, 0.107794, 3.43752, -0.185865)
 
 [node name="PlatformA" parent="Platforms" index="0" instance=ExtResource("2_dtc53")]
-transform = Transform3D(0.463079, 0, -0.886317, 0, 1, 0, 0.886317, 0, 0.463079, -1.69842, 2.71674, -3.28791)
+transform = Transform3D(0.463079, 0, -0.886317, 0, 1, 0, 0.886317, 0, 0.463079, -1.69842, -0.973638, -3.28791)
 
 [node name="PlatformA2" parent="Platforms" index="1" instance=ExtResource("2_dtc53")]
-transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, -0.573631, 5.13252, -23.1586)
+transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, -0.573631, 1.44214, -23.1586)
 
 [node name="Platform" parent="Platforms" index="2" instance=ExtResource("3_yduho")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.666, 6.76994, -10.0302)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.666, 3.07956, -10.0302)
 
 [node name="Platform2" parent="Platforms" index="3" instance=ExtResource("3_yduho")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9626, 7.76052, -14.6283)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9626, 4.07014, -14.6283)
 
 [node name="PlatformA3" parent="Platforms" index="4" instance=ExtResource("2_dtc53")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.4798, 6.96966, -22.4171)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.4798, 3.27928, -22.4171)
 
 [node name="Wand2" parent="Platforms" index="5" instance=ExtResource("4_1kkk5")]
-transform = Transform3D(-4.34014e-08, -0.118889, 0.992908, -5.19681e-09, 0.992908, 0.118889, -1, 0, -4.37114e-08, -14.5731, 7.76052, -22.3817)
+transform = Transform3D(-4.34014e-08, -0.118889, 0.992908, -5.19681e-09, 0.992908, 0.118889, -1, 0, -4.37114e-08, -14.5731, 4.07014, -22.3817)
 
 [node name="PlatformB" parent="Platforms" index="6" instance=ExtResource("6_vg1l5")]
-transform = Transform3D(-0.0103671, -0.499973, -0.865979, 0.0356825, 0.865289, -0.500002, 0.999309, -0.0360839, 0.00886976, 29.6587, 8.09454, -22.2283)
+transform = Transform3D(0.0104718, -0.499973, -0.865978, 0, 0.866025, -0.5, 0.999945, 0.00523591, 0.00906887, 29.6587, 4.40416, -22.2283)
 
 [node name="PlatformB2" parent="Platforms" index="7" instance=ExtResource("6_vg1l5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.2146, 8.35936, -35.8703)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.2146, 4.66898, -35.8703)
 
 [node name="PlatformB3" parent="Platforms" index="8" instance=ExtResource("6_vg1l5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.2021, 6.52228, -50.1182)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.2021, 2.8319, -50.1182)
 
 [node name="PlatformA4" parent="Platforms" index="9" instance=ExtResource("2_dtc53")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.73539, 15.7684, -38.597)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.73539, 12.078, -38.597)
 
 [node name="PlatformB4" parent="Platforms" index="10" instance=ExtResource("6_vg1l5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.23636, 10.6648, -49.8347)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.23636, 6.97442, -49.8347)
 
 [node name="WandPlatform" parent="Platforms" index="11" instance=ExtResource("7_1haej")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 47.6414, 14.0079, -22.4747)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 47.6414, 10.3175, -22.4747)
 
 [node name="Wand" parent="Platforms" index="12" instance=ExtResource("4_1kkk5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3591, 8.3714, -24.615)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3591, 7.95922, -24.615)
 
 [node name="Wand3" parent="Platforms" index="13" instance=ExtResource("4_1kkk5")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 20.3591, 8.42126, -20.1486)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 20.3591, 8.00908, -20.1486)
 
 [node name="PlatformB5" parent="Platforms" index="14" instance=ExtResource("6_vg1l5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.76801, 13.3883, -49.8347)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.76801, 9.69792, -49.8347)
 
 [node name="PlatformB6" parent="Platforms" index="15" instance=ExtResource("6_vg1l5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.8056, 3.34727, -22.2564)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.8056, -0.343108, -22.2564)
 
 [node name="Platform3" parent="Platforms" index="16" instance=ExtResource("3_yduho")]
-transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 42.4663, -16.2342, -35.014)
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 42.2303, -17.0146, -34.6772)
 
 [node name="Platform4" parent="Platforms" index="17" instance=ExtResource("3_yduho")]
-transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 42.4663, -16.2342, -10.2349)
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 42.2303, -17.0146, -9.89809)
 
-[node name="JumpPad" parent="Obstacles" index="0" instance=ExtResource("7_vo0ft")]
-transform = Transform3D(-4.2222e-08, -0.258819, -0.965926, -1.13133e-08, 0.965926, -0.258819, 1, 0, -4.37114e-08, 28.1899, 10.4573, -50.0617)
+[node name="Platform5" parent="Platforms" index="18" instance=ExtResource("3_yduho")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 42.2303, -17.0146, -22.2552)
 
-[node name="Laser" parent="Obstacles" index="1" instance=ExtResource("10_746fq")]
-transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 42.4546, -0.845103, -10.3345)
+[node name="Canon" parent="Obstacles" index="0" instance=ExtResource("8_v1x3f")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 47.9687, 13.9014, -22.4774)
+ball_liftetime = 8.0
+ball_bounciness = 0.7
+fire_strength = 11.7
 
-[node name="Laser2" parent="Obstacles" index="2" instance=ExtResource("10_746fq")]
-transform = Transform3D(1, 0, 0, 0, 0.642788, -0.766044, 0, 0.766044, 0.642788, 42.4546, -0.845103, -34.7543)
+[node name="JumpPad" parent="Obstacles" index="1" instance=ExtResource("7_vo0ft")]
+transform = Transform3D(-4.2222e-08, -0.258819, -0.965926, -1.13133e-08, 0.965926, -0.258819, 1, 0, -4.37114e-08, 28.1899, 6.76692, -50.0617)
 
-[node name="Button" parent="Obstacles" index="3" instance=ExtResource("9_yg4vs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.76508, 19.2893, -38.937)
+[node name="Laser" parent="Obstacles" index="2" instance=ExtResource("10_746fq")]
+transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 42.2186, -1.62549, -9.99769)
+
+[node name="Laser2" parent="Obstacles" index="3" instance=ExtResource("10_746fq")]
+transform = Transform3D(1, 0, 0, 0, 0.642788, -0.766044, 0, 0.766044, 0.642788, 42.2186, -1.62549, -34.4175)
+
+[node name="Button" parent="Obstacles" index="4" instance=ExtResource("9_yg4vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.76508, 15.5989, -38.937)
+
+[node name="Laser3" parent="Obstacles" index="5" instance=ExtResource("10_746fq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.2224, -1.62549, -22.2254)
 
 [node name="LevelTransition" parent="Triggers" index="0" instance=ExtResource("10_cj7pi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.7909, 8.36176, -22.1722)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.7909, 4.67138, -22.1722)
 next_level = ExtResource("11_8d134")
-
-[node name="Canon" parent="." index="9" instance=ExtResource("8_v1x3f")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 47.9687, 17.5918, -22.4774)
-ball_liftetime = 8.0
-fire_strength = 12.0
 
 [connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser" method="toggle"]
 [connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser2" method="toggle"]
+[connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser3" method="toggle"]
