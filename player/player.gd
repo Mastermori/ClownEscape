@@ -20,16 +20,18 @@ const DASH_VELOCITY = 15.0
 @onready var fall_gravity: float = (-2.0 * jump_height) / (jump_time_to_fall * jump_time_to_fall)
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-var dash_cooldown = 0.0
-var dash_charged = true
+var dash_cooldown: float = 0.0
+var dash_charged: bool = true
+
 var camera_locked: bool = false
+var debug_disable_gravity: bool = false
 
 # Whether the player should make walking sounds.
-var is_walking = false
-var is_falling = false
-var is_dead = false
+var is_walking: bool = false
+var is_falling: bool = false
+var is_dead: bool = false
 
 @onready var camera = %Camera3D
 @onready var koyote_timer = $KoyoteTimer
@@ -55,9 +57,12 @@ func _physics_process(delta):
 		dash_charged = true
 	
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and (is_on_floor() or not koyote_timer.is_stopped()):
+	if Input.is_action_just_pressed("jump") and ((is_on_floor() or not koyote_timer.is_stopped()) or debug_disable_gravity):
 		koyote_timer.stop()
-		velocity.y = jump_velocity
+		if debug_disable_gravity:
+			position.y += jump_velocity
+		else:
+			velocity.y = jump_velocity
 		Global.play_sound_at(preload("res://player/Boing.ogg"), position)
 	
 	# Get the input direction and handle the movement/deceleration.
@@ -118,6 +123,8 @@ func get_jump_velocity(height: float):
 	return sqrt(height * abs(jump_gravity) * 2.0)
 
 func _get_gravity():
+	if debug_disable_gravity:
+		return 0
 	if velocity.y > 0:
 		return jump_gravity
 	else:
@@ -137,3 +144,8 @@ func _input(event):
 		rotate_y(-event.relative.x * MOUSE_SENSITIVITY)
 		camera.rotate_x(-event.relative.y * MOUSE_SENSITIVITY)
 		camera.rotation.x = clampf(camera.rotation.x, -deg_to_rad(90), deg_to_rad(90))
+
+func _unhandled_key_input(event: InputEvent) -> void:
+	if event.is_action_pressed("toggle_debug_gravity"):
+		debug_disable_gravity = not debug_disable_gravity
+		velocity.y = 0
