@@ -9,6 +9,7 @@ var lifetime: float = 5 :
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Smoothing.teleport()
 	lifetime = lifetime
 
 func _on_body_entered(body):
