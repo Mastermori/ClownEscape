@@ -27,9 +27,9 @@ instance_dock/scenes=[{
 }, {
 "name": "Obstacles",
 "scenes": [{
-"scene": "res://obstacles/button/button.tscn"
-}, {
 "scene": "res://obstacles/canon/canon.tscn"
+}, {
+"scene": "res://obstacles/button/button.tscn"
 }, {
 "scene": "res://obstacles/laser/laser.tscn"
 }, {

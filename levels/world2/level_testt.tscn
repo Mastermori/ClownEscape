@@ -1,0 +1,58 @@
+[gd_scene load_steps=11 format=3 uid="uid://0jjegkq5befs"]
+
+[ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_dpp4h"]
+[ext_resource type="PackedScene" uid="uid://c2ote8ql3pxa" path="res://platforms/platform_b.tscn" id="2_wxnux"]
+[ext_resource type="PackedScene" uid="uid://dj2dynul1los1" path="res://platforms/tiny_platform.tscn" id="3_22yy4"]
+[ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="4_44kjy"]
+[ext_resource type="PackedScene" uid="uid://b50k5w01i1s5e" path="res://obstacles/canon/canon.tscn" id="6_0ie3l"]
+[ext_resource type="PackedScene" uid="uid://bfhqbmxjakdab" path="res://platforms/wand.tscn" id="7_mcjyf"]
+[ext_resource type="PackedScene" uid="uid://b3ch27e2b5l68" path="res://obstacles/button/button.tscn" id="8_k172y"]
+[ext_resource type="PackedScene" uid="uid://b48kdjgaubgam" path="res://obstacles/jump_pad/jump_pad.tscn" id="9_odhm4"]
+[ext_resource type="PackedScene" uid="uid://8e2ey38722hg" path="res://obstacles/laser/laser.tscn" id="10_ngofs"]
+
+[node name="LevelBase" instance=ExtResource("1_dpp4h")]
+
+[node name="Player" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.08518, 2.87295)
+
+[node name="PlatformB" parent="." index="9" instance=ExtResource("2_wxnux")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11497, 0, 2.12125)
+
+[node name="PlatformB2" parent="." index="10" instance=ExtResource("2_wxnux")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.18474, 0, 5.97329)
+
+[node name="Platform" parent="." index="11" instance=ExtResource("3_22yy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.7793, 0, -0.823832)
+
+[node name="PlatformA" parent="." index="12" instance=ExtResource("4_44kjy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.25526, 0, 9.48272)
+
+[node name="WandPlatform" parent="." index="13" instance=ExtResource("5_7lmbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0283, 0, 15.6699)
+
+[node name="Canon" parent="." index="14" instance=ExtResource("6_0ie3l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.61416, 3.02522, 8.56146)
+
+[node name="Canon2" parent="." index="15" instance=ExtResource("6_0ie3l")]
+transform = Transform3D(-0.946986, 0, -0.321274, 0.18272, 0.822521, -0.538583, 0.264255, -0.568734, -0.778917, 12.4409, 8.81581, 24.9131)
+
+[node name="PlatformA2" parent="." index="16" instance=ExtResource("4_44kjy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.31639, 0, 24.202)
+
+[node name="Wand" parent="." index="17" instance=ExtResource("7_mcjyf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.39168, 3.02522, 25.7611)
+
+[node name="Button" parent="." index="18" instance=ExtResource("8_k172y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.40845, 3.02889, 24.9846)
+
+[node name="JumpPad" parent="." index="19" instance=ExtResource("9_odhm4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4572, 3.58392, 14.9374)
+
+[node name="PlatformA3" parent="." index="20" instance=ExtResource("4_44kjy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.09413, 11.7436, 18.6525)
+
+[node name="Laser" parent="." index="21" instance=ExtResource("10_ngofs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.57128, 15.5213, 18.0194)
+
+[node name="Laser2" parent="." index="22" instance=ExtResource("10_ngofs")]
+transform = Transform3D(1, 0, 0, 0, 0.380247, 0.924885, 0, -0.924885, 0.380247, -0.432867, 3.02522, 10.3013)
