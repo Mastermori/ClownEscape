@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c2ote8ql3pxa" path="res://platforms/platform_b.tscn" id="2_wxnux"]
 [ext_resource type="PackedScene" uid="uid://dj2dynul1los1" path="res://platforms/tiny_platform.tscn" id="3_22yy4"]
 [ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="4_44kjy"]
+[ext_resource type="PackedScene" uid="uid://cf4qey5q5atvs" path="res://platforms/wand_platform.tscn" id="5_7lmbj"]
 [ext_resource type="PackedScene" uid="uid://b50k5w01i1s5e" path="res://obstacles/canon/canon.tscn" id="6_0ie3l"]
 [ext_resource type="PackedScene" uid="uid://bfhqbmxjakdab" path="res://platforms/wand.tscn" id="7_mcjyf"]
 [ext_resource type="PackedScene" uid="uid://b3ch27e2b5l68" path="res://obstacles/button/button.tscn" id="8_k172y"]
