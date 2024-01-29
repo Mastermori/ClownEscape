@@ -9,15 +9,12 @@ extends StaticBody3D
 ## Set this to limit with which collision normal the pad bounces
 @export var collision_normal: Vector3
 # The countdown till the platform can propell the player again
-var countdown = 0
 @export var is_enabled: bool = true
+@export var disable_auto_rotation: bool = true
 
-@onready var jump_direction = %JumpDirection
+var countdown = 0
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
+@onready var jump_direction := %JumpDirection as Marker3D
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -32,13 +29,22 @@ func collide_with_player(player: Player, collision: KinematicCollision3D):
 	player.dash_charged = true
 	var bounce_velocity = player.get_jump_velocity(bounce_height)
 	#var direction = collision.get_normal()
-	var direction = (jump_direction.global_position - global_position).normalized()
-	player.velocity += (direction + bounce_direction_correction).normalized() * bounce_velocity
+	var direction: Vector3 = (jump_direction.global_position - global_position).normalized()
+	if direction.y < .9 and not disable_auto_rotation:
+		var player_dir: Vector3 = player.get_global_transform().basis.z
+		var y_rot := player_dir.signed_angle_to(-Vector3(direction.x, 0, direction.z), Vector3(0, 1, 0))
+		if abs(y_rot) > PI/4.0:
+			lerp_camera(player, y_rot)
+	player.velocity = (direction + bounce_direction_correction).normalized() * bounce_velocity
 	countdown = cooldown
 	$CJumpPad/AnimationPlayer.play("default")
 	Global.play_sound_at(preload("res://player/Boing.ogg"), position)
-	
-	
-	
+
+func lerp_camera(player: Player, y_rot: float) -> void:
+	player.lock_camera(true)
+	var tween := create_tween().set_loops(15)
+	tween.tween_callback(player.rotate_y.bind(y_rot / 15.0)).set_delay(.01)
+	tween.finished.connect(player.lock_camera.bind(false))
+
 func toggle_jump_pad():
 	is_enabled = not is_enabled
