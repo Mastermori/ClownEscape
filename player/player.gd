@@ -66,8 +66,8 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, direction.x * SPEED, acceleration * delta)
 		velocity.z = move_toward(velocity.z, direction.z * SPEED, acceleration * delta)
 	else:
-		velocity.x = move_toward(velocity.x, 0, acceleration * 2 * delta)
-		velocity.z = move_toward(velocity.z, 0, acceleration * 2 * delta)
+		velocity.x = move_toward(velocity.x, 0, acceleration * delta)
+		velocity.z = move_toward(velocity.z, 0, acceleration * delta)
 	
 	# Handle dash
 	if dash_cooldown > 0:
@@ -80,7 +80,9 @@ func _physics_process(delta):
 		# However it needs to be limited since it can otherwise be used to fly.
 		# The vanilla transform only accelerates horizontally but can thus be used much more freely.
 		#velocity -= camera.global_transform.basis.z * DASH_VELOCITY
-		velocity -= transform.basis.z * DASH_VELOCITY
+		var dash_velocity = -transform.basis.z * DASH_VELOCITY
+		velocity.x = dash_velocity.x
+		velocity.z = dash_velocity.z
 	
 	# Here we finally process the movement. We use move_and_slide since we want to slide along surfaces.
 	# Additionally it allows for easy detection of whether we are grounded.
