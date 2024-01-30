@@ -24,12 +24,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 8, -12)
 
 [node name="JumpPad" parent="Obstacles" index="0" instance=ExtResource("4_isqnw")]
 transform = Transform3D(1, 0, 0, 0, 0.137998, -0.990433, 0, 0.990433, 0.137998, 3.01946, 5.21115, -10.6518)
-bounce_height = 17.0
 bounce_direction_correction = Vector3(0, 0.5, 0)
 
 [node name="JumpPad2" parent="Obstacles" index="1" instance=ExtResource("4_isqnw")]
 transform = Transform3D(-1, 1.49012e-08, 2.6077e-08, -1.10489e-08, 0.137998, -0.990433, 1.19209e-07, -0.990433, -0.137998, 3.01946, 10.2809, 3.59795)
-bounce_height = 17.0
 bounce_direction_correction = Vector3(0, 0.5, 0)
 
 [node name="LevelTransition" parent="Triggers" index="0" instance=ExtResource("6_fjxms")]

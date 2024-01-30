@@ -10,7 +10,7 @@ extends StaticBody3D
 @export var collision_normal: Vector3
 # The countdown till the platform can propell the player again
 @export var is_enabled: bool = true
-@export var disable_auto_rotation: bool = true
+@export var disable_auto_rotation: bool = false
 
 var countdown = 0
 
