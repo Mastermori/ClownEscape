@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dwtj3rotfsea1" path="res://levels/world_tutorial/level_3.tscn" id="5_ieq37"]
 [ext_resource type="PackedScene" uid="uid://dwcuerynd5d6u" path="res://levels/world_tutorial/level_4.tscn" id="6_hq1je"]
 [ext_resource type="PackedScene" uid="uid://dntvwp3ey10cg" path="res://levels/world_tutorial/level_5.tscn" id="7_e4jig"]
-[ext_resource type="PackedScene" uid="uid://dg4x3i1b8773x" path="res://levels/easy_world/level_1.tscn" id="9_kpy0m"]
+[ext_resource type="PackedScene" uid="uid://dg4x3i1b8773x" path="res://levels/level_1.tscn" id="9_kpy0m"]
 [ext_resource type="PackedScene" uid="uid://dakv5o7t8lt2s" path="res://levels/easy_world/level_2.tscn" id="10_2vy0s"]
 [ext_resource type="PackedScene" uid="uid://dpjwg6mo38qtf" path="res://levels/world1/level1.tscn" id="11_hyhnw"]
 [ext_resource type="PackedScene" uid="uid://y0k2pfj6w7y5" path="res://levels/easy_world/level3.tscn" id="11_wbius"]

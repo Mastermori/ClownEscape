@@ -73,7 +73,7 @@ transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 36.562
 transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 36.5625, -13.7991, -9.89809)
 
 [node name="Platform8" parent="Platforms" index="17" instance=ExtResource("3_yduho")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5628, 10.248, -22.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5628, 9.55316, -22.25)
 
 [node name="Platform9" parent="Platforms" index="18" instance=ExtResource("3_yduho")]
 transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 36.5628, -19.8815, -22.3146)
@@ -105,7 +105,7 @@ fire_strength = 12.0
 
 [node name="JumpPad" parent="Obstacles" index="1" instance=ExtResource("7_vo0ft")]
 transform = Transform3D(-3.78552e-08, -0.5, -0.866026, -2.18557e-08, 0.866026, -0.5, 1, 9.1951e-16, -4.37114e-08, 28.7544, 12.6795, -43.1796)
-bounce_height = 20.0
+bounce_height = 21.0
 bounce_direction_correction = Vector3(-2.5, 2.5, 0)
 
 [node name="Laser" parent="Obstacles" index="2" instance=ExtResource("10_746fq")]
