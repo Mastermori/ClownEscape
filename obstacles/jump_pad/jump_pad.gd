@@ -30,7 +30,7 @@ func collide_with_player(player: Player, collision: KinematicCollision3D):
 	var bounce_velocity = player.get_jump_velocity(bounce_height)
 	#var direction = collision.get_normal()
 	var direction: Vector3 = (jump_direction.global_position - global_position).normalized()
-	if direction.y < .9 and not disable_auto_rotation:
+	if direction.y < .9 and not disable_auto_rotation and Input.is_action_pressed("jump"):
 		var player_dir: Vector3 = player.get_global_transform().basis.z
 		var y_rot := player_dir.signed_angle_to(-Vector3(direction.x, 0, direction.z), Vector3(0, 1, 0))
 		if abs(y_rot) > PI/4.0:
