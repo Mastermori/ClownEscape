@@ -20,13 +20,13 @@ transform = Transform3D(2.98023e-08, 0, -1, 0, 1, 0, 1, 0, 2.98023e-08, 0, 4.282
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.76987, 0, 6.21661)
 
 [node name="PlatformB" parent="Platforms" index="1" instance=ExtResource("3_7sjdn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1487, -0.601107, 6.23421)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.6711, -0.601107, 6.23421)
 
 [node name="PlatformB2" parent="Platforms" index="2" instance=ExtResource("3_7sjdn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.727, -0.601107, 6.23421)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.2494, -0.601107, 6.23421)
 
 [node name="WandPlatform" parent="Platforms" index="3" instance=ExtResource("4_0gell")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.3571, 2.26785, 6.20183)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.9375, 2.26785, 6.20183)
 
 [node name="JumpPad" parent="Obstacles" index="0" instance=ExtResource("4_jo0rq")]
 transform = Transform3D(0.5, -0.866025, 0, 0.866025, 0.5, 0, 0, 0, 1, -0.990979, -0.0260762, 6.12016)
@@ -34,10 +34,10 @@ bounce_height = 26.0
 bounce_direction_correction = Vector3(0, 0.28, 0)
 
 [node name="Button" parent="Obstacles" index="1" instance=ExtResource("6_uhv1m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.6769, 3.33271, 6.11556)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1993, 3.33271, 6.11556)
 
 [node name="Laser" parent="Obstacles" index="2" instance=ExtResource("9_awjyp")]
-transform = Transform3D(-4.37114e-08, 1, 0, 4.37114e-08, 1.91069e-15, 1, 1, 4.37114e-08, -4.37114e-08, -22.1618, 4.58733, 6.24903)
+transform = Transform3D(-4.37114e-08, 1, 0, 4.37114e-08, 1.91069e-15, 1, 1, 4.37114e-08, -4.37114e-08, -30.7422, 4.58733, 6.24903)
 active = false
 
 [node name="LevelTransition" parent="Triggers" index="0" instance=ExtResource("3_7wqho")]
@@ -48,7 +48,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 4, 6.3)
 text = "You thought it was that easy?"
 
 [node name="LevelTransition2" parent="Triggers" index="2" instance=ExtResource("3_7wqho")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.7882, 7, 6.25029)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.3686, 7, 6.25029)
 next_level = ExtResource("10_vk2p8")
 
 [connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser" method="toggle"]

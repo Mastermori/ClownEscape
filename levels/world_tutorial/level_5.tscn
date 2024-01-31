@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b50k5w01i1s5e" path="res://obstacles/canon/canon.tscn" id="3_m48to"]
 [ext_resource type="PackedScene" uid="uid://c2ote8ql3pxa" path="res://platforms/platform_b.tscn" id="4_8of8c"]
 [ext_resource type="PackedScene" uid="uid://csxa7ww5dihdf" path="res://levels/components/level_transition.tscn" id="5_3e37o"]
-[ext_resource type="PackedScene" uid="uid://dg4x3i1b8773x" path="res://levels/easy_world/level_1.tscn" id="6_2e55h"]
+[ext_resource type="PackedScene" uid="uid://c1bekogkmnilg" path="res://levels/easy_world/level_1.tscn" id="6_drj5l"]
 
 [node name="Level5" instance=ExtResource("1_iw6y5")]
 
@@ -56,4 +56,4 @@ direction = Vector3(0, 0.4, 1)
 
 [node name="LevelTransition" parent="Triggers" index="0" instance=ExtResource("5_3e37o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.3229, 3.8812, 4.06427)
-next_level = ExtResource("6_2e55h")
+next_level = ExtResource("6_drj5l")

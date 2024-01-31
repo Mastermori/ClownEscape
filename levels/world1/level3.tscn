@@ -17,7 +17,10 @@
 transform = Transform3D(1, 0, 0, 0, 0.770012, 0.638029, 0, -0.638029, 0.770012, 0, 29.3963, -2.55951)
 
 [node name="Player" parent="." index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0137873, 28.5791, -0.0314903)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000640869, 15.6347, 3.46387)
+
+[node name="Platforms" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -12.8871, 0)
 
 [node name="Wand" parent="Platforms" index="0" instance=ExtResource("3_oguqa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.30478, 33.5299, -21.8872)
@@ -52,13 +55,22 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45.539
 [node name="Wand5" parent="Platforms" index="10" instance=ExtResource("3_oguqa")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45.5395, 18.9, -12.2012)
 
+[node name="PlatformB3" parent="Platforms" index="11" instance=ExtResource("5_6jsyn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0546875, 23.6449, 3.59495)
+
+[node name="PlatformB6" parent="Platforms" index="12" instance=ExtResource("5_6jsyn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3698, 28.5837, -14.4181)
+
+[node name="Obstacles" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -12.8871, 0)
+
 [node name="JumpPad" parent="Obstacles" index="0" instance=ExtResource("2_vxsiq")]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -0.0137166, 20.9797, -0.00475752)
-bounce_height = 20.0
+bounce_height = 25.0
 
 [node name="JumpPad2" parent="Obstacles" index="1" instance=ExtResource("2_vxsiq")]
 transform = Transform3D(0.800355, 0.599527, 0, -0.599527, 0.800355, 0, 0, 0, 1, -11.0137, 32.9797, -14.4575)
-bounce_height = 30.0
+bounce_height = 25.0
 
 [node name="Laser" parent="Obstacles" index="2" instance=ExtResource("4_gn551")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 5.24987, 35.7013, -21)
@@ -122,8 +134,12 @@ max_length = 20
 
 [node name="Canon" parent="Obstacles" index="17" instance=ExtResource("6_1rl6q")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17.6512, 20.0432, -9.83245)
-push_strength = 100.0
+push_strength = 30.0
+fire_strength = 30.0
 direction = Vector3(0, 0.3, 1)
+
+[node name="Triggers" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -12.8871, 0)
 
 [node name="TextTrigger" parent="Triggers" index="0" instance=ExtResource("8_7l5wu")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 18.0821, 22.5587, -10.0657)

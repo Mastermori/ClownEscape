@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b3ch27e2b5l68" path="res://obstacles/button/button.tscn" id="9_yg4vs"]
 [ext_resource type="PackedScene" uid="uid://8e2ey38722hg" path="res://obstacles/laser/laser.tscn" id="10_746fq"]
 [ext_resource type="PackedScene" uid="uid://csxa7ww5dihdf" path="res://levels/components/level_transition.tscn" id="10_cj7pi"]
-[ext_resource type="PackedScene" uid="uid://dpjwg6mo38qtf" path="res://levels/world1/level1.tscn" id="11_8d134"]
+[ext_resource type="PackedScene" uid="uid://c15b0tsitp6lu" path="res://menus/win_screen.tscn" id="12_c0eds"]
 
 [node name="LevelBase" instance=ExtResource("1_8x8rq")]
 
@@ -122,7 +122,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.593618, 0)
 
 [node name="LevelTransition" parent="Triggers" index="0" instance=ExtResource("10_cj7pi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.7909, 8.02958, -22.1722)
-next_level = ExtResource("11_8d134")
+next_level = ExtResource("12_c0eds")
 
 [connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser" method="toggle"]
 [connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser2" method="toggle"]

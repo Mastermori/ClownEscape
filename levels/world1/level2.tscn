@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cnc4bs7ptxlil"]
+[gd_scene load_steps=9 format=3 uid="uid://cnc4bs7ptxlil"]
 
 [ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_jo414"]
 [ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="3_r7u03"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dej3yjlxd3yf1" path="res://levels/world1/level3.tscn" id="5_uaboi"]
 [ext_resource type="PackedScene" uid="uid://b48kdjgaubgam" path="res://obstacles/jump_pad/jump_pad.tscn" id="5_w3yfd"]
 [ext_resource type="PackedScene" uid="uid://cau0cybig3rn" path="res://levels/components/text_trigger.tscn" id="7_inksk"]
+[ext_resource type="PackedScene" uid="uid://c2ote8ql3pxa" path="res://platforms/platform_b.tscn" id="8_7rl37"]
 
 [node name="LevelBase2" instance=ExtResource("1_jo414")]
 
@@ -14,57 +15,70 @@
 transform = Transform3D(1, 0, 0, 0, 0.770012, 0.638029, 0, -0.638029, 0.770012, 0, 12.4044, -3.86146)
 
 [node name="Player" parent="." index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.21636, 5.99617)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.15163, 3.70911)
 
 [node name="PlatformA" parent="Platforms" index="0" instance=ExtResource("3_r7u03")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.66038, 2.49248, -13.7483)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.27057, 2.49248, -17.0406)
 
 [node name="PlatformA4" parent="Platforms" index="1" instance=ExtResource("3_r7u03")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0963026, 0.49858, 3.36216)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0963026, 2.43385, 1.0751)
 
 [node name="PlatformA2" parent="Platforms" index="2" instance=ExtResource("3_r7u03")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.526941, 3.34389, -57.1155)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091513, 3.34389, -57.1155)
 
 [node name="PlatformA3" parent="Platforms" index="3" instance=ExtResource("3_r7u03")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.8491, 8.98147, -35.7483)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0587522, 8.98147, -35.7483)
 
 [node name="PlatformA5" parent="Platforms" index="4" instance=ExtResource("3_r7u03")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.01589, 8.98147, -72.5365)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.089242, 6.69836, -69.9282)
 
 [node name="Canon" parent="Obstacles" index="0" instance=ExtResource("4_0uexu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37622, 6.34395, -57.5298)
-fire_interval = 1.8
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75777, 6.34395, -57.5298)
+push_strength = 20.0
+fire_interval = 1.2
+initial_delay = 0.8
 fire_strength = 25.0
 
 [node name="Canon2" parent="Obstacles" index="1" instance=ExtResource("4_0uexu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90166, 6.34395, -57.5298)
-fire_interval = 1.6
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28321, 6.34395, -57.5298)
+push_strength = 20.0
+fire_interval = 1.22
+initial_delay = 0.6
 fire_strength = 25.0
 
 [node name="Canon3" parent="Obstacles" index="2" instance=ExtResource("4_0uexu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.621524, 6.34395, -57.5298)
-fire_interval = 1.4
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.23998, 6.34395, -57.5298)
+push_strength = 20.0
+fire_interval = 1.24
+initial_delay = 0.4
 fire_strength = 25.0
 
 [node name="Canon4" parent="Obstacles" index="3" instance=ExtResource("4_0uexu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.14997, 6.34395, -57.5298)
-fire_interval = 1.2
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.76842, 6.34395, -57.5298)
+push_strength = 20.0
+fire_interval = 1.26
+initial_delay = 0.2
 fire_strength = 25.0
 
 [node name="JumpPad" parent="Obstacles" index="4" instance=ExtResource("5_w3yfd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.57839, 5.62022, -17.9286)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.51899, 5.62022, -20.5806)
 bounce_height = 8.0
 
 [node name="JumpPad2" parent="Obstacles" index="5" instance=ExtResource("5_w3yfd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.696783, 6, -49.4476)
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0.0267925, 6, -48.5875)
+bounce_height = 20.0
+bounce_direction_correction = Vector3(0, 6, -6)
 
 [node name="TextTrigger" parent="Triggers" index="0" instance=ExtResource("7_inksk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.10951, 5.82982)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.59473, 1.12316)
 text = "In the good old days we used people as projectiles. Unfortunately our budget can't afford the cleaning staff anymore."
 
 [node name="LevelTransition" parent="Triggers" index="1" instance=ExtResource("4_ql7xg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 13.3584, -75.6991)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.105132, 11.0753, -73.0908)
 next_level = ExtResource("5_uaboi")
 
 [node name="SpawnPosition" parent="." index="7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.21636, 5.9079)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.21636, 4.49284)
+
+[node name="PlatformB" parent="." index="9" instance=ExtResource("8_7rl37")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5089, 1.73839, -20.5835)

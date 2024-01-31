@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://xag144nxhhpn" path="res://levels/level_base.tscn" id="1_uvqv7"]
 [ext_resource type="PackedScene" uid="uid://dtuny4brvvc8f" path="res://platforms/platform_a.tscn" id="2_bff2m"]
 [ext_resource type="PackedScene" uid="uid://b50k5w01i1s5e" path="res://obstacles/canon/canon.tscn" id="2_f7rqg"]
-[ext_resource type="PackedScene" path="res://platforms/tiny_platform.tscn" id="5_aqio8"]
+[ext_resource type="PackedScene" uid="uid://dj2dynul1los1" path="res://platforms/tiny_platform.tscn" id="5_aqio8"]
 [ext_resource type="PackedScene" uid="uid://cau0cybig3rn" path="res://levels/components/text_trigger.tscn" id="6_58nnf"]
 [ext_resource type="PackedScene" uid="uid://b48kdjgaubgam" path="res://obstacles/jump_pad/jump_pad.tscn" id="6_lbk2c"]
 [ext_resource type="PackedScene" uid="uid://c15b0tsitp6lu" path="res://menus/win_screen.tscn" id="7_nkxf2"]
