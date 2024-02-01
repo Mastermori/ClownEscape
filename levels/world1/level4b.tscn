@@ -73,5 +73,5 @@ next_level = ExtResource("10_m3k0g")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.18191, 0.452187)
 
 [connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser" method="toggle"]
-[connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/JumpPad" method="toggle_jump_pad"]
 [connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser2" method="toggle"]
+[connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/JumpPad" method="toggle_jump_pad"]
