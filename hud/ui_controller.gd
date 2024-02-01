@@ -70,7 +70,8 @@ func play_death_fade():
 	if not anim_player.is_playing():
 		anim_player.play("fade")
 		await anim_player.animation_finished
-		Global.level.reset_player()
+		if is_instance_valid(Global.level):
+			Global.level.reset_player()
 
 func play_fade_in():
 	anim_player.play("fade", -1, -2.0, true)
