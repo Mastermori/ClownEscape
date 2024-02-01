@@ -66,5 +66,5 @@ theme_override_font_sizes/font_size = 45
 text = "Select Level"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/OptionsButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/LevelSelectButton" to="." method="_on_level_select_button_pressed"]

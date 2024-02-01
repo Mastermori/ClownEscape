@@ -7,14 +7,14 @@ var MainPanel: Control
 
 
 func _enter_tree() -> void:
-	_add_editor_interface_singleton()
+	#_add_editor_interface_singleton()
 	_add_plugin_singleton()
 	_add_editor()
 	add_inspector_plugin(inspector_plugin)
 
 
 func _exit_tree() -> void:
-	_remove_editor_interface_singleton()
+	#_remove_editor_interface_singleton()
 	_remove_editor()
 	remove_inspector_plugin(inspector_plugin)
 
@@ -23,7 +23,7 @@ func _exit_tree() -> void:
 
 func _add_editor_interface_singleton() -> void:
 	if not Engine.has_singleton("ggsEI"):
-		Engine.register_singleton("ggsEI", get_editor_interface())
+		Engine.register_singleton("ggsEI", EditorInterface)
 
 
 func _remove_editor_interface_singleton() -> void:

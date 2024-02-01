@@ -59,6 +59,10 @@ config/icon="res://icon.svg"
 Global="*res://globals/global.gd"
 GGS="*res://addons/ggs/classes/global/ggs.tscn"
 
+[editor]
+
+export/convert_text_resources_to_binary=false
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/InstanceDock/plugin.cfg", "res://addons/ggs/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/script-ide/plugin.cfg", "res://addons/smoothing/plugin.cfg")

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://8r02s13nn8wu"]
+
+[ext_resource type="Script" path="res://game_settings/settings/Mouse/Sensitivity.gd" id="1_qjtad"]
+
+[resource]
+resource_name = "Sensitivity"
+script = ExtResource("1_qjtad")
+current = 1.0
+default = 1.0
+name = "Sensitivity"
+category = "Mouse"
+value_type = 3
+value_hint = 1
+value_hint_string = ".5,2"

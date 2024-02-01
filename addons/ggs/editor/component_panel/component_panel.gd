@@ -63,8 +63,7 @@ func _get_comp_list() -> Array[Dictionary]:
 ### Component Instantiation
 
 func _on_List_item_activated(item_index: int) -> void:
-	var EI: EditorInterface = ggsUtils.get_editor_interface()
-	var ES: EditorSelection = EI.get_selection()
+	var ES: EditorSelection = EditorInterface.get_selection()
 	var selected_nodes: Array[Node] = ES.get_selected_nodes()
 	
 	if selected_nodes.size() != 1:
@@ -73,7 +72,7 @@ func _on_List_item_activated(item_index: int) -> void:
 	
 	var item_meta: String = List.get_item_metadata(item_index)
 	var SelectedNode: Node = selected_nodes[0]
-	var ESR: Node = EI.get_edited_scene_root()
+	var ESR: Node = EditorInterface.get_edited_scene_root()
 	
 	var comp_scene: PackedScene = load(item_meta)
 	var Component: Control = comp_scene.instantiate()
@@ -88,4 +87,4 @@ func _on_List_item_activated(item_index: int) -> void:
 	if not GroupField.text.strip_edges().is_empty():
 		Component.add_to_group(GroupField.text.strip_edges(), true)
 	
-	EI.save_scene()
+	EditorInterface.save_scene()

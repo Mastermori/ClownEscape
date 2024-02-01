@@ -1,0 +1,87 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6reetafwexj"]
+
+[ext_resource type="PackedScene" uid="uid://ds06mwhee8ygm" path="res://game_settings/components/slider/slider.tscn" id="1_4euwh"]
+[ext_resource type="Script" path="res://menus/options_menu.gd" id="1_8bih1"]
+[ext_resource type="Script" path="res://game_settings/components/slider/slider.gd" id="2_grwva"]
+[ext_resource type="Resource" uid="uid://8r02s13nn8wu" path="res://game_settings/settings/Mouse/Sensitivity.tres" id="3_4xcqj"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8bih1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "Options"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="MouseSens" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 350
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/MouseSens"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/MouseSens/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Mouse Sensitivity:"
+
+[node name="ValueLabel" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/MouseSens/HBoxContainer"]
+layout_mode = 2
+
+[node name="Slider" parent="MarginContainer/VBoxContainer/VBoxContainer/MouseSens" instance=ExtResource("1_4euwh")]
+layout_mode = 2
+size_flags_horizontal = 10
+script = ExtResource("2_grwva")
+setting = ExtResource("3_4xcqj")
+apply_on_change = true
+grab_focus_on_mouse_over = true
+
+[node name="Slider" parent="MarginContainer/VBoxContainer/VBoxContainer/MouseSens/Slider" index="0"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+min_value = 0.5
+max_value = 2.0
+step = 0.05
+value = 0.5
+
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_font_sizes/font_size = 30
+text = " Back "
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/VBoxContainer/MouseSens/Slider/Slider" to="." method="_on_slider_value_changed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+
+[editable path="MarginContainer/VBoxContainer/VBoxContainer/MouseSens/Slider"]

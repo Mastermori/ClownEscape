@@ -10,6 +10,8 @@ const FLOORED_ACCELERATION = 60.0
 const DASH_COOLDOWN_DURATION = .5
 const DASH_VELOCITY = 15.0
 
+const SENSITIVITY = preload("res://game_settings/settings/Mouse/Sensitivity.tres")
+
 @export var jump_height: float = 2.0
 @export var jump_time_to_peak: float = 0.5
 @export var jump_time_to_fall: float = 0.43
@@ -141,8 +143,8 @@ func _input(event):
 	# We rotate the character around the Y axis only since we do not want to flip ourselves upside down.
 	# The camera is rotated between looking straight up or straight down.
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-		rotate_y(-event.relative.x * MOUSE_SENSITIVITY)
-		camera.rotate_x(-event.relative.y * MOUSE_SENSITIVITY)
+		rotate_y(-event.relative.x * MOUSE_SENSITIVITY * SENSITIVITY.current)
+		camera.rotate_x(-event.relative.y * MOUSE_SENSITIVITY * SENSITIVITY.current)
 		camera.rotation.x = clampf(camera.rotation.x, -deg_to_rad(90), deg_to_rad(90))
 
 func _unhandled_key_input(event: InputEvent) -> void:
