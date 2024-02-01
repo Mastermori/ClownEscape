@@ -57,10 +57,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://globals/global.gd"
+GGS="*res://addons/ggs/classes/global/ggs.tscn"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/InstanceDock/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/script-ide/plugin.cfg", "res://addons/smoothing/plugin.cfg")
+enabled=PackedStringArray("res://addons/InstanceDock/plugin.cfg", "res://addons/ggs/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/script-ide/plugin.cfg", "res://addons/smoothing/plugin.cfg")
 
 [filesystem]
 
