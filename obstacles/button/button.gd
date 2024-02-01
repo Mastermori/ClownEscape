@@ -2,7 +2,7 @@ extends Area3D
 
 @export var toggleable: bool = false
 @export var initial_toggle_state: bool = false
-@export var toggle_delay: float = 0
+@export var toggle_time: float = 0
 
 signal switch_toggled
 signal switch_off
@@ -23,8 +23,9 @@ func _on_body_entered(body):
 	
 	Global.play_sound_at(preload("res://obstacles/button/Click.ogg"), position, 0.0, 20.0)
 	
-	if toggle_delay > 0:
-		$Timer.start(toggle_delay)
+	if toggle_time > 0:
+		toggle_button()
+		$Timer.start(toggle_time)
 	else:
 		toggle_button()
 

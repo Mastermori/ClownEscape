@@ -39,15 +39,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.3826, -2.48982, -24.0195)
 
 [node name="Button" parent="Obstacles" index="0" instance=ExtResource("3_d70dp")]
 transform = Transform3D(2.98023e-08, 1, 0, -1, 2.98023e-08, 0, 0, 0, 1, -3.78542, 5.75697, -11.6511)
+toggle_time = 3.0
 
 [node name="Laser" parent="Obstacles" index="1" instance=ExtResource("6_7o0tu")]
 transform = Transform3D(1, 1.06581e-14, 0, -1.06581e-14, 1, 0, 0, 0, 1, 5.43196, -7.29422, -17.2828)
-active = false
 
 [node name="JumpPad" parent="Obstacles" index="2" instance=ExtResource("5_qg0sm")]
 transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 16.5101, 2.34117, -35.755)
 bounce_height = 30.0
-is_enabled = false
 
 [node name="JumpPad2" parent="Obstacles" index="3" instance=ExtResource("5_qg0sm")]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 16.5101, 13.261, -21.9393)
@@ -69,4 +68,3 @@ next_level = ExtResource("10_26whe")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.18191, 0)
 
 [connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/Laser" method="toggle"]
-[connection signal="switch_toggled" from="Obstacles/Button" to="Obstacles/JumpPad" method="toggle_jump_pad"]

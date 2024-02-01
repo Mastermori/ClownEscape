@@ -11,6 +11,7 @@ data = PackedVector3Array(1.0923, -0.1469, 1.3743, -1.0924, 0.1469, 1.3743, 1.09
 
 [node name="Button" type="Area3D"]
 collision_mask = 2
+monitorable = false
 script = ExtResource("1_xq0xl")
 
 [node name="Timer" type="Timer" parent="."]
